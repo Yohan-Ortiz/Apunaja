@@ -71,6 +71,40 @@ i{
 
 
 
+/* Imagen de fondo de la pagina */
+
+body {background-image: url(/ASSETS/background_images_website/fondo\ pagina\ principal.jpg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center center;
+     background-size:cover;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,8 +116,8 @@ i{
 footer {
     background-color: #ffffff;
     width: 100%;
-    padding: 20px 0;
-    position: fixed; /* Fija el footer */
+    padding: 10px 10;
+    position:fixed; /* Fija el footer */
     bottom: 0; /* Lo coloca en la parte inferior */
     left: 0; /* Asegura que esté alineado a la izquierda */
     border-top: 1px solid #e0e0e0; /* Añade una línea sutil arriba del footer */
