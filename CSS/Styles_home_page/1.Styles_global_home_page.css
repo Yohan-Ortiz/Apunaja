@@ -63,3 +63,8 @@ nav ul li a::before {display: block;
        
 /* 10. Expande la barra de pseudo-elemento a todo el ancho al pasar el cursor */
 nav ul li a:hover:before {width: 100%;}
+
+
+/* cambiar color de iconos */
+i{
+    color: #864904;}
