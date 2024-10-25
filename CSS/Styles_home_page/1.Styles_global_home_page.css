@@ -68,3 +68,82 @@ nav ul li a:hover:before {width: 100%;}
 /* cambiar color de iconos */
 i{
     color: #864904;}
+
+
+
+
+
+
+
+
+
+
+/* pie de pagina-Home_page */
+footer {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    position: fixed; /* Fija el footer */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    left: 0; /* Asegura que esté alineado a la izquierda */
+    border-top: 1px solid #e0e0e0; /* Añade una línea sutil arriba del footer */
+    text-align: center; /* Cambiado de 'end' a 'center' para centrar todo el contenido */
+}
+
+
+.footer h4 {
+    color: #864904;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.menu-socials {
+    padding: 0;
+    margin: 15px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente los iconos y texto */
+    gap: 20px; /* Espacio uniforme entre elementos */
+}
+
+.menu-socials li {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre icono y texto */
+}
+
+.menu-socials i {
+    font-size: 20px; /* Tamaño uniforme para los iconos */
+    color: #864904;
+}
+
+.menu-socials a {
+    text-decoration: none;
+    color: #864904;
+    transition: all 0.3s ease; /* Suaviza la transición del hover */
+}
+
+.menu-socials a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.By, .text {
+    margin: 10px 0;
+    color: #555;
+    text-align: center;
+    font-size: 0.9em;
+    
+}
+
+/* Asegura que el contenido principal no quede oculto detrás del footer */
+body {
+    margin-bottom: 250px; /* Ajusta este valor según la altura de tu footer */
+}
+
+
+
+
+
+
