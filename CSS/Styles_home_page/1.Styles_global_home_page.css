@@ -1,54 +1,64 @@
 
-*
-    {padding: 0px;
+/* barra de navegacion-Home_page */
+
+
+/* #1.Bodes universales */
+*   {padding: 0px;
     margin: 0px;
     box-sizing:border-box}
 
-body 
-    {background-color:#864904;
-    font-family:'Calibri';}
+/* #2.color del cuerpo de la pagina  */
+body {background-color:#864904;
+     font-family:'Calibri';}
 
-.menu 
-    {width: 900px;
-    margin:0 auto;}
+/* #3.tamaño de menu */
 
-img    
-    {width:140px;
-    height: 85px;
+.menu {width: 900px;
+      margin: auto;}
+
+/* #4.tamaño de logo */
+img {width:150px;
+    height: 95px;
     float: left;
     padding: 8px;}
 
-
+/* #5.Color y tamaño de barra de navegacion */
 header {background-color:#ffffff;
        width: 100%;
        clear: both;
        content:'';
        display: table;}
 
-nav{float: right;}    
+/* #6.Alinear opciones denavegación a la derecha */
+nav{float: right;
+margin-right: 100px;}    
 
 
-nav ul li 
-   {list-style: none;
-    margin-left: 45px;
-    padding: 30px 0;
-    float: left;
-position: relative;}
+/* #7.Estilos (1.Eliminar viñetas, 2.separar elementos de lista,    3.espaciado interno arriba o abajo, 4.alinearelementos de lista a la izquierda, 5.posicion relativa para justar o colocar elementos secundarios)*/
+nav ul li   {list-style: none;
+            margin-left: 100px;
+            padding: 30px 0;
+            float: left;
+            position: relative;}
 
-nav ul li a {text-decoration: none; 
+
+/* #8. Estilos de texto (1.Eliminar subarayado predeterminado de los enlaces, 2.define el color deltexto, 3.Texto de enlace en negrita) */
+nav ul li a {
+        text-decoration: none; 
              color: #864904;
-             font-weight: bold;
-            }
+             font-weight: bold;}
 
-nav ul li a::before 
-            {display: block;
-            content:'';    
-            width:0%;
-            background: #864904;
-            height: 5px;
-            top: 0;
-            position: absolute;
-            transition:whdth 0.2s;}
+
+/* #9.Barra siperior animada (1.Pseudo-elemento como bloque, 2.Crear contenido vacio para plicar estilo, 3.Ancho para la animacion, 4. clo de pseido-elemento, 5.altura de pseudo-elemento, 6.posiscion de barra superior, 7.determinar posision apsoluta en relacion a enlace, 8.suavizar la animacion del ancho)*/
+nav ul li a::before {display: block;
+                    content:'';    
+                    width:0%;
+                    background: #864904;
+                    height: 5px;
+                    top:70%;
+                    transform: translateY(0);
+                    position: absolute;
+                    transition:whdth 0.2s;}
        
-nav ul li a:hover:before 
-            {width: 100%;}
+/* 10. Expande la barra de pseudo-elemento a todo el ancho al pasar el cursor */
+nav ul li a:hover:before {width: 100%;}
