@@ -15,9 +15,14 @@ header {background-color:#ffffff;
        content:'';
        display: table;}
 
+nav{float: right;
+}       
+
 img    
     {width:110px;
-    height:60px;}
+    height:60px;
+    float: left;
+    padding: 8px;}
 
 .Img-2 {
     width:220px;
