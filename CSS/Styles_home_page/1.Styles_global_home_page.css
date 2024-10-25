@@ -14,7 +14,7 @@ body {background-color:#864904;
 /* #3.tamaño de menu */
 
 .menu {width: 900px;
-      margin: auto;}
+      margin: 0%;}
 
 /* #4.tamaño de logo */
 img {width:150px;
@@ -25,6 +25,7 @@ img {width:150px;
 /* #5.Color y tamaño de barra de navegacion */
 header {background-color:#ffffff;
        width: 100%;
+       height: 0%;
        clear: both;
        content:'';
        display: table;}
