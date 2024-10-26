@@ -1,3 +1,59 @@
+
+/* BARRA DE NEVEGACION-ADMIN_PAGE */
+
+
+/* #1. Bordes universales */
 * {
-    background-color: black;
-}
+    padding: 0px; /* Sin espacio interno */
+    margin: 0px; /* Sin margen externo */
+    box-sizing: border-box; /* Mantiene tamaño fijo */
+    font-family:'Calibri';}
+    
+    
+/*  */
+
+body{ background-image: url(/ASSETS/background_images_website/fondo\ pagina\ adminitrador.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;}
+
+
+/*  */
+nav {
+    max-width: 100%;
+    margin: auto;
+    background:#ffffff;
+    font-size: 20px;  
+    margin-top: 50px;}
+
+
+/*  */
+.Menu-horizontal {
+        list-style: none;
+        display: flex;
+        justify-content:space-around;}
+
+
+/*  */
+.Menu-horizontal > li > a {
+    display: block;
+    padding: 15px 28px;
+    color: #864904;
+    text-decoration: none;}
+
+
+/*  */
+.Menu-horizontal > li:hover {
+    background-color: #864904;}
+
+
+/*  */
+.Menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #864904;}
+
+.Menu-horizontal li:hover .Menu-vertical{}
