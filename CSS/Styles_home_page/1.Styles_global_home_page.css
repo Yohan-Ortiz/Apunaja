@@ -87,7 +87,7 @@ i {
 
 /* #12. Imagen de fondo */
 body {
-    background-image: url('/ASSETS/background_images_website/Sitio Web Portfolio y Currículo de Consultoría Azul Oscuro y Naranja.png'); /* Ruta de imagen */
+    background-image: url(/ASSETS/background_images_website/fondo\ pagina\ principal.jpg); /* Ruta de imagen */
     background-repeat: no-repeat; /* No repite */
     background-attachment: fixed; /* Imagen fija */
     background-position: center center; /* Centrado */
