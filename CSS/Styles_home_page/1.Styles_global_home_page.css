@@ -1,150 +1,171 @@
 
-/* barra de navegacion-Home_page */
-
-
-/* #1.Bodes universales */
-*   {padding: 0px;
-    margin: 0px;
-    box-sizing:border-box}
-
-/* #2.color del cuerpo de la pagina  */
-body {background-color:#864904;
-     font-family:'Calibri';}
-
-/* #3.tamaño de menu */
-
-.menu {width: 900px;
-      margin: 0%;}
-
-/* #4.tamaño de logo */
-img {width:100px;
-    height: 63px;
-    float: left;
-    padding: 4px;}
-
-/* #5.Color y tamaño de barra de navegacion */
-header {background-color:#ffffff;
-       width: 100%;
-       height: 0%;
-       clear: both;
-       content:'';
-       display: table;}
-
-/* #6.Alinear opciones denavegación a la derecha */
-nav{float: right;
-margin-right: 30px;}    
-
-
-/* #7.Estilos (1.Eliminar viñetas, 2.separar elementos de lista,    3.espaciado interno arriba o abajo, 4.alinearelementos de lista a la izquierda, 5.posicion relativa para justar o colocar elementos secundarios)*/
-nav ul li   {list-style: none;
-            margin-left: 50px;
-            padding: 15px 0;
-            float: left;
-            position: relative;}
-
-
-/* #8. Estilos de texto (1.Eliminar subarayado predeterminado de los enlaces, 2.define el color deltexto, 3.Texto de enlace en negrita) */
-nav ul li a {
-        text-decoration: none; 
-             color: #864904;
-             font-weight: bold;}
-
-
-/* #9.Barra siperior animada (1.Pseudo-elemento como bloque, 2.Crear contenido vacio para plicar estilo, 3.Ancho para la animacion, 4. clo de pseido-elemento, 5.altura de pseudo-elemento, 6.posiscion de barra superior, 7.determinar posision apsoluta en relacion a enlace, 8.suavizar la animacion del ancho)*/
-nav ul li a::before {display: block;
-                    content:'';    
-                    width:0%;
-                    background: #864904;
-                    height: 3px;
-                    top:75%;
-                    transform: translateY(0);
-                    position: absolute;
-                    transition:whdth 0.2s;}
-       
-/* 10. Expande la barra de pseudo-elemento a todo el ancho al pasar el cursor */
-nav ul li a:hover:before {width: 100%;}
-
-
-/* cambiar color de iconos */
-i{
-    color: #864904;}
 
 
 
-/* Imagen de fondo de la pagina */
+/* BARRA DE NAVEGACION-HOME_PAGE */
 
+
+
+/* #1. Bordes universales */
+* {
+    padding: 0px; /* Sin espacio interno */
+    margin: 0px; /* Sin margen externo */
+    box-sizing: border-box; /* Mantiene tamaño fijo */}
+
+
+/* #2. Color de fondo */
 body {
-    background-image: url(/ASSETS/background_images_website/Sitio\ Web\ Portfolio\ y\ Currículo\ de\ Consultoría\ Azul\ Oscuro\ y\ Naranja.png);
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-position: center center;
-     background-size:cover;}
-    
+    background-color: #864904; /* Fondo de página */
+    font-family: 'Calibri'; /* Tipo de letra */}
+
+
+/* #3. Tamaño de menú */
+.menu {
+    width: 900px; /* Ancho del menú */
+    margin: 0%; /* Sin margen */}
+
+
+/* #4. Tamaño de logo */
+img {
+    width: 100px; /* Ancho del logo */
+    height: 63px; /* Alto del logo */
+    float: left; /* Alinea a la izquierda */
+    padding: 4px; /* Espacio interno */}
+
+
+/* #5. Barra de navegación */
+header {
+    background-color: #ffffff; /* Fondo blanco */
+    width: 100%; /* Ancho completo */
+    clear: both; /* Limpia flotantes */
+    display: table; /* Establece como tabla */}
+
+
+/* #6. Alinear menú a la derecha */
+nav {
+    float: right; /* Menú a la derecha */
+    margin-right: 30px; /* Espacio derecho */}
+
+
+/* #7. Estilos de lista */
+nav ul li {
+    list-style: none; /* Sin viñetas */
+    margin-left: 50px; /* Espacio entre items */
+    padding: 15px 0; /* Espacio vertical */
+    float: left; /* Alinea a la izquierda */
+    position: relative; /* Ajustes de posición */}
+
+
+/* #8. Estilo de enlaces */
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #864904; /* Color de texto */
+    font-weight: bold; /* Negrita */}
+
+
+/* #9. Animación de subrayado */
+nav ul li a::before {
+    display: block; /* Bloque pseudo-elemento */
+    content: ''; /* Contenido vacío */
+    width: 0%; /* Ancho inicial */
+    background: #864904; /* Color barra */
+    height: 3px; /* Altura barra */
+    top: 75%; /* Posición vertical */
+    position: absolute; /* Posición absoluta */
+    transition: width 0.2s; /* Suaviza animación */}
+
+
+/* #10. Expandir barra en hover */
+nav ul li a:hover:before {
+    width: 100%; /* Ancho completo */}
+
+
+/* #11. Color de iconos */
+i {
+    color: #864904; /* Color iconos */}
+
+
+/* #12. Imagen de fondo */
+body {
+    background-image: url('/ASSETS/background_images_website/Sitio Web Portfolio y Currículo de Consultoría Azul Oscuro y Naranja.png'); /* Ruta de imagen */
+    background-repeat: no-repeat; /* No repite */
+    background-attachment: fixed; /* Imagen fija */
+    background-position: center center; /* Centrado */
+    background-size: cover; /* Cubre pantalla */}
 
 
 
 
-/* pie de pagina-Home_page */
+
+
+
+
+
+
+/* PIE DE PAGINA_HOME PAGE*/
+
+
+
+/* #1. definicion de color y estilo de barra del pie de pagina */
 footer {
-    background-color:#ffffff;
-    width: 100%;
-    padding: 2px 0;
-    position:fixed; /* Fija el footer */
-    bottom: 0; /* Lo coloca en la parte inferior */
-    left: 0; /* Asegura que esté alineado a la izquierda */
-    border-top: 1px solid #000000; /* Añade una línea sutil arriba del footer */
-    text-align: center; /* Cambiado de 'end' a 'center' para centrar todo el contenido */
-}
+    background-color: #ffffff; /* Fondo blanco */
+    width: 100%; /* Ancho completo */
+    padding: 2px 0; /* Espacio vertical */
+    position: fixed; /* Fijo en parte baja */
+    bottom: 0; /* Ubicación abajo */
+    left: 0; /* Alineado a la izquierda */
+    border-top: 1px solid #ffffff; /* Línea superior */
+    text-align: center; /* Centrado */}
 
-
+    /* #2. */
 .footer h4 {
-    color: #864904;
-    margin: 2px 0;
-    font-size: 0.9em;
+    color: #864904; /* Color texto */
+    margin: 2px 0; /* Espacio vertical */
+    font-size: 0.9em; /* Tamaño texto */
 }
 
+/* Redes sociales en footer */
 .menu-socials {
-    padding: 0;
-    margin: 5px 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Alinea verticalmente los iconos y texto */
-    gap: 10px; /* Espacio uniforme entre elementos */
+    padding: 0; /* Sin espacio interno */
+    margin: 5px 0; /* Margen vertical */
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espacio entre items */
 }
 
 .menu-socials li {
-    display: flex;
-    align-items: center;
+    display: flex; /* Alineación en fila */
+    align-items: center; /* Centrado vertical */
     gap: 3px; /* Espacio entre icono y texto */
 }
 
 .menu-socials i {
-    font-size: 14px; /* Tamaño uniforme para los iconos */
-    color: #864904;
+    font-size: 14px; /* Tamaño iconos */
+    color: #864904; /* Color iconos */
 }
 
 .menu-socials a {
-    text-decoration: none;
-    color: #864904;
-    transition: all 0.3s ease; /* Suaviza la transición del hover */
+    text-decoration: none; /* Sin subrayado */
+    color: #864904; /* Color enlace */
+    transition: all 0.3s ease; /* Transición suave */
 }
 
 .menu-socials a:hover {
-    text-decoration: underline;
-    opacity: 0.8;
+    text-decoration: underline; /* Subrayado en hover */
+    opacity: 0.8; /* Opacidad en hover */
 }
 
 .By, .text {
-    margin: 2px 0;
-    color: #555;
-    text-align: center;
-    font-size: 0.em;
-    line-height:1.2 ;
+    margin: 2px 0; /* Espacio vertical */
+    color: #555; /* Color texto */
+    text-align: center; /* Centrado */
+    font-size: 0.9em; /* Tamaño texto */
+    line-height: 1.2; /* Espacio entre líneas */
 }
 
-/* Asegura que el contenido principal no quede oculto detrás del footer */
+/* Evita que el contenido principal quede oculto tras el footer */
 body {
-    margin-bottom: 180px; /* Ajusta este valor según la altura de tu footer */
+    margin-bottom: 180px; /* Ajuste para altura del footer */
 }
-
