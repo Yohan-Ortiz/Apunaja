@@ -44,13 +44,13 @@ header {
 /* #6. Alinear menú a la derecha */
 nav {
     float: right; /* Menú a la derecha */
-    margin-right: 100px; /* Espacio derecho */}
+    margin-right: 50px; /* Espacio derecho */}
 
 
 /* #7. Estilos de lista */
 nav ul li {
     list-style: none; /* Sin viñetas */
-    margin-left: 30px; /* Espacio entre items */
+    margin-left:50px; /* Espacio entre items */
     padding: 15px 0; /* Espacio vertical */
     float: left; /* Alinea a la izquierda */
     position: relative; /* Ajustes de posición */}
@@ -136,7 +136,7 @@ footer {
     gap: 10px; /* Espacio entre items */}
 
 
-    /* #4. centrado de iconos y enlaces */
+/* #4. centrado de iconos y enlaces */
 .menu-socials li {
     display: flex; /* Alineación en fila */
     align-items: center; /* Centrado vertical */
@@ -149,27 +149,27 @@ footer {
     color: #864904; /* Color iconos */}
 
     
-
+/* #6. reansiciones y eliminar detalles de URL */
 .menu-socials a {
     text-decoration: none; /* Sin subrayado */
     color: #864904; /* Color enlace */
-    transition: all 0.3s ease; /* Transición suave */
-}
+    transition: all 0.3s ease; /* Transición suave */}
 
+
+/* #7.color de subrayado */
 .menu-socials a:hover {
     text-decoration: underline; /* Subrayado en hover */
-    opacity: 0.8; /* Opacidad en hover */
-}
+    opacity: 0.8; /* Opacidad en hover */}
 
+
+/* #8. Estilos para textos de creditos de desarrollo y derechos de autor*/
 .By, .text {
     margin: 2px 0; /* Espacio vertical */
     color: #555; /* Color texto */
     text-align: center; /* Centrado */
     font-size: 0.9em; /* Tamaño texto */
-    line-height: 1.2; /* Espacio entre líneas */
-}
+    line-height: 1.2; /* Espacio entre líneas */}
 
-/* Evita que el contenido principal quede oculto tras el footer */
+/* #9.Evita que el contenido principal quede oculto tras el footer */
 body {
-    margin-bottom: 180px; /* Ajuste para altura del footer */
-}
+    margin-bottom: 180px; /* Ajuste para altura del footer */}
