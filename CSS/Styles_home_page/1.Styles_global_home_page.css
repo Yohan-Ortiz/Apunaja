@@ -44,13 +44,13 @@ header {
 /* #6. Alinear menú a la derecha */
 nav {
     float: right; /* Menú a la derecha */
-    margin-right: 30px; /* Espacio derecho */}
+    margin-right: 100px; /* Espacio derecho */}
 
 
 /* #7. Estilos de lista */
 nav ul li {
     list-style: none; /* Sin viñetas */
-    margin-left: 50px; /* Espacio entre items */
+    margin-left: 30px; /* Espacio entre items */
     padding: 15px 0; /* Espacio vertical */
     float: left; /* Alinea a la izquierda */
     position: relative; /* Ajustes de posición */}
@@ -117,14 +117,15 @@ footer {
     border-top: 1px solid #ffffff; /* Línea superior */
     text-align: center; /* Centrado */}
 
-    /* #2. */
+
+/* #2. estilo de texto inicial (sigenos:) */
 .footer h4 {
     color: #864904; /* Color texto */
     margin: 2px 0; /* Espacio vertical */
-    font-size: 0.9em; /* Tamaño texto */
-}
+    font-size: 0.9em; /* Tamaño texto */}
 
-/* Redes sociales en footer */
+
+/* #3.Redes sociales en footer */
 .menu-socials {
     padding: 0; /* Sin espacio interno */
     margin: 5px 0; /* Margen vertical */
@@ -132,19 +133,22 @@ footer {
     display: flex; /* Flexbox */
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */
-    gap: 10px; /* Espacio entre items */
-}
+    gap: 10px; /* Espacio entre items */}
 
+
+    /* #4. centrado de iconos y enlaces */
 .menu-socials li {
     display: flex; /* Alineación en fila */
     align-items: center; /* Centrado vertical */
-    gap: 3px; /* Espacio entre icono y texto */
-}
+    gap: 3px; /* Espacio entre icono y texto */}
 
+
+/* #5 Configuracion de iconos y estilos*/
 .menu-socials i {
     font-size: 14px; /* Tamaño iconos */
-    color: #864904; /* Color iconos */
-}
+    color: #864904; /* Color iconos */}
+
+    
 
 .menu-socials a {
     text-decoration: none; /* Sin subrayado */
