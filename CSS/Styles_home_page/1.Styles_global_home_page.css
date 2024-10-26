@@ -23,7 +23,7 @@ img {width:100px;
     padding: 4px;}
 
 /* #5.Color y tamaño de barra de navegacion */
-header {background-color:#ffffff93;
+header {background-color:#ffffff;
        width: 100%;
        height: 0%;
        clear: both;
@@ -32,7 +32,7 @@ header {background-color:#ffffff93;
 
 /* #6.Alinear opciones denavegación a la derecha */
 nav{float: right;
-margin-right: 100px;}    
+margin-right: 30px;}    
 
 
 /* #7.Estilos (1.Eliminar viñetas, 2.separar elementos de lista,    3.espaciado interno arriba o abajo, 4.alinearelementos de lista a la izquierda, 5.posicion relativa para justar o colocar elementos secundarios)*/
@@ -74,7 +74,7 @@ i{
 /* Imagen de fondo de la pagina */
 
 body {
-    background-image: url(/ASSETS/background_images_website/);
+    background-image: url(/ASSETS/background_images_website/Sitio\ Web\ Portfolio\ y\ Currículo\ de\ Consultoría\ Azul\ Oscuro\ y\ Naranja.png);
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center center;
@@ -86,7 +86,7 @@ body {
 
 /* pie de pagina-Home_page */
 footer {
-    background-color:#ffffff9f;
+    background-color:#ffffff;
     width: 100%;
     padding: 2px 0;
     position:fixed; /* Fija el footer */
