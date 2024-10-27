@@ -38,7 +38,14 @@ header {
     background-color: #ffffff86; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     clear: both; /* Limpia flotantes */
-    display: table; /* Establece como tabla */}
+    display:table; /* Establece como tabla */
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
 
 /* #6. Alinear menú a la derecha */
@@ -91,7 +98,8 @@ body {
     background-repeat: no-repeat; /* No repite */
     background-attachment: fixed; /* Imagen fija */
     background-position: center center; /* Centrado */
-    background-size: cover; /* Cubre pantalla */}
+    background-size: cover; /* Cubre pantalla */
+margin-bottom: 100px;}
 
 
 
