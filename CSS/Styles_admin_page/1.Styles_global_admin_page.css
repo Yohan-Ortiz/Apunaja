@@ -1,98 +1,121 @@
-
-
 /* BARRA DE NAVEGACION - ADMIN_PAGE */
-
-
 
 /* #1. Estilo universal para bordes y tipografía */
 * {
-    padding: 0px; /* Elimina el padding por defecto de todos los elementos */
-    margin: 0px; /* Elimina el margen por defecto de todos los elementos */
-    box-sizing: border-box; /* Asegura que padding y border no afecten el ancho/alto total */
-    font-family: 'Calibri'; /* Define la tipografía para todos los elementos */
+    padding: 0; /* Quita padding por defecto */
+    margin: 0; /* Quita margen por defecto */
+    box-sizing: border-box; /* Incluye padding y border en tamaño */
+    font-family: 'Calibri'; /* Fuente de todos los elementos */
 }
 
-/* #2. Estilo de fondo del cuerpo de la página */
+/* #2. Fondo del cuerpo */
 body {
     background-image: url(/ASSETS/background_images_website/fondo\ pagina\ adminitrador.png); /* Imagen de fondo */
-    background-position: center center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
-    background-attachment: fixed; /* Fija la imagen de fondo al viewport */
-    background-size: cover; /* Cubre toda el área visible */
-    margin-bottom: 180px; /* Evita que el footer cubra el contenido */
+    background-position: center; /* Centrado de fondo */
+    background-repeat: no-repeat; /* Sin repetición */
+    background-attachment: fixed; /* Fondo fijo */
+    background-size: cover; /* Cubre todo el área */
+    margin-bottom: 180px; /* Espacio para el footer */
 }
 
-/* #3. Estilo para logo */
+/* #3. Estilo del logo */
 img {
-    width: 100px; /* Ancho fijo de la imagen */
-    height: 63px; /* Alto fijo de la imagen */
-    float: left; /* Posiciona la imagen a la izquierda */
-    padding: 4px; /* Espacio interno alrededor de la imagen */
+    width: 100px; /* Ancho del logo */
+    height: 63px; /* Alto del logo */
+    float: left; /* Posición a la izquierda */
+    padding: 4px; /* Espacio alrededor */
 }
 
-/* #4. Estilo del encabezado */
+/* #4. Encabezado */
 header {
-    background-color: #ffffff; /* Fondo blanco para el encabezado */
-    width: 100%; /* Ocupa el ancho completo */
-    clear: both; /* Evita que los elementos flotantes interfieran */
-    display: table; /* Facilita el ajuste automático del contenido */
+    background-color: #ffffff; /* Fondo blanco */
+    width: 100%; /* Ancho completo */
+    clear: both; /* Limpia flotados */
+    display: table; /* Acomodo automático */
 }
 
-/* #5. Estilo del menú de navegación */
+/* #5. Menú de navegación */
 nav {
-    max-width: 100%; /* Limita el ancho máximo al 100% */
-    margin: auto; /* Centra el menú horizontalmente */
-    float: right; /* Alinea el menú a la derecha */
-    font-size: 20px; /* Tamaño del texto del menú */
-    margin-right: 50px; /* Espacio a la derecha del menú */
+    max-width: 100%; /* Ancho máximo */
+    margin: auto; /* Centrado horizontal */
+    float: right; /* Alineado a la derecha */
+    font-size: 20px; /* Tamaño del texto */
+    margin-right: 50px; /* Espacio derecho */
 }
 
-/* #6. Estilo de la lista del menú horizontal */
+/* #6. Lista del menú horizontal */
 .Menu-horizontal {
-    list-style: none; /* Elimina viñetas de la lista */
-    display: flex; /* Dispone los elementos en fila */
-    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Disposición en fila */
+    justify-content: space-around; /* Distribución uniforme */
 }
 
-/* #7. Estilo de los enlaces en el menú horizontal */
+/* Íconos en el menú */
+.Menu-horizontal > li {
+    display: flex; /* Flex para alineación */
+    align-items: center; /* Centrado vertical */
+    position: relative; /* Posicionamiento para dropdown */
+}
+
+.Menu-horizontal > li > i {
+    margin-right: 2px; /* Espacio entre icono y texto */
+    color: #864904; /* Color del icono */
+    font-size: 18px; /* Tamaño del icono */
+}
+
 .Menu-horizontal > li > a {
-    display: block; /* Ocupa todo el área del elemento */
-    padding: 15px 28px; /* Espacio interno alrededor del enlace */
-    color: #864904; /* Color del texto del enlace */
-    text-decoration: none; /* Elimina subrayado de los enlaces */
+    padding: 15px 20px 15px 2px; /* Padding ajustado para icono */
 }
 
-/* #8. Efecto al pasar sobre los elementos del menú horizontal */
+/* #7. Enlaces en el menú */
+.Menu-horizontal > li > a {
+    display: block; /* Ocupa todo el espacio */
+    padding: 15px 18px; /* Espacio interno */
+    color: #864904; /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* #8. Efecto hover en menú */
 .Menu-horizontal > li:hover {
-    background-color: #86490452; /* Fondo semitransparente en hover */
+    background-color: #86490452; /* Fondo semi-transparente */
 }
 
-/* #9. Estilo del menú desplegable vertical */
+/* #9. Menú desplegable vertical */
 .Menu-vertical {
-    position: absolute; /* Posiciona el menú relativo a su contenedor */
-    display: none; /* Oculta el menú por defecto */
-    list-style: none; /* Elimina viñetas de la lista */
-    width: 200px; /* Ancho fijo para el menú */
-    background-color: #86490456; /* Fondo semitransparente */
+    position: absolute; /* Relativo al contenedor */
+    display: none; /* Oculto por defecto */
+    list-style: none; /* Sin viñetas */
+    width: 200px; /* Ancho fijo */
+    background-color: #86490456; /* Fondo semi-transparente */
+    top: 100%;
+    left: 0;
 }
 
-/* #10. Muestra el menú vertical cuando se hace hover en el menú horizontal */
+.Menu-vertical li {
+    width: 100%; /* Ancho completo */
+}
+
+/* #10. Mostrar menú vertical en hover */
 .Menu-horizontal li:hover .Menu-vertical {
-    display: block; /* Muestra el menú desplegable */
+    display: block; /* Muestra el menú */
 }
 
-/* #11. Estilo al pasar sobre los elementos del menú vertical */
+/* #11. Efecto hover en menú vertical */
 .Menu-vertical li:hover {
-    background-color: #000000b9; /* Fondo oscuro en hover */
+    background-color: #000000b9; /* Fondo oscuro */
 }
 
-/* #12. Estilo de los enlaces en el menú vertical */
+/* #12. Enlaces en menú vertical */
 .Menu-vertical li > a {
-    display: block; /* Ocupa todo el área del elemento */
-    color: #ffffff; /* Color del texto del enlace */
-    padding: 15px 15px 15px 20px; /* Espacio interno */
-    text-decoration: none; /* Elimina subrayado */
+    display: block; /* Ocupa todo el área */
+    color: #ffffff; /* Texto blanco */
+    padding: 15px 20px; /* Espacio interno */
+    text-decoration: none; /* Sin subrayado */
 }
+
+
+
+
 
 
 
@@ -104,77 +127,75 @@ nav {
 
 
 
-
-/* #1. Estilos del contenedor del footer */
+/* #1. Contenedor del footer */
 footer {
     background-color: #ffffff; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     padding: 2px 0; /* Espacio vertical */
-    position: fixed; /* Fija el footer en la parte inferior */
-    bottom: 0; /* Ubicación en la parte baja */
+    position: fixed; /* Posición fija en la parte inferior */
+    bottom: 0; /* En la parte baja */
     left: 0; /* Alineado a la izquierda */
     border-top: 1px solid #ffffff; /* Línea superior */
-    text-align: center; /* Centrado del contenido */
+    text-align: center; /* Centrado */
 }
 
-/* #2. Estilo del texto inicial (Síguenos) en el footer */
+/* #2. Texto inicial en footer */
 .footer h4 {
     color: #864904; /* Color del texto */
     margin: 2px 0; /* Espacio vertical */
     font-size: 0.9em; /* Tamaño del texto */
 }
 
-/* #3. Estilo de la lista de redes sociales en el footer */
+/* #3. Lista de redes sociales en footer */
 .menu-socials {
     padding: 0; /* Sin padding */
     margin: 5px 0; /* Espacio vertical */
     list-style: none; /* Sin viñetas */
-    display: flex; /* Disposición en fila */
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
+    display: flex; /* Fila */
+    justify-content: center; /* Centrado */
+    align-items: center; /* Alineación vertical */
     gap: 10px; /* Espacio entre íconos */
 }
 
-/* #4. Estilo de los elementos individuales de redes sociales */
+/* #4. Elementos de redes sociales */
 .menu-socials li {
-    display: flex; /* Disposición en fila */
+    display: flex; /* En fila */
     align-items: center; /* Centrado vertical */
     gap: 3px; /* Espacio entre ícono y texto */
 }
 
-/* #5. Estilo de los íconos de redes sociales */
+/* #5. Íconos de redes sociales */
 .menu-socials i {
-    font-size: 14px; /* Tamaño de los íconos */
-    color: #864904; /* Color de los íconos */
+    font-size: 14px; /* Tamaño del icono */
+    color: #864904; /* Color del icono */
 }
 
-/* #6. Estilo de los enlaces de redes sociales */
+/* #6. Enlaces de redes sociales */
 .menu-socials a {
     text-decoration: none; /* Sin subrayado */
     color: #864904; /* Color del enlace */
-    transition: all 0.3s ease; /* Transición suave */
+    transition: all 0.3s ease; /* Transición */
 }
 
-/* #7. Efecto de hover para los enlaces de redes sociales */
+/* #7. Hover en redes sociales */
 .menu-socials a:hover {
     text-decoration: underline; /* Subrayado en hover */
-    opacity: 0.8; /* Opacidad reducida en hover */
+    opacity: 0.8; /* Opacidad reducida */
 }
 
-/* #8. Estilos para textos de créditos y derechos de autor */
+/* #8. Textos de créditos */
 .By, .text {
     margin: 2px 0; /* Espacio vertical */
-    color: #555; /* Color del texto */
+    color: #555; /* Color de texto */
     text-align: center; /* Centrado */
     font-size: 0.9em; /* Tamaño del texto */
     line-height: 1.2; /* Espacio entre líneas */
 }
 
-/* #9.Evita que el contenido principal quede oculto tras el footer */
+/* #9. Evitar que el footer cubra contenido */
 body {
-    margin-bottom: 180px; /* Ajuste para altura del footer */}
-
-
+    margin-bottom: 180px; /* Espacio para el footer */
+}
 
 
 
