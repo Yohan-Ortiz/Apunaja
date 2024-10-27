@@ -35,7 +35,7 @@ img {
 
 /* #5. Barra de navegación */
 header {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff86; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     clear: both; /* Limpia flotantes */
     display: table; /* Establece como tabla */}
@@ -108,7 +108,7 @@ body {
 
 /* #1. definicion de color y estilo de barra del pie de pagina */
 footer {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff96; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     padding: 2px 0; /* Espacio vertical */
     position: fixed; /* Fijo en parte baja */
