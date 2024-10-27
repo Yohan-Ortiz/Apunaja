@@ -22,7 +22,7 @@ body {
     margin-bottom: 180px; /* Evita que el footer cubra el contenido */
 }
 
-/* #3. Estilo de las imágenes */
+/* #3. Estilo para logo */
 img {
     width: 100px; /* Ancho fijo de la imagen */
     height: 63px; /* Alto fijo de la imagen */
