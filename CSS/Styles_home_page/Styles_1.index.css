@@ -1,7 +1,26 @@
 .nit {position: relative;
-     text-align: center;
-     color: white;
-     
+      text-align: left;
+      color: white;
+      padding: 10px;
+} 
 
-
+.title {position: relative;
+        text-align: center;
+        color: white;
+        font-size: 50px;
 }
+
+.logosecundario {
+        display: block;  /* Cambia la imagen a un elemento de bloque */
+        margin-left: auto;  /* Margen izquierdo automático */
+        margin-right: auto; /* Margen derecho automático */
+        width:auto; /* Ajusta el ancho según sea necesario */
+        height: 150px; /* Ajusta la altura según sea necesario */
+    
+}
+
+.name {position: relative;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background-attachment: fixed;}
