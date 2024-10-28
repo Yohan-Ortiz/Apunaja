@@ -87,3 +87,17 @@ main {
     color: #000000; /* Texto negro */
     font-weight: 600; /* Grosor medio */
 }
+
+
+.wrapper .btn-1 {
+    width: 100%; /* Ancho completo */
+    height: 45px;
+    background: rgb(255, 255, 255); /* Fondo blanco */
+    border: none;
+    outline: none;
+    border-radius: 40px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra suave */
+    cursor: pointer; /* Cambia el cursor a mano */
+    font-size: 14px;
+    color: #000000; /* Texto negro */
+    font-weight: 600; /* Grosor medio */}
