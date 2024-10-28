@@ -1,11 +1,26 @@
-.logo-container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    height: 200px;           /* Ajusta la altura según el espacio que necesites */
+.nit {position: relative;
+      text-align: left;
+      color: white;
+      padding: 10px;
+} 
+
+.title {position: relative;
+        text-align: center;
+        color: white;
+        font-size: 50px;
 }
 
-.logo-container {
-    width: 100px;
-    height: 150px;            /* Ajusta el tamaño del logo según necesites */
+.logosecundario {
+        display: block;  /* Cambia la imagen a un elemento de bloque */
+        margin-left: auto;  /* Margen izquierdo automático */
+        margin-right: auto; /* Margen derecho automático */
+        width:auto; /* Ajusta el ancho según sea necesario */
+        height: 150px; /* Ajusta la altura según sea necesario */
+    
 }
+
+.name {position: relative;
+    text-align: center;
+    color: white;
+    padding: 150px;
+    background-attachment: fixed;}

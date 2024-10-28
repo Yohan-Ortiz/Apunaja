@@ -1,0 +1,50 @@
+.text-global { max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+color: white;}
+
+/* Sección introductoria */
+.text-intro{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text-intro h1 {
+    font-size: 32px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.text-intro p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: justify;
+}
+.subtitle{text-align: justify;}
+/* Contenedor de las columnas */
+.columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px;
+}
+
+/* Estilos para cada columna */
+.columnas {
+    padding: 20px;
+    
+    
+    
+}
+
+.columnas h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.columnas p {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: justify;
+}

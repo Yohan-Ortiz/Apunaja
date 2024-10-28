@@ -28,7 +28,7 @@ body {
 
 
 /* #4. Tamaño de logo */
-img {
+.logoprincipal {
     width: 100px; /* Ancho del logo */
     height: 63px; /* Alto del logo */
     float: left; /* Alinea a la izquierda */
