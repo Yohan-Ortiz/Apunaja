@@ -1,7 +1,4 @@
 
-
-
-
 /* BARRA DE NAVEGACION-HOME_PAGE */
 
 
@@ -13,10 +10,15 @@
     box-sizing: border-box; /* Mantiene tamaño fijo */}
 
 
-/* #2. Color de fondo */
+/* #2. Tipo,color e Imagen de fondo*/
 body {
-    background-color: #864904; /* Fondo de página */
-    font-family: 'Calibri'; /* Tipo de letra */}
+    background-color: #ffffff; /* Fondo de página */
+    font-family: 'Calibri'; /* Tipo de letra */
+    background-image: url('/ASSETS/background_images_website/fondo\ pagina\ principal.jpg'); /* Ruta de imagen */
+    background-repeat: no-repeat; /* No repite */
+    background-attachment: fixed; /* Imagen fija */
+    background-position: center center; /* Centrado */
+    background-size: cover; /* Cubre pantalla */}
 
 
 /* #3. Tamaño de menú */
@@ -35,17 +37,10 @@ img {
 
 /* #5. Barra de navegación */
 header {
-    background-color: #ffffff86; /* Fondo blanco */
+    background-color: #ffffff85; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     clear: both; /* Limpia flotantes */
-    display:table; /* Establece como tabla */
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
+    display: table; /* Establece como tabla */}
 
 
 /* #6. Alinear menú a la derecha */
@@ -92,16 +87,6 @@ i {
     color: #864904; /* Color iconos */}
 
 
-/* #12. Imagen de fondo */
-body {
-    background-image: url(/ASSETS/background_images_website/fondo\ pagina\ principal.jpg); /* Ruta de imagen */
-    background-repeat: no-repeat; /* No repite */
-    background-attachment: fixed; /* Imagen fija */
-    background-position: center center; /* Centrado */
-    background-size: cover; /* Cubre pantalla */
-margin-bottom: 100px;}
-
-
 
 
 
@@ -116,7 +101,7 @@ margin-bottom: 100px;}
 
 /* #1. definicion de color y estilo de barra del pie de pagina */
 footer {
-    background-color: #ffffff96; /* Fondo blanco */
+    background-color: #ffffff85; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     padding: 2px 0; /* Espacio vertical */
     position: fixed; /* Fijo en parte baja */
