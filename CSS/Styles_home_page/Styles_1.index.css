@@ -1,11 +1,4 @@
-.logo-container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    height: 200px;           /* Ajusta la altura según el espacio que necesites */
-}
+.nit {align-content: center;
 
-.logo-container {
-    width: 100px;
-    height: 150px;            /* Ajusta el tamaño del logo según necesites */
+
 }
