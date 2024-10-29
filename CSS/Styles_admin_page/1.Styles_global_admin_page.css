@@ -10,13 +10,15 @@
 
 /* #2. Fondo del cuerpo */
 body {
-    background-image: url(/ASSETS/background_images_website/fondo\ pagina\ adminitrador.png); /* Imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.24)), 
+                      url('/ASSETS/background_images_website/fondo\ pagina\ adminitrador.png'); /* Imagen de fondo con filtro oscuro */
     background-position: center; /* Centrado de fondo */
     background-repeat: no-repeat; /* Sin repetición */
     background-attachment: fixed; /* Fondo fijo */
     background-size: cover; /* Cubre todo el área */
     margin-bottom: 180px; /* Espacio para el footer */
 }
+
 
 /* #3. Estilo del logo */
 img {
@@ -129,13 +131,13 @@ nav {
 
 /* #1. Contenedor del footer */
 footer {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff00; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     padding: 2px 0; /* Espacio vertical */
     position: fixed; /* Posición fija en la parte inferior */
     bottom: 0; /* En la parte baja */
     left: 0; /* Alineado a la izquierda */
-    border-top: 1px solid #ffffff; /* Línea superior */
+    border-top: 1px solid #ffffff00; /* Línea superior */
     text-align: center; /* Centrado */
 }
 
@@ -146,44 +148,8 @@ footer {
     font-size: 0.9em; /* Tamaño del texto */
 }
 
-/* #3. Lista de redes sociales en footer */
-.menu-socials {
-    padding: 0; /* Sin padding */
-    margin: 5px 0; /* Espacio vertical */
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Fila */
-    justify-content: center; /* Centrado */
-    align-items: center; /* Alineación vertical */
-    gap: 10px; /* Espacio entre íconos */
-}
 
-/* #4. Elementos de redes sociales */
-.menu-socials li {
-    display: flex; /* En fila */
-    align-items: center; /* Centrado vertical */
-    gap: 3px; /* Espacio entre ícono y texto */
-}
-
-/* #5. Íconos de redes sociales */
-.menu-socials i {
-    font-size: 14px; /* Tamaño del icono */
-    color: #864904; /* Color del icono */
-}
-
-/* #6. Enlaces de redes sociales */
-.menu-socials a {
-    text-decoration: none; /* Sin subrayado */
-    color: #864904; /* Color del enlace */
-    transition: all 0.3s ease; /* Transición */
-}
-
-/* #7. Hover en redes sociales */
-.menu-socials a:hover {
-    text-decoration: underline; /* Subrayado en hover */
-    opacity: 0.8; /* Opacidad reducida */
-}
-
-/* #8. Textos de créditos */
+/* #3. Textos de créditos */
 .By, .text {
     margin: 2px 0; /* Espacio vertical */
     color: #555; /* Color de texto */
@@ -192,7 +158,7 @@ footer {
     line-height: 1.2; /* Espacio entre líneas */
 }
 
-/* #9. Evitar que el footer cubra contenido */
+/* #4. Evitar que el footer cubra contenido */
 body {
     margin-bottom: 180px; /* Espacio para el footer */
 }
