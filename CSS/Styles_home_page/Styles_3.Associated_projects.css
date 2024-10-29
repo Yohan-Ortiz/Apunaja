@@ -1,13 +1,13 @@
 /* Barra de pestañas de navegación */
-.barra-secciones {
-    display: flex;
+main .barra-secciones {
+    display:table;
     justify-content: center;
     gap: 15px;
     background-color: #333;
     padding: 15px 0;
 }
 
-.barra-secciones button {
+main .barra-secciones button {
     background: none;
     color: white;
     border: none;
@@ -17,21 +17,17 @@
     transition: color 0.3s;
 }
 
-.barra-secciones button:hover {
+main .barra-secciones button:hover {
     color: #ddd;
 }
 
-.seccion {
+main .seccion {
     display: none; /* Ocultamos todas las secciones inicialmente */
     text-align: center;
     margin-top: 20px;
 }
 
-.seccion.active {
+main .seccion.active {
     display: block; /* Solo mostramos la sección activa */
 }
- img { display: block;  /* Cambia la imagen a un elemento de bloque */
-    margin-left: auto;  /* Margen izquierdo automático */
-    margin-right: auto; /* Margen derecho automático */
-    width:auto; /* Ajusta el ancho según sea necesario */
-    height: 150px; /* Ajusta la altura según sea necesario */}
+ 
