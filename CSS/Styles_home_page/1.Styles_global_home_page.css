@@ -14,20 +14,15 @@
 body {
     background-color: #ffffff; /* Fondo de página */
     font-family: 'Calibri'; /* Tipo de letra */
-    background-image: url('/ASSETS/background_images_website/fondo\ pagina\ principal.jpg'); /* Ruta de imagen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.384)), 
+                      url('/ASSETS/background_images_website/fondo principal.jpg'); /* Imagen con filtro oscuro */
     background-repeat: no-repeat; /* No repite */
     background-attachment: fixed; /* Imagen fija */
     background-position: center center; /* Centrado */
-    background-size: cover; /* Cubre pantalla */}
+    background-size: cover; /* Cubre pantalla */
+}
 
-
-/* #3. Tamaño de menú */
-.menu {
-    width: 900px; /* Ancho del menú */
-    margin: 0%; /* Sin margen */}
-
-
-/* #4. Tamaño de logo */
+/* #3. Tamaño de logo */
 .logoprincipal {
     width: 100px; /* Ancho del logo */
     height: 63px; /* Alto del logo */
@@ -35,21 +30,21 @@ body {
     padding: 4px; /* Espacio interno */}
 
 
-/* #5. Barra de navegación */
+/* #4. Barra de navegación */
 header {
-    background-color: #ffffffad; /* Fondo blanco */
+    background-color: #fffffffd; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     clear: both; /* Limpia flotantes */
     display: table; /* Establece como tabla */}
 
 
-/* #6. Alinear menú a la derecha */
+/* #5. Alinear menú a la derecha */
 nav {
     float: right; /* Menú a la derecha */
     margin-right: 50px; /* Espacio derecho */}
 
 
-/* #7. Estilos de lista */
+/* #6. Estilos de lista */
 nav ul li {
     list-style: none; /* Sin viñetas */
     margin-left:50px; /* Espacio entre items */
@@ -58,14 +53,14 @@ nav ul li {
     position: relative; /* Ajustes de posición */}
 
 
-/* #8. Estilo de enlaces */
+/* #7. Estilo de enlaces */
 nav ul li a {
     text-decoration: none; /* Sin subrayado */
     color: #864904; /* Color de texto */
     font-weight: bold; /* Negrita */}
 
 
-/* #9. Animación de subrayado */
+/* #8. Animación de subrayado */
 nav ul li a::before {
     display: block; /* Bloque pseudo-elemento */
     content: ''; /* Contenido vacío */
@@ -77,13 +72,13 @@ nav ul li a::before {
     transition: width 0.2s; /* Suaviza animación */}
 
 
-/* #10. Expandir barra en hover */
+/* #9. Expandir barra en hover */
 nav ul li a:hover:before {
     width: 100%; /* Ancho completo */}
 
 
-/* #11. Color de iconos */
-i {
+/* #10. Color de iconos */
+.colricons i{
     color: #864904; /* Color iconos */}
 
 
@@ -104,7 +99,7 @@ footer {
     background-color: #ffffff00; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     padding: 2px 0; /* Espacio vertical */
-    position: fixed; /* Fijo en parte baja */
+    position:fixed; /* Fijo en parte baja */
     bottom: 0; /* Ubicación abajo */
     left: 0; /* Alineado a la izquierda */
     border-top: 1px solid #ffffff00; /* Línea superior */
@@ -115,7 +110,7 @@ footer {
 /* #8. Estilos para textos de creditos de desarrollo y derechos de autor*/
 .By, .text {
     margin: 2px 0; /* Espacio vertical */
-    color: #414040; /* Color texto */
+    color: #cfcfcf; /* Color texto */
     text-align: center; /* Centrado */
     font-size: 0.9em; /* Tamaño texto */
     line-height: 1.2; /* Espacio entre líneas */}

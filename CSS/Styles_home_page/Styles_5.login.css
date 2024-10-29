@@ -103,3 +103,5 @@ main {
     font-weight: 600; /* Grosor medio */
     margin-bottom: 15px; /* Espacio inferior */
 }
+
+.icons i {color: white;}
