@@ -37,7 +37,7 @@ body {
 
 /* #5. Barra de navegación */
 header {
-    background-color: #ffffff85; /* Fondo blanco */
+    background-color: #ffffffad; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     clear: both; /* Limpia flotantes */
     display: table; /* Establece como tabla */}
@@ -101,64 +101,21 @@ i {
 
 /* #1. definicion de color y estilo de barra del pie de pagina */
 footer {
-    background-color: #ffffff85; /* Fondo blanco */
+    background-color: #ffffff00; /* Fondo blanco */
     width: 100%; /* Ancho completo */
     padding: 2px 0; /* Espacio vertical */
     position: fixed; /* Fijo en parte baja */
     bottom: 0; /* Ubicación abajo */
     left: 0; /* Alineado a la izquierda */
-    border-top: 1px solid #ffffff; /* Línea superior */
+    border-top: 1px solid #ffffff00; /* Línea superior */
     text-align: center; /* Centrado */}
-
-
-/* #2. estilo de texto inicial (sigenos:) */
-.footer h4 {
-    color: #864904; /* Color texto */
-    margin: 2px 0; /* Espacio vertical */
-    font-size: 0.9em; /* Tamaño texto */}
-
-
-/* #3.Redes sociales en footer */
-.menu-socials {
-    padding: 0; /* Sin espacio interno */
-    margin: 5px 0; /* Margen vertical */
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Flexbox */
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    gap: 10px; /* Espacio entre items */}
-
-
-/* #4. centrado de iconos y enlaces */
-.menu-socials li {
-    display: flex; /* Alineación en fila */
-    align-items: center; /* Centrado vertical */
-    gap: 3px; /* Espacio entre icono y texto */}
-
-
-/* #5 Configuracion de iconos y estilos*/
-.menu-socials i {
-    font-size: 14px; /* Tamaño iconos */
-    color: #864904; /* Color iconos */}
-
     
-/* #6. reansiciones y eliminar detalles de URL */
-.menu-socials a {
-    text-decoration: none; /* Sin subrayado */
-    color: #864904; /* Color enlace */
-    transition: all 0.3s ease; /* Transición suave */}
-
-
-/* #7.color de subrayado */
-.menu-socials a:hover {
-    text-decoration: underline; /* Subrayado en hover */
-    opacity: 0.8; /* Opacidad en hover */}
 
 
 /* #8. Estilos para textos de creditos de desarrollo y derechos de autor*/
 .By, .text {
     margin: 2px 0; /* Espacio vertical */
-    color: #555; /* Color texto */
+    color: #414040; /* Color texto */
     text-align: center; /* Centrado */
     font-size: 0.9em; /* Tamaño texto */
     line-height: 1.2; /* Espacio entre líneas */}

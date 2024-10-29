@@ -1,18 +1,18 @@
 .body_login {
-    display: flex; /* Flexbox para organizar elementos */
+    display: flex; /* Organiza elementos con Flexbox */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    min-height: 100vh; /* Ocupa altura completa de la pantalla */
-    padding-top: 80px; /* Espacio arriba */
-    padding-bottom: 180px; /* Espacio abajo */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding-top: 80px; /* Espacio superior */
+    padding-bottom: 180px; /* Espacio inferior */
     background-image: none !important; /* Sin imagen de fondo */
 }
 
 main {
-    display: flex; /* Flexbox para alinear contenido */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    padding: 50PX;
+    display: flex; /* Usa Flexbox para el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 50px; /* Espacio interno */
 }
 
 .wrapper {
@@ -43,10 +43,10 @@ main {
     height: 100%; /* Altura completa */
     background: transparent; /* Fondo transparente */
     border: none; /* Sin borde */
-    outline: none;
+    outline: none; /* Sin contorno al enfocar */
     border: 2px solid rgba(255, 255, 255, .2); /* Borde semitransparente */
     border-radius: 40px; /* Bordes redondeados */
-    font-size: 14px;
+    font-size: 14px; /* Tamaño de fuente */
     color: white; /* Texto blanco */
     padding: 20px 45px 20px 20px; /* Espacio interno */
 }
@@ -58,46 +58,48 @@ main {
 .input_box i {
     position: absolute; /* Posiciona el icono */
     right: 20px; /* A 20px del borde derecho */
-    top: 50%; /* Centrado vertical */
-    transform: translateY(-50%); /* Ajuste de centrado */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar */
 }
 
 .wrapper .remenmer-forgot {
-    display: flex; /* Coloca elementos en fila */
-    justify-content: space-between;
-    font-size: 13px;
-    margin: -15px 0 15px; /* Espacio arriba y abajo */
+    display: flex; /* Elementos en fila */
+    justify-content: space-between; /* Espacio entre elementos */
+    font-size: 13px; /* Tamaño de fuente pequeño */
+    margin: -15px 0 15px; /* Espacio vertical */
 }
 
 .remenmer-forgot label input {
-    accent-color: white; /* Color de acento */
+    accent-color: white; /* Color de acento blanco */
     margin-right: 3px; /* Espacio a la derecha */
 }
 
 .wrapper .btn {
     width: 100%; /* Ancho completo */
-    height: 45px;
-    background: rgb(255, 255, 255); /* Fondo blanco */
-    border: none;
-    outline: none;
+    height: 45px; /* Altura fija */
+    background: rgb(0, 0, 0); /* Fondo blanco */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
     border-radius: 40px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra suave */
-    cursor: pointer; /* Cambia el cursor a mano */
-    font-size: 14px;
-    color: #000000; /* Texto negro */
+    box-shadow: 0 0 10px rgba(19, 240, 19, 0.1); /* Sombra suave */
+    cursor: pointer; /* Cambia a mano al pasar */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #ffffff; /* Texto negro */
     font-weight: 600; /* Grosor medio */
+    margin-bottom: 15px; /* Espacio inferior */
 }
-
 
 .wrapper .btn-1 {
     width: 100%; /* Ancho completo */
-    height: 45px;
+    height: 45px; /* Altura fija */
     background: rgb(255, 255, 255); /* Fondo blanco */
-    border: none;
-    outline: none;
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
     border-radius: 40px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra suave */
-    cursor: pointer; /* Cambia el cursor a mano */
-    font-size: 14px;
+    cursor: pointer; /* Cambia a mano al pasar */
+    font-size: 14px; /* Tamaño de fuente */
     color: #000000; /* Texto negro */
-    font-weight: 600; /* Grosor medio */}
+    font-weight: 600; /* Grosor medio */
+    margin-bottom: 15px; /* Espacio inferior */
+}
