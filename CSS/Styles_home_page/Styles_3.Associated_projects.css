@@ -1,33 +1,52 @@
 /* Barra de pestañas de navegación */
-main .barra-secciones {
-    display:table;
-    justify-content: center;
-    gap: 15px;
-    background-color: #333;
-    padding: 15px 0;
+.contenido-introduccion h1 {text-align:center;
+justify-content: center;
+padding: 20px;}
+
+.contenido-introduccion {
+
+    text-align: justify;
+    content: ;
 }
 
-main .barra-secciones button {
+
+
+.barra-secciones {
+    width: 90%;
+    margin: 70px;
+    position:sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #864904;
+    padding: 15px 0;
+    z-index: 1;
+}
+.barra-secciones button {
     background: none;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+    color: rgb(255, 255, 255);
+    border:none;
     font-size: 16px;
     cursor: pointer;
     transition: color 0.3s;
 }
-
-main .barra-secciones button:hover {
-    color: #ddd;
+ .barra-secciones button:hover {
+    color: #000000;
 }
-
 main .seccion {
     display: none; /* Ocultamos todas las secciones inicialmente */
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px !important; /* Reduce el espacio superior */
+    padding: 20px !important; /* Reduce el espacio interno */
 }
 
 main .seccion.active {
     display: block; /* Solo mostramos la sección activa */
+    margin-top: 10px !important; /* Aplica el mismo margen */
+    padding: 20px !important; /* Aplica el mismo padding */
 }
+.seccion {text-align:center;
+padding: 40px;}
  
