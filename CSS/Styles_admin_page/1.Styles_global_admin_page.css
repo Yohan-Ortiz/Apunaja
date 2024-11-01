@@ -23,7 +23,7 @@ body {
 /* #3. Estilo del logo */
 img {
     width: 100px; /* Ancho del logo */
-    height: 63px; /* Alto del logo */
+    height: 53px; /* Alto del logo */
     float: left; /* Posición a la izquierda */
     padding: 4px; /* Espacio alrededor */
 }

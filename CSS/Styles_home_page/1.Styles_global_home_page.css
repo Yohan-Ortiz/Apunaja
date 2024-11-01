@@ -1,121 +1,147 @@
-
-/* BARRA DE NAVEGACION-HOME_PAGE */
-
-
+/* BARRA DE NAVEGACIÓN - HOME_PAGE */
 
 /* #1. Bordes universales */
 * {
-    padding: 0px; /* Sin espacio interno */
-    margin: 0px; /* Sin margen externo */
-    box-sizing: border-box; /* Mantiene tamaño fijo */}
+    padding: 0px; /* Sin padding */
+    margin: 0px; /* Sin margen */
+    box-sizing: border-box; /* Tamaño fijo */
+}
 
-
-/* #2. Tipo,color e Imagen de fondo*/
+/* #2. Fondo y fuente de la página */
 body {
-    background-color: #ffffff; /* Fondo de página */
-    font-family: 'Calibri'; /* Tipo de letra */
+    background-color: #ffffff; /* Fondo */
+    font-family: 'Calibri'; /* Fuente */
     background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.384)), 
-                      url('/ASSETS/background_images_website/fondo principal.jpg'); /* Imagen con filtro oscuro */
-    background-repeat: no-repeat; /* No repite */
+                      url('/ASSETS/background_images_website/fondo principal.jpg'); /* Imagen fondo */
+    background-repeat: no-repeat; /* No repetir */
     background-attachment: fixed; /* Imagen fija */
-    background-position: center center; /* Centrado */
+    background-position: center center; /* Centro */
     background-size: cover; /* Cubre pantalla */
 }
 
-/* #3. Tamaño de logo */
+/* #3. Tamaño y posición del logo */
 .logoprincipal {
-    width: 100px; /* Ancho del logo */
-    height: 63px; /* Alto del logo */
-    float: left; /* Alinea a la izquierda */
-    padding: 4px; /* Espacio interno */}
-
+    width: 100px; /* Ancho logo */
+    height: 53px; /* Alto logo */
+    float: left; /* Izquierda */
+    padding: 4px; /* Padding */
+}
 
 /* #4. Barra de navegación */
 header {
     background-color: #fffffffd; /* Fondo blanco */
-    width: 100%; /* Ancho completo */
-    clear: both; /* Limpia flotantes */
-    display: table; /* Establece como tabla */}
+    width: 100%; /* Ancho total */
+    clear: both; /* Limpia float */
+    display: table; /* Como tabla */
+    position: relative; /* Posición */
+    z-index: 1000; /* Capa superior */
+}
 
-
-/* #5. Alinear menú a la derecha */
+/* #5. Alineación del menú */
 nav {
-    float: right; /* Menú a la derecha */
-    margin-right: 50px; /* Espacio derecho */}
+    float: right; /* Derecha */
+    margin-right: 50px; /* Espacio */
+}
 
-
-/* #6. Estilos de lista */
+/* #6. Estilo de lista de menú */
 nav ul li {
     list-style: none; /* Sin viñetas */
-    margin-left:50px; /* Espacio entre items */
-    padding: 15px 0; /* Espacio vertical */
-    float: left; /* Alinea a la izquierda */
-    position: relative; /* Ajustes de posición */}
+    margin-left: 50px; /* Espacio */
+    padding: 15px 0; /* Padding vertical */
+    float: left; /* Izquierda */
+    position: relative; /* Relativo */
+}
 
-
-/* #7. Estilo de enlaces */
+/* #7. Estilo de enlaces del menú */
 nav ul li a {
     text-decoration: none; /* Sin subrayado */
-    color: #864904; /* Color de texto */
-    font-weight: bold; /* Negrita */}
-
+    color: #864904; /* Color */
+    font-weight: bold; /* Negrita */
+}
 
 /* #8. Animación de subrayado */
 nav ul li a::before {
-    display: block; /* Bloque pseudo-elemento */
-    content: ''; /* Contenido vacío */
+    display: block; /* Bloque */
+    content: ''; /* Sin contenido */
     width: 0%; /* Ancho inicial */
-    background: #864904; /* Color barra */
-    height: 3px; /* Altura barra */
-    top: 75%; /* Posición vertical */
-    position: absolute; /* Posición absoluta */
-    transition: width 0.2s; /* Suaviza animación */}
-
+    background: #864904; /* Color */
+    height: 3px; /* Alto */
+    top: 75%; /* Posición */
+    position: absolute; /* Absoluto */
+    transition: width 0.2s; /* Animación */
+}
 
 /* #9. Expandir barra en hover */
-nav ul li a:hover:before {
-    width: 100%; /* Ancho completo */}
-
+nav ul li a:hover::before {
+    width: 100%; /* Ancho completo */
+}
 
 /* #10. Color de iconos */
-.colricons i{
-    color: #864904; /* Color iconos */}
+.colricons i {
+    color: #864904; /* Color iconos */
+}
+
+/* Submenú */
+nav ul li ul {
+    display: none; /* Oculto */
+    position: absolute; /* Absoluto */
+    background-color: #fffffffd; /* Fondo */
+    padding: 10px; /* Padding */
+    min-width: 160px; /* Ancho mínimo */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Capa superior */
+    top: 100%; /* Posición */
+    left: 0; /* Izquierda */
+    border-radius: 4px; /* Borde redondeado */
+}
+
+/* Mostrar submenú en hover */
+nav ul li:hover > ul {
+    display: block; /* Visible */
+}
+
+/* Elementos del submenú */
+nav ul li ul li {
+    width: 100%; /* Ancho */
+    float: none; /* Sin flotante */
+    margin: 0; /* Sin margen */
+    padding: 10px; /* Padding */
+}
+
+/* Hover de submenú */
+nav ul li ul li:hover {
+    background-color: #f1f1f1; /* Fondo en hover */
+}
 
 
 
 
 
 
+/* PIE DE PÁGINA - HOME_PAGE */
 
-
-
-
-/* PIE DE PAGINA_HOME PAGE*/
-
-
-
-/* #1. definicion de color y estilo de barra del pie de pagina */
+/* #1. Estilos del footer */
 footer {
-    background-color: #ffffff00; /* Fondo blanco */
-    width: 100%; /* Ancho completo */
-    padding: 2px 0; /* Espacio vertical */
-    position:fixed; /* Fijo en parte baja */
-    bottom: 0; /* Ubicación abajo */
-    left: 0; /* Alineado a la izquierda */
-    border-top: 1px solid #ffffff00; /* Línea superior */
-    text-align: center; /* Centrado */}
-    
+    background-color: #ffffff00; /* Fondo transparente */
+    width: 100%; /* Ancho */
+    padding: 2px 0; /* Padding vertical */
+    position: fixed; /* Fijo abajo */
+    bottom: 0; /* Abajo */
+    left: 0; /* Izquierda */
+    border-top: 1px solid #ffffff00; /* Borde superior */
+    text-align: center; /* Centro */
+}
 
-
-/* #8. Estilos para textos de creditos de desarrollo y derechos de autor*/
+/* #8. Textos de créditos */
 .By, .text {
-    margin: 2px 0; /* Espacio vertical */
-    color: #cfcfcf; /* Color texto */
-    text-align: center; /* Centrado */
-    font-size: 0.9em; /* Tamaño texto */
-    line-height: 1.2; /* Espacio entre líneas */}
+    margin: 2px 0; /* Margen vertical */
+    color: #cfcfcf; /* Color */
+    text-align: center; /* Centro */
+    font-size: 0.9em; /* Tamaño */
+    line-height: 1.2; /* Interlineado */
+}
 
-/* #9.Evita que el contenido principal quede oculto tras el footer */
+/* #9. Espacio inferior para footer */
 body {
-    margin-bottom: 180px; /* Ajuste para altura del footer */}
-    
+    margin-bottom: 180px; /* Margen inferior */
+}
