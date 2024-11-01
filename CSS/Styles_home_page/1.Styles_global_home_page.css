@@ -25,7 +25,7 @@ body {
 /* #3. Tamaño de logo */
 .logoprincipal {
     width: 100px; /* Ancho del logo */
-    height: 63px; /* Alto del logo */
+    height: 53px; /* Alto del logo */
     float: left; /* Alinea a la izquierda */
     padding: 4px; /* Espacio interno */}
 
@@ -80,6 +80,55 @@ nav ul li a:hover:before {
 /* #10. Color de iconos */
 .colricons i{
     color: #864904; /* Color iconos */}
+
+    /* Mantén todo tu CSS anterior y agrega estos nuevos estilos */
+
+/* Estilos para el submenu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #fffffffd;
+    padding: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+}
+
+/* Mostrar submenu al hacer hover */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* Estilos para los items del submenu */
+nav ul li ul li {
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Ajustar el hover de los items del submenu */
+nav ul li ul li a::before {
+    display: none;
+}
+
+nav ul li ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Asegurar que el menú principal tenga posición relativa */
+nav ul li {
+    position: relative;
+}
+
+/* Ajustar el z-index del header para que esté por encima de otros elementos */
+header {
+    position: relative;
+    z-index: 1000;
+}
 
 
 
