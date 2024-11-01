@@ -21,7 +21,9 @@ color: white;}
     color: #ffffff;
     text-align: justify;
 }
-.subtitle{text-align: justify;}
+.subtitle{text-align:center;}
+
+
 /* Contenedor de las columnas */
 .columnas {
     display: grid;
