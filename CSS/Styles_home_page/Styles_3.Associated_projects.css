@@ -10,7 +10,7 @@
     display: flex;
     gap: 3rem;
     padding: 2rem;
-    background: linear-gradient(135deg, #f5f7fa48 0%, #e8ecf18f 100%);
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   }
@@ -21,10 +21,18 @@
   }
 
   .design-1 h1 {
-    color: #000000;
+    color: #864904;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
+  }
+  .design-1 p {
+    color: #000000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+
+
   }
 
   .design-1 .image-grid {
@@ -44,3 +52,22 @@
 
   .design-1 .image-grid img:hover {
     transform: scale(1.05);}
+
+    
+        .button {
+            background-color: #864904;
+            border: none;
+            color: #ffff;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Opción 1: Usando un contenedor con text-align: right */
+        .botones-container {
+            text-align: right;
+        }
