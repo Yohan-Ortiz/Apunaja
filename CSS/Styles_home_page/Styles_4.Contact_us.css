@@ -33,11 +33,17 @@ main {
     font-size: 1rem;
 }
 
-.data > p > i {
+.data > p > i a{
     color: rgb(0, 0, 0);
     margin-right: 10px;
     font-size: 25px;
+    
 }
+.data a
+{text-decoration: none;
+color: #ffffff;}
+
+.data i {}
 
 .links {
     display: flex;
