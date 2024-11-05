@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+
+    <!-- Conectar con CSS -->
     <link rel="stylesheet" href="/CSS/Styles_admin_page/1.Styles_global_admin_page.css">
     <link rel="stylesheet" href="/CSS/Styles_admin_page/Styles_3.Create_new_beneficiary.css">
     <title>Crear nuevo beneficiario</title>
 </head>
 <body>
     <header>
+                            <!--Logo-->
+        <a href="/HTML/Admin_panel/1.Home/home_panel.html"><img src="/ASSETS/logos_of_the_site/logo_color.png" alt="Logo"></a>
 
-
-
-
-
-
-
+                            <!-- Icino de usuasio-->
+    <div class="icons">
+        <a href="/HTML/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+                          <!-- Boton hacia atras -->
+        
+        <div class="botones-container">
+            <a href="/HTML/Admin_panel/1.Home/home_panel.html" class="button">Atras</a>
+        </div>
         
     </header>
     <h2>NUEVO BENEFICIARIO</h2>
 
-    <div>  
+    <div class="formglobal">  
     <form>
 
          <!-- CARGAR USUARIOS EXCEL -->
@@ -44,31 +53,35 @@
        
 
        <!--  -->
-      <div>
+
+<div class="label">
 <label for="NOMBRES">NOMBRES</label>
+</div>
+
+<div class="input">
 <input type="text"  id="NOMBRES" name="NOMBRES" placeholder="NOMBRES">
-       </div>
+</div>
 
       <!-- APELLIDOS -->
-      <div>
+      <div class="name-2">
 <label for="APELLIDOS">APELLIDOS</label>
 <input type="text"  id="APELLIDOS" name="APELLIDOS" placeholder="APELLIDOS">
       </div>
 
      <!-- DOCUMENTO -->
-        <div>
+        <div class="Document-Id">
 <label for="DOCUMENTO">DOCUMENTO</label>
 <input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="DOCUMENTO">
         </div>
 
        <!-- FECHA DE NACIMIENTO-->
-       <div>
+       <div class="fecha">
 <label for="fecha">FECHA DE NACIMIENTO</label>
 <input type="date" name="fecha" id="fecha">    
        </div>
 
        <!-- ROL -->
-       <div>
+       <div class="rol">
 <label for="Rol">ROL</label>
 <select name="Rol" id="Rol">
        <option value="Rol">BENEFICIARIO</option>
@@ -78,18 +91,25 @@
  
 
 <!-- GEOREFERENCIA DE COMUNIDAD -->
-        <div>
+<div class="Ubication">
 <label for="">GEOREFERENCIA DE COMUNIDAD</label>
+
 <!-- LAT -->
+<div class="latitud">
 <div><label for="Latitud">LAT</label>
 <input type="number" id="Latitud" name="Latitud" placeholder="LATITUD"></div>
+</div>
 <!-- LON -->
+ <div class="longitud">
 <div><label for="Longitud">LON</label>
 <input type="number"  id="Longitud" name="Longitud" placeholder="LONGITUD"></div>
-       </div>
+</div>
+
+</div>
+
 
 <!--OCUPACION -->
-        <div>
+        <div class="jobs">
 <label for="OCUPACION">OCUPACION</label>
 <input type="text" name="OCUPACION" id="OCUPACION" placeholder="OCUPACION">
         </div>

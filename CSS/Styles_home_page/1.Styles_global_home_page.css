@@ -9,7 +9,7 @@
 
 /* #2. Fondo y fuente de la página */
 body {
-    background-color: #ffffff; /* Fondo */
+    background-color: #fff; /* Fondo */
     font-family: 'Calibri'; /* Fuente */
     background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.384)), 
                       url('/ASSETS/background_images_website/fondo principal.jpg'); /* Imagen fondo */
