@@ -1,14 +1,8 @@
-function mostrarSeccion(id) {
-    // Oculta todas las secciones
-    document.querySelectorAll('.seccion').forEach((seccion) => {
-        seccion.classList.remove('active');
-    });
-    
-    // Muestra la sección seleccionada
-    document.getElementById(id).classList.add('active');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
 
-// Muestra la primera sección por defecto al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    mostrarSeccion('PozosyJagüeyes');
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
 });

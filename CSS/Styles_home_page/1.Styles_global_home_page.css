@@ -7,17 +7,21 @@
     box-sizing: border-box; /* Tamaño fijo */
 }
 
-/* #2. Fondo y fuente de la página */
 body {
-    background-color: #ffffff; /* Fondo */
-    font-family: 'Calibri'; /* Fuente */
+    background-color: #ffffff;
+    font-family: 'Calibri';
     background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.384)), 
-                      url('/ASSETS/background_images_website/fondo principal.jpg'); /* Imagen fondo */
-    background-repeat: no-repeat; /* No repetir */
-    background-attachment: fixed; /* Imagen fija */
-    background-position: center center; /* Centro */
-    background-size: cover; /* Cubre pantalla */
-}
+                      url('/ASSETS/background_images_website/fondo principal.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    
+    /* NUEVO: Propiedades agregadas para controlar el footer */
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+ }
 
 /* #3. Tamaño y posición del logo */
 .logoprincipal {
@@ -115,33 +119,29 @@ nav ul li ul li:hover {
 
 
 
-
-
-
 /* PIE DE PÁGINA - HOME_PAGE */
 
 /* #1. Estilos del footer */
 footer {
-    background-color: #ffffff00; /* Fondo transparente */
-    width: 100%; /* Ancho */
-    padding: 2px 0; /* Padding vertical */
-    position: fixed; /* Fijo abajo */
-    bottom: 0; /* Abajo */
-    left: 0; /* Izquierda */
-    border-top: 1px solid #ffffff00; /* Borde superior */
-    text-align: center; /* Centro */
-}
+    background-color: #ffffff00;
+    width: 100%;
+    padding: 2px 0;
+    /* MODIFICADO: Cambiado de static a absolute para que aparezca al final */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ffffff00;
+    text-align: center;
+ }
+ 
+ /* #8. Textos de créditos */
+ .By, .text {
+    margin: 2px 0;
+    color: #cfcfcf;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2;
+ }
 
-/* #8. Textos de créditos */
-.By, .text {
-    margin: 2px 0; /* Margen vertical */
-    color: #cfcfcf; /* Color */
-    text-align: center; /* Centro */
-    font-size: 0.9em; /* Tamaño */
-    line-height: 1.2; /* Interlineado */
-}
 
-/* #9. Espacio inferior para footer */
-body {
-    margin-bottom: 180px; /* Margen inferior */
-}
+
