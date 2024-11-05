@@ -15,14 +15,43 @@
         margin-left: auto;  /* Margen izquierdo automático */
         margin-right: auto; /* Margen derecho automático */
         width:auto; /* Ajusta el ancho según sea necesario */
-        height: 150px; /* Ajusta la altura según sea necesario */
+        height: 200px; /* Ajusta la altura según sea necesario */
+        margin-top: 60PX;
     
 }
-
-.name {position: relative;
-    text-align: center;
-    color: white;
-    padding: 100px;
-    background-attachment: fixed;}
+.logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .logo {
+        width: 300px; /* Ajusta este valor según el tamaño que necesites */
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .text-container {
+        width: 100%;
+    }
+    
+    .main-title {
+        color: #ffffff;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .subtitle {
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: normal;
+        margin-top: 0;
+        font-family: Arial, sans-serif;}
 
     
