@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Cargar iconos de Fontawesome -->
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+
+
+<!-- Enlaces a archivos CSS -->
+<link rel="stylesheet" href="/CSS/Styles_home_page/1.Styles_global_home_page.css">
+<link rel="stylesheet" href="/CSS/Styles_home_page/Styles_2.public.css">
+
+<!-- Favicons para diferentes dispositivos y tamaños -->
+<link rel="apple-touch-icon" sizes="57x57" href="/ASSETS/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/ASSETS/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/ASSETS/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/ASSETS/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/ASSETS/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/ASSETS/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/ASSETS/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/ASSETS/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/ASSETS/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/ASSETS/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ASSETS/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ASSETS/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/ASSETS/favicons/favicon-16x16.png">
+
+    <title>Noticias</title>
+</head>
+<body>
+                <!-- ===================== HEADER ===================== -->
+    <header>
+        <!-- Logotipo principal -->
+        <a href="/index.html"><img class="logoprincipal" src="/ASSETS/logos_of_the_site/logo_color.png" alt="Logotipo principal"></a>
+        
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <div class="colricons">
+                    <li><i class="fa-solid fa-house"></i><a href="/index.html">INICIO</a></li>
+                    <li><i class="fa-solid fa-newspaper"></i><a href="/HTML/home_page/2.public.html">NOTICIAS</a></li>
+                    <li><i class="fa-solid fa-users"></i><a href="/HTML/home_page/3.Who_are_we.html">¿QUIENES SOMOS?</a></li>
+                    <li><i class="fa-regular fa-folder-open"></i><a href="#">PROYECTOS ASOCIADOS</a>
+                        <ul>
+                            <li><a href="/HTML/home_page/4.Associated_projects/project-1.html">POZOS Y JAGÜEYES</a></li>
+                            <li><a href="/HTML/home_page/4.Associated_projects/project-2.html">ENERGÍAS FOTOVOLTAICAS</a></li>
+                            <li><a href="/HTML/home_page/4.Associated_projects/project-3.html">HUERTAS COMUNITARIAS</a></li>
+                            <li><a href="/HTML/home_page/4.Associated_projects/project-4.html">ESTUFAS EFICIENTES</a></li>
+                            <li><a href="/HTML/home_page/4.Associated_projects/project-5.html">ARTESANÍAS WAYUU</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="fa-solid fa-phone"></i><a href="/HTML/home_page/5.Contact_us.html">CONTÁCTANOS</a></li>
+                    <li><i class="fa-solid fa-right-to-bracket"></i><a href="/HTML/home_page/6.login.html">INICIAR SESIÓN</a></li>
+                </div>                                   
+            </ul>
+        </nav>
+    </header>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+
+    <div class="container">
+        <div class="news">
+            <h1>Últimas Noticias</h1>
+            <p>Mantente informado con las noticias más relevantes</p>
+        </div>
+
+        <div class="news-grid" id="newsContainer">
+            <!-- Las noticias se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <script>
+        // Cargar noticias existentes
+        function loadNews() {
+            const news = JSON.parse(localStorage.getItem('news') || '[]');
+            const newsContainer = document.getElementById('newsContainer');
+            newsContainer.innerHTML = '';
+
+            news.forEach(item => {
+                const article = document.createElement('article');
+                article.className = 'news-card';
+                article.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="news-image">
+                    <div class="news-content">
+                        <span class="news-category">${item.category}</span>
+                        <h2 class="news-title">${item.title}</h2>
+                        <p class="news-excerpt">${item.excerpt}</p>
+                        <div class="news-meta">
+                            <span>Por ${item.author}</span>
+                            <span>${item.date}</span>
+                        </div>
+                    </div>
+                `;
+                newsContainer.appendChild(article);
+            });
+        }
+
+        // Cargar noticias al iniciar
+        loadNews();
+    </script>
+
+    
+                    <!-- ===================== FOOTER ===================== -->
+   
+   
+</body>
+</html>

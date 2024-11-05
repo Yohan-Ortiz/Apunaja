@@ -8,16 +8,6 @@
 }
 
 body {
-<<<<<<< HEAD
-    background-color: #fff; /* Fondo */
-    font-family: 'Calibri'; /* Fuente */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.384)), 
-                      url('/ASSETS/background_images_website/fondo principal.jpg'); /* Imagen fondo */
-    background-repeat: no-repeat; /* No repetir */
-    background-attachment: fixed; /* Imagen fija */
-    background-position: center center; /* Centro */
-    background-size: cover; /* Cubre pantalla */
-=======
     background-color: #ffffff00;
     font-family: 'Calibri';
     position: relative;
@@ -62,7 +52,6 @@ body::after {
     100% {
         transform: scale(1);
     }
->>>>>>> 4e161e6a77124bdb376578b6b95485aedbdb5758
 }
 
 /* #3. Tamaño y posición del logo */
