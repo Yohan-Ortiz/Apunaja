@@ -6,16 +6,17 @@
     margin: 0px; 
     box-sizing: border-box; 
 }
-
 body {
     background-color: #ffffff00;
     font-family: 'Calibri';
     position: relative;
     min-height: 100vh;
-    padding-bottom: 80px;
-    overflow: hidden;
+    margin: 0;
+    padding-bottom: 80px; /* Altura del footer */
+    overflow-x: hidden; /* Solo previene scroll horizontal */
 }
 
+/* Fondo con efecto zoom */
 body::before {
     content: '';
     position: fixed;
@@ -43,15 +44,9 @@ body::after {
 }
 
 @keyframes zoomEffect {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* #3. Tamaño y posición del logo */
@@ -152,23 +147,23 @@ nav ul li ul li:hover {
 
 /* PIE DE PÁGINA - HOME_PAGE */
 
-/* #1. Estilos del footer */
+/* Estilos del footer */
 footer {
-    background-color: #ffffff00; 
-    width: 100%; 
-    padding: 2px 0; 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    border-top: 1px solid #ffffff00; 
-    text-align: center; 
+    background-color: #ffffff00;
+    width: 100%;
+    height: 80px; /* Altura fija del footer */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ffffff00;
+    text-align: center;
 }
 
-/* #8. Textos de créditos */
+/* Textos de créditos */
 .By, .text {
-    margin: 2px 0; 
-    color: #cfcfcf; 
-    text-align: center; 
-    font-size: 0.9em; 
-    line-height: 1.2; 
+    margin: 2px 0;
+    color: #cfcfcf;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2;
 }
