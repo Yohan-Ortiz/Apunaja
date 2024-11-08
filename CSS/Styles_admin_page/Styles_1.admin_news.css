@@ -1,5 +1,6 @@
 h1 {text-align: center;
-padding-top: 50PX;}
+padding-top: 50PX;
+color: #ffffff;}
 
 .forms-container {
     display: flex;
@@ -211,5 +212,4 @@ padding-top: 50PX;}
     .news-form, .edit-form {
         width: 100%;
     }
-}
-Last edited 
+} 
