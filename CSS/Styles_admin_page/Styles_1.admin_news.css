@@ -8,6 +8,7 @@ color: #ffffff;}
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    position: relative;
 }
 .container {
     max-width: 1200px;
@@ -24,6 +25,25 @@ color: #ffffff;}
 }
 
 /* Estilos del formulario */
+.news-form {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    background: rgba(255, 255, 255, 0);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.news-form.hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
 
 .news-form, .edit-form {
     background: rgba(255, 255, 255, 0);
@@ -32,6 +52,25 @@ color: #ffffff;}
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     flex: 1;
     min-width: 300px;
+}
+
+.edit-form {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    background: rgba(255, 255, 255, 0);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.edit-form.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .form-group {

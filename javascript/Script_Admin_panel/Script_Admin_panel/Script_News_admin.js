@@ -1,3 +1,33 @@
+// Función para convertir imagen a Base64
+function getBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+    });
+}
+
+// Previsualizar imagen seleccionada en el formulario principal
+document.getElementById('image').addEventListener('change', async function(e) {
+    const imagePreview = document.getElementById('imagePreview');
+    if (e.target.files && e.target.files[0]) {
+        const imageBase64 = await getBase64(e.target.files[0]);
+        imagePreview.src = imageBase64;
+        imagePreview.style.display = 'block';
+    }
+});
+
+// Previsualizar imagen seleccionada en el formulario de edición
+document.getElementById('edit-image').addEventListener('change', async function(e) {
+    const imagePreview = document.getElementById('editImagePreview');
+    if (e.target.files && e.target.files[0]) {
+        const imageBase64 = await getBase64(e.target.files[0]);
+        imagePreview.src = imageBase64;
+        imagePreview.style.display = 'block';
+    }
+});
+
 // Cargar noticias existentes
 function loadNews() {
     const news = JSON.parse(localStorage.getItem('news') || '[]');
@@ -36,7 +66,8 @@ function showEditForm(index) {
 
     document.getElementById('edit-title').value = item.title;
     document.getElementById('edit-category').value = item.category;
-    document.getElementById('edit-image').value = item.image;
+    document.getElementById('editImagePreview').src = item.image;
+    document.getElementById('editImagePreview').style.display = 'block';
     document.getElementById('edit-excerpt').value = item.excerpt;
     document.getElementById('edit-author').value = item.author;
     document.getElementById('edit-date').value = item.date;
@@ -53,16 +84,54 @@ function hideEditForm() {
     editForm.classList.remove('show');
 }
 
+// Manejar envío del formulario principal
+document.getElementById('newsForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const imageFile = document.getElementById('image').files[0];
+    if (!imageFile) {
+        alert('Por favor seleccione una imagen');
+        return;
+    }
+
+    const imageBase64 = await getBase64(imageFile);
+
+    const newNews = {
+        title: document.getElementById('title').value,
+        category: document.getElementById('category').value,
+        image: imageBase64,
+        excerpt: document.getElementById('excerpt').value,
+        author: document.getElementById('author').value,
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString(),
+        credits: ''
+    };
+
+    const news = JSON.parse(localStorage.getItem('news') || '[]');
+    news.unshift(newNews);
+    localStorage.setItem('news', JSON.stringify(news));
+
+    document.getElementById('newsForm').reset();
+    document.getElementById('imagePreview').style.display = 'none';
+    loadNews();
+});
+
 // Actualizar noticia
-document.getElementById('editForm').addEventListener('submit', (e) => {
+document.getElementById('editForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const index = parseInt(e.target.dataset.index);
     const news = JSON.parse(localStorage.getItem('news') || '[]');
+    
+    let imageBase64 = news[index].image; // Mantener la imagen existente por defecto
+    const imageFile = document.getElementById('edit-image').files[0];
+    if (imageFile) {
+        imageBase64 = await getBase64(imageFile);
+    }
 
     news[index] = {
         title: document.getElementById('edit-title').value,
         category: document.getElementById('edit-category').value,
-        image: document.getElementById('edit-image').value,
+        image: imageBase64,
         excerpt: document.getElementById('edit-excerpt').value,
         author: document.getElementById('edit-author').value,
         date: document.getElementById('edit-date').value,
@@ -82,29 +151,6 @@ function deleteNews(index) {
     localStorage.setItem('news', JSON.stringify(news));
     loadNews();
 }
-
-// Manejar envío del formulario
-document.getElementById('newsForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const newNews = {
-        title: document.getElementById('title').value,
-        category: document.getElementById('category').value,
-        image: document.getElementById('image').value,
-        excerpt: document.getElementById('excerpt').value,
-        author: document.getElementById('author').value,
-        date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString(),
-        credits: ''
-    };
-
-    const news = JSON.parse(localStorage.getItem('news') || '[]');
-    news.unshift(newNews);
-    localStorage.setItem('news', JSON.stringify(news));
-
-    document.getElementById('newsForm').reset();
-    loadNews();
-});
 
 // Cargar noticias al iniciar
 loadNews();

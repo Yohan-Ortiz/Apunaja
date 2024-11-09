@@ -34,8 +34,9 @@
         </div>
 
         <div class="form-group">
-            <label for="image">URL de la Imagen</label>
-            <input type="url" id="image" required placeholder="https://ejemplo.com/imagen.jpg">
+            <label for="image">Imagen de la Noticia</label>
+            <input type="file" id="image" accept="image/*" required>
+            <img id="imagePreview" style="max-width: 200px; display: none; margin-top: 10px;">
         </div>
 
         <div class="form-group">
@@ -70,8 +71,9 @@
         </div>
 
         <div class="form-group">
-            <label for="edit-image">URL de la Imagen</label>
-            <input type="url" id="edit-image" required placeholder="https://ejemplo.com/imagen.jpg">
+            <label for="edit-image">Imagen de la Noticia</label>
+            <input type="file" id="edit-image" accept="image/*">
+            <img id="editImagePreview" style="max-width: 200px; margin-top: 10px;">
         </div>
 
         <div class="form-group">
@@ -110,6 +112,7 @@
 <div class="news-grid" id="newsContainer">
 
 
+    <script></script>
 <script src="/javascript/Script_Admin_panel/Script_Admin_panel/Script_News_admin.js"></script>
 
 </div>
