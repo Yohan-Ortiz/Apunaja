@@ -58,11 +58,15 @@ function loadNews() {
     });
 }
 
-// Mostrar formulario de edición
+// Mostrar formulario de edición (FUNCIÓN MODIFICADA)
 function showEditForm(index) {
     const news = JSON.parse(localStorage.getItem('news') || '[]');
     const editForm = document.getElementById('editForm');
+    const newsForm = document.getElementById('newsForm');
     const item = news[index];
+
+    // Ocultar el formulario de noticias y mostrar el de edición
+    newsForm.style.display = 'none';
 
     document.getElementById('edit-title').value = item.title;
     document.getElementById('edit-category').value = item.category;
@@ -75,13 +79,16 @@ function showEditForm(index) {
     document.getElementById('edit-credits').value = item.credits;
 
     editForm.dataset.index = index;
-    editForm.classList.add('show');
+    editForm.style.display = 'block';
 }
 
-// Ocultar formulario de edición
+// Ocultar formulario de edición (FUNCIÓN MODIFICADA)
 function hideEditForm() {
     const editForm = document.getElementById('editForm');
-    editForm.classList.remove('show');
+    const newsForm = document.getElementById('newsForm');
+    
+    editForm.style.display = 'none';
+    newsForm.style.display = 'block';
 }
 
 // Manejar envío del formulario principal

@@ -1,6 +1,8 @@
-h1 {text-align: center;
-padding-top: 50PX;
-color: #ffffff;}
+h1 {
+    text-align: center;
+    padding-top: 50PX;
+    color: #ffffff;
+}
 
 .forms-container {
     display: flex;
@@ -8,8 +10,8 @@ color: #ffffff;}
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
-    position: relative;
 }
+
 .container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -26,51 +28,23 @@ color: #ffffff;}
 
 /* Estilos del formulario */
 .news-form {
-    transition: opacity 0.3s ease;
-    opacity: 1;
-    visibility: visible;
     background: rgba(255, 255, 255, 0);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     flex: 1;
     min-width: 300px;
-}
-
-.news-form.hidden {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    pointer-events: none;
-}
-
-
-.news-form, .edit-form {
-    background: rgba(255, 255, 255, 0);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 1;
-    min-width: 300px;
+    display: block; /* Visible por defecto */
 }
 
 .edit-form {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
     background: rgba(255, 255, 255, 0);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     flex: 1;
     min-width: 300px;
-}
-
-.edit-form.show {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+    display: none; /* Oculto por defecto */
 }
 
 .form-group {
@@ -87,7 +61,7 @@ color: #ffffff;}
 .form-group input,
 .form-group textarea,
 .form-group select {
-    width: 35%;
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -187,7 +161,6 @@ color: #ffffff;}
     background-color: #c0392b;
 }
 
-/* Nuevos estilos para edición de noticias */
 .edit-btn {
     background-color: #3498db;
     color: white;
@@ -196,50 +169,11 @@ color: #ffffff;}
     border-radius: 4px;
     cursor: pointer;
     margin-top: 1rem;
+    margin-right: 0.5rem;
 }
 
 .edit-btn:hover {
     background-color: #2980b9;
-}
-
-.edit-form {
-    display: none;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.edit-form.show {
-    display: block;
-}
-
-.edit-form {
-    display: none;
-}
-
-.edit-form.show {
-    display: block;
-}
-
-/* Ajustar el ancho de los inputs para que se ajusten al nuevo layout */
-.form-group input, 
-.form-group textarea, 
-.form-group select {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Ajustar el grid de noticias para que aparezca debajo de los formularios */
-.news-grid {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
 }
 
 /* Media query para pantallas pequeñas */
@@ -251,4 +185,34 @@ color: #ffffff;}
     .news-form, .edit-form {
         width: 100%;
     }
-} 
+}
+input[type="file"] {
+    display: inline-block;
+    padding: 10px 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    background-color: #007bff; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Animación */
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden; /* Oculta el botón predeterminado */
+}
+
+input[type="file"]::before {
+    content: 'Seleccionar Imagen'; /* Texto personalizado */
+    display: inline-block;
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+input[type="file"]:hover::before {
+    background-color: #0056b3; /* Color al pasar el mouse */
+}

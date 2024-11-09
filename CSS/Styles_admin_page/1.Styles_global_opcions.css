@@ -1,0 +1,42 @@
+
+/* Estilos header en opciones*/
+
+.logoopcions img {
+        width: 90px;
+        height: auto;}
+
+
+
+        .icons i{
+            font-size: 40px; /* Ajusta el tamaño aquí */
+            color: #864904; /* Opcional: Cambia el color */
+        }
+        
+        /* Opciones adicionales si quieres cambiar el tamaño según la clase */
+        .icons {
+            font-size: 15px;
+        }
+        
+        .icons {
+            font-size: 50px;
+        }
+
+.button {   background-color: #864904;
+    border: none;
+    color: #ffff;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius:px ;}
+
+
+.botones-container {
+    text-align: right;
+    margin: 5px;}
+
+

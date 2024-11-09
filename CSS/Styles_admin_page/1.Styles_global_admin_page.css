@@ -1,167 +1,139 @@
-/* BARRA DE NAVEGACION - ADMIN_PAGE */
-
-/* #1. Estilo universal para bordes y tipografía */
+/* Estilos generales */
 * {
-    padding: 0; /* Quita padding por defecto */
-    margin: 0; /* Quita margen por defecto */
-    box-sizing: border-box; /* Incluye padding y border en tamaño */
-    font-family: 'Calibri'; /* Fuente de todos los elementos */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Fuente mejorada */
 }
 
-/* #2. Fondo del cuerpo */
+/* Fondo del cuerpo */
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.24)), 
-                      url('/ASSETS/background_images_website/fondo\ pagina\ adminitrador.png'); /* Imagen de fondo con filtro oscuro */
-    background-position: center; /* Centrado de fondo */
-    background-repeat: no-repeat; /* Sin repetición */
-    background-attachment: fixed; /* Fondo fijo */
-    background-size: cover; /* Cubre todo el área */
-    margin-bottom: 180px; /* Espacio para el footer */
+                      url('/assets/background_images_website/fondo\ pagina\ adminitrador.png'); /* Tu imagen original */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 180px;
 }
 
-
-/* #3. Estilo del logo */
-img {
-    width: 100px; /* Ancho del logo */
-    height: 53px; /* Alto del logo */
-    float: left; /* Posición a la izquierda */
-    padding: 4px; /* Espacio alrededor */
-}
-
-/* #4. Encabezado */
+/* Encabezado */
 header {
     background-color: #ffffff; /* Fondo blanco */
-    width: 100%; /* Ancho completo */
-    clear: both; /* Limpia flotados */
-    display: table; /* Acomodo automático */
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* #5. Menú de navegación */
+.logo-admin img {
+    width: 100px;
+    height: auto;
+}
+
+/* Navegación */
 nav {
-    max-width: 100%; /* Ancho máximo */
-    margin: auto; /* Centrado horizontal */
-    float: right; /* Alineado a la derecha */
-    font-size: 20px; /* Tamaño del texto */
-    margin-right: 50px; /* Espacio derecho */
+    display: flex;
+    align-items: center;
 }
 
-/* #6. Lista del menú horizontal */
 .Menu-horizontal {
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Disposición en fila */
-    justify-content: space-around; /* Distribución uniforme */
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Íconos en el menú */
 .Menu-horizontal > li {
-    display: flex; /* Flex para alineación */
-    align-items: center; /* Centrado vertical */
-    position: relative; /* Posicionamiento para dropdown */
+    position: relative;
 }
 
 .Menu-horizontal > li > i {
-    margin-right: 2px; /* Espacio entre icono y texto */
-    color: #864904; /* Color del icono */
-    font-size: 18px; /* Tamaño del icono */
+    margin-right: 8px;
+    color: #864904;
+    font-size: 20px;
 }
 
 .Menu-horizontal > li > a {
-    padding: 15px 20px 15px 2px; /* Padding ajustado para icono */
+    padding: 10px 15px;
+    color: #864904;
+    text-decoration: none;
+    border-radius: 5px;     
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* #7. Enlaces en el menú */
-.Menu-horizontal > li > a {
-    display: block; /* Ocupa todo el espacio */
-    padding: 15px 18px; /* Espacio interno */
-    color: #864904; /* Color de texto */
-    text-decoration: none; /* Sin subrayado */
+.Menu-horizontal > li:hover > a {
+    background-color: #864904;
+    color: #fff;
 }
 
-/* #8. Efecto hover en menú */
-.Menu-horizontal > li:hover {
-    background-color: #86490452; /* Fondo semi-transparente */
-}
-
-/* #9. Menú desplegable vertical */
+/* Submenú */
 .Menu-vertical {
-    position: absolute; /* Relativo al contenedor */
-    display: none; /* Oculto por defecto */
-    list-style: none; /* Sin viñetas */
-    width: 200px; /* Ancho fijo */
-    background-color: #86490456; /* Fondo semi-transparente */
+    position: absolute;
     top: 100%;
     left: 0;
+    display: none;
+    list-style: none;
+    width: 220px;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .Menu-vertical li {
-    width: 100%; /* Ancho completo */
+    width: 100%;
 }
 
-/* #10. Mostrar menú vertical en hover */
-.Menu-horizontal li:hover .Menu-vertical {
-    display: block; /* Muestra el menú */
-}
-
-/* #11. Efecto hover en menú vertical */
-.Menu-vertical li:hover {
-    background-color: #000000b9; /* Fondo oscuro */
-}
-
-/* #12. Enlaces en menú vertical */
 .Menu-vertical li > a {
-    display: block; /* Ocupa todo el área */
-    color: #ffffff; /* Texto blanco */
-    padding: 15px 20px; /* Espacio interno */
-    text-decoration: none; /* Sin subrayado */
+    display: block;
+    padding: 10px 15px;
+    color: #864904;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.3s;
 }
 
+.Menu-vertical li > a:hover {
+    background-color: #f8f9fa;
+    color: #333;
+}
 
+/* Mostrar el submenú al hacer hover */
+.Menu-horizontal li:hover .Menu-vertical {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
-/* PIE DE PAGINA - ADMIN_PAGE */
-
-
-
-/* #1. Contenedor del footer */
+/* Pie de página */
 footer {
-    background-color: #ffffff00; /* Fondo blanco */
-    width: 100%; /* Ancho completo */
-    padding: 2px 0; /* Espacio vertical */
-    position: fixed; /* Posición fija en la parte inferior */
-    bottom: 0; /* En la parte baja */
-    left: 0; /* Alineado a la izquierda */
-    border-top: 1px solid #ffffff00; /* Línea superior */
-    text-align: center; /* Centrado */
+    background-color: #ffffff00;
+    width: 100%;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ffffff00;
+    text-align: center;
 }
 
-/* #2. Texto inicial en footer */
 .footer h4 {
-    color: #864904; /* Color del texto */
-    margin: 2px 0; /* Espacio vertical */
-    font-size: 0.9em; /* Tamaño del texto */
+    color: #864904;
+    margin: 2px 0;
+    font-size: 0.9em;
 }
 
-
-/* #3. Textos de créditos */
 .By, .text {
-    margin: 2px 0; /* Espacio vertical */
-    color: #555; /* Color de texto */
-    text-align: center; /* Centrado */
-    font-size: 0.9em; /* Tamaño del texto */
-    line-height: 1.2; /* Espacio entre líneas */
+    margin: 2px 0;
+    color: #555;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2;
 }
 
-/* #4. Evitar que el footer cubra contenido */
+/* Evitar que el footer cubra contenido */
 body {
-    margin-bottom: 180px; /* Espacio para el footer */
+    margin-bottom: 180px;
 }
-
-
-

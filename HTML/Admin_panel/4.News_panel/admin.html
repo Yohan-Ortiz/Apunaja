@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     
     <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_admin_page.css">
     <link rel="stylesheet" href="/css/Styles_admin_page/Styles_1.admin_news.css">
@@ -12,6 +10,10 @@
     <title>Administración de Noticias</title>
 </head>
 <body>
+
+    <nav>
+        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt=""></a>
+    </nav>
 
     <h1 class="title">PANEL ADMINISTRADOR DE NOTICIAS</h1>
 
@@ -41,7 +43,7 @@
 
         <div class="form-group">
             <label for="excerpt">Contenido de la Noticia</label>
-            <textarea id="excerpt" required></textarea>
+            <textarea id="excerpt" required placeholder="MAXIMO DE 200 ACARACTERES" maxlength="200"></textarea>
         </div>
 
         <div class="form-group">
@@ -111,8 +113,6 @@
 </div>
 <div class="news-grid" id="newsContainer">
 
-
-    <script></script>
 <script src="/javascript/Script_Admin_panel/Script_Admin_panel/Script_News_admin.js"></script>
 
 </div>
