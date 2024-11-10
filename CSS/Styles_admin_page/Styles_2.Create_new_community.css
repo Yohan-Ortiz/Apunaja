@@ -1,0 +1,138 @@
+/* Estilos generales */
+main {
+    padding: 20px; /* Reducido de 40px */
+    background: linear-gradient(135deg, #1e3b7200 0%, #2a529800 100%);
+    min-height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+ h2, h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.4rem; /* Reducido de 1.8rem */
+    margin-bottom: 15px; /* Reducido de 25px */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Reducido de 30px */
+    background-color: #ffffff1a;
+    padding: 20px; /* Reducido de 35px */
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    max-width: 1000px; /* Reducido de 1300px */
+    margin: auto;
+    border: 1px solid #02030300;
+}
+
+/* Secciones principales */
+.community-section, 
+.authority-section {
+    width: 48%;
+    padding: 15px; /* Reducido de 25px */
+    background-color: #ffffff0d;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Etiquetas y campos */
+.label {
+    margin-bottom: 12px; /* Reducido de 20px */
+}
+
+.label label {
+    display: block;
+    color: #ffffff;
+    font-size: 0.85rem; /* Reducido de 0.9rem */
+    margin-bottom: 4px; /* Reducido de 8px */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.label input,
+.label select {
+    width: 100%;
+    padding: 8px; /* Reducido de 12px */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid transparent; /* Reducido de 2px */
+    border-radius: 6px;
+    font-size: 0.9rem; /* Reducido de 1rem */
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+/* Georeferencia específica */
+.label div {
+    margin-bottom: 6px; /* Reducido de 10px */
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reducido de 15px */
+    margin-top: 20px; /* Reducido de 30px */
+    padding: 0 15px; /* Reducido de 20px */
+}
+
+.action-buttons input[type="button"],
+.action-buttons input[type="submit"] {
+    width: 100%;
+    padding: 10px; /* Reducido de 15px */
+    border-radius: 6px;
+    font-size: 0.9rem; /* Reducido de 1rem */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+    }
+    
+    .community-section,
+    .authority-section {
+        width: 100%;
+    }
+    
+    main {
+        padding: 15px; /* Reducido de 20px */
+    }
+    
+    h2, h3 {
+        font-size: 1.2rem; /* Más pequeño en móvil */
+    }
+}
+
+/* Select personalizado */
+select {
+    background-size: 0.8em; /* Reducido de 1em */
+    background-position: right 0.8rem center;
+}
+
+/* Ajuste adicional para hacer el formulario más compacto verticalmente */
+input, select {
+    margin-bottom: 8px; /* Reducido el espacio entre inputs */
+}
+
+/* Hacer los botones más compactos pero manteniendo la usabilidad */
+.action-buttons input[type="button"],
+.action-buttons input[type="submit"] {
+    min-height: 38px; /* Altura mínima para mantener la usabilidad */
+}

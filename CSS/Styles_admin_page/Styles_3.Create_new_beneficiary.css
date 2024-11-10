@@ -1,15 +1,199 @@
+/* Variables y Reset */
+:root {
+    --primary-bg: rgba(255, 255, 255, 0.1);
+    --secondary-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: #ffffff;
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-text: #333333;
+    --spacing: 20px;
+    --border-radius: 12px;
+}
 
+/* Estilos generales */
+.formglobal {
+    padding: var(--spacing);
+    background: linear-gradient(135deg, #1e3b7200 0%, #2a529800 100%);
+    min-height: 100vh;
+}
 
-/* Cuerpo de pagina*/
+.formglobal form {
+    background-color: #ffffff1a;
+    padding: calc(var(--spacing) * 1.5);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid #02030300;
+    max-width: 1000px;
+    margin: auto;
+}
 
-h2{         text-align: center;
-            color: #ffff;
-            padding-top: 30px;
-            font-size: 40px;}
+/* Encabezados */
+h2 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-.formglobal .label{
-            text-align: left;
-            font-size: 30px; 
-            color: #ffff;
-            margin: 10px;}
-        
+/* Sección de carga */
+.upload-section {
+    background-color: var(--secondary-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.upload-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing);
+}
+
+.upload-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-icon {
+    font-size: 2rem;
+}
+
+/* Contenedor principal de dos columnas */
+.main-info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+/* Columnas de información */
+.info-column {
+    background-color: var(--secondary-bg);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs y Selects */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--input-text);
+    transition: all 0.3s ease;
+}
+
+/* Georeferencia */
+.geo-reference {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.geo-reference label {
+    color: #ffffff;
+    text-align: left;
+}
+
+.coordinates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Botones */
+input[type="button"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Sección de acciones */
+.action-section {
+    display: grid;
+    gap: var(--spacing);
+}
+
+.submit-button {
+    background-color: rgba(62, 184, 178, 0.3);
+}
+
+.submit-button:hover {
+    background-color: rgba(62, 184, 178, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-info-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .formglobal {
+        padding: 15px;
+    }
+    
+    .formglobal form {
+        padding: var(--spacing);
+    }
+    
+    .coordinates {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Efectos y animaciones */
+.info-column {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+ .icon i {
+    color: #ffffff;
+    font-size:38px;
+}
+   

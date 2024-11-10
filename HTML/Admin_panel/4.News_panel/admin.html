@@ -6,15 +6,30 @@
     
     <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_admin_page.css">
     <link rel="stylesheet" href="/css/Styles_admin_page/Styles_1.admin_news.css">
+    <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_opcions.css">
 
     <title>Administración de Noticias</title>
 </head>
 <body>
 
-    <nav>
-        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt=""></a>
-    </nav>
+    <header>
+        <div class="logoopcions">                <!--Logo-->
+            <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="Logo"></a>
+        </div>
 
+                            <!-- Icino de usuasio-->
+        <div class="icons">
+            <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+                          <!-- Boton hacia atras -->
+        
+        <div class="botonback">
+            <a href="/html/Admin_panel/1.Home/home_panel.html" class="button">Atras</a>
+        </div>
+        
+    </header>
+
+<main>
     <h1 class="title">PANEL ADMINISTRADOR DE NOTICIAS</h1>
 
 <div class="forms-container">
@@ -114,6 +129,7 @@
 <div class="news-grid" id="newsContainer">
 
 <script src="/javascript/Script_Admin_panel/Script_Admin_panel/Script_News_admin.js"></script>
+</main>
 
 </div>
 </body>

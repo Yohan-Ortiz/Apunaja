@@ -14,126 +14,118 @@
     <title>Crear nueva Comunidad</title>
 </head>
 <body>
+    <header>
 
-<header>
+        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="logo"></a>
+        
+        <nav>
+            <ul class="nav">
+                <li><i class="fa-solid fa-users"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a>
+                </li>
+                <li><i class="fa-solid fa-user"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a>   
+                </li>
+                <li><i class="fa-solid fa-school"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/3.Create_new_Schols.html">CENTROS EDUCATIVOS</a>   
+                </li>
+                <li><i class="fa-solid fa-graduation-cap"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a>   
+                </li>
+                <li><i class="fa-solid fa-arrow-right"></i>
+                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        </header>
 
-       <div class="logoopcions">
-              <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="Logo"></a>
-       </div>
+   <main>
 
-       <div class="icons">
-              <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html"><i class="fa-solid fa-users"></i></a>
-       </div>
+<h1>CREAR COMUNIDAD</h1>
 
-       <div class="botones-container">
-              <a href="/html/Admin_panel/1.Home/home_panel.html" class="button">Atras</a>
-       </div>
+       <div class="form-container">
+              <!-- Datos de la comunidad -->
+              <div class="community-section">
+                  <h3>DATOS DE LA COMUNIDAD</h3>
+                  <!-- COMUNIDAD -->
+                  <div class="label">
+                      <div><label for="Comunidad">COMUNIDAD</label></div>
+                      <div><input type="text" id="Comunidad" name="Comunidad" placeholder="Comunidad"></div>
+                  </div>
+                  <!-- RESGUARDO -->
+                  <div class="label">
+                     <div><label for="Resguardo">RESGUARDO</label></div>
+                     <div><input type="text" id="Resguardo" name="Resguardo" placeholder="Resguardo"></div>
+                  </div>
+                  <!-- DEPARTAMENTO -->
+                  <div class="label">
+                     <div><label for="Departamento">DEPARTAMENTO</label></div>
+                     <div><input type="text" id="Departamento" name="Departamento" placeholder="Departamento"></div>
+                  </div>
+                  <!-- MUNICIPIO -->
+                  <div class="label">
+                     <div><label for="Municipio">MUNICIPIO</label></div>
+                     <div><input type="text" id="Municipio" name="Municipio" placeholder="Municipio"></div>
+                  </div>
+                  <!-- GEOREFERENCIA -->
+                  <div class="label">
+                      <label for="">GEOREFERENCIA DE COMUNIDAD</label>
+                      <div>
+                          <div><label for="Latitud">LAT</label></div>
+                          <div><input type="number" id="Latitud" name="Latitud" placeholder="LATITUD"></div>
+                      </div>
+                      <div>
+                            <div><label for="Longitud">LON</label></div>
+                            <div><input type="number" id="Longitud" name="Longitud" placeholder="LONGITUD"></div>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Datos de la autoridad tradicional -->
+              <div class="authority-section">
+                  <h3>DATOS DE LA AUTORIDAD TRADICIONAL</h3>
+                  <!-- Nombres -->
+                  <div class="label">
+                      <div><label for="name">NOMBRES</label></div>
+                      <div><input type="text" id="name" name="name" placeholder="Nombres"></div>
+                  </div>
+                  <!-- Apellidos -->
+                  <div class="label">
+                     <div><label for="name">APELLIDOS</label></div>
+                      <div><input type="text" id="apellido" name="apellido" placeholder="Apellidos"></div>
+                  </div>
+                  <!-- Fecha de nacimiento -->
+                  <div class="label">
+                      <div><label for="fecha">FECHA DE NACIMIENTO</label></div>
+                      <div><input type="date" name="fecha" id="fecha"></div>
+                  </div>
+                  <!-- ROL -->
+                  <div class="label">
+                      <div><label for="Rol">ROL</label></div>
+                      <div><select name="Rol" id="Rol"></div>
+                          <option value="rol">Autoridad tradicional</option>
+                          <option value="rol">Lider</option>
+                      </select>
+                  </div>
+                  <!-- Documento -->
+                  <div class="label">
+                      <div><label for="Documento">DOCUMENTO</label></div>
+                      <div><input type="number" name="Documento" id="Documento" placeholder="Documento"></div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Botones de acción -->
+          <div class="action-buttons">
+              <div><input type="button" value="CARGAR DOCUMENTO DE AUTORIDAD"></div>
+              <div><input type="button" value="CARGAR FIRMA O HUELLA"></div>
+              <div><input type="button" value="CARGAR ACTA DE POSESION"></div>
+              <div><input type="submit" value="CREAR COMUNIDAD"></div>
+          </div>          
 
-
-</header>
-
-    <h2>NUEVA COMUNIDAD</h2>
-
-    <div>  
-    <form>
-
-       <!-- COMUNIDAD -->
-      <div>
-<label for="Comunidad">COMUNIDAD</label>
-<input type="text"  id="Comunidad" name="Comunidad" placeholder="Comunidad">
-       </div>
-
-      <!-- RESGUARDO -->
-      <div>
-<label for="Resguardo">RESGUARDO</label>
-<input type="text"  id="Resguardo" name="Resguardo" placeholder="Resguardo">
-      </div>
-
-      <!-- DEPARTAMENTO-->
-      <div>
-<label for="Departamento">DEPARTAMENTO</label>
-<input type="text"  id="Departamento" name="Departamento" placeholder="Departamento">
-     </div>
-
-      <!-- MUNICIPIO-->
-       <div>
-<label for="Municipio">MUNICIPIO</label>
-<input type="text"  id="Municipio" name="Municipio" placeholder="Municipio">
-       </div>
-
-      <!-- DATOS DE AUTORIDAD TRADICIONAL-->
-       <div>
-<label for="name">DATOS DE AUTORIDAD TRADICIONAL</label>
-
-<div><input type="text" id="name" name="name" placeholder="Nombres"></div>
-<div><input type="text"  id="name" name="name" placeholder="Apellidos"></div>
-       </div>
-
-       <!-- FECHA DE NACIMIENTO-->
-       <div>
-<label for="fecha">FECHA DE NACIMIENTO</label>
-<input type="date" name="fecha" id="fecha">    
-       </div>
-
-       <!-- ROL -->
-       <div>
-<label for="Rol">ROL</label>
-<select name="Rol" id="Rol">
-       <option value="rol">Autoridad tradicional</option>
-       <option value="rol">Lider</option> 
-</select>
-       </div>
- 
-       <!-- DOCUMENTO -->
-        <div>
-<label for="Documento">DOCUMENTO</label>
-<input type="number" name="Documento" id="Documento" placeholder="Documento">
-        </div>
-
-<!-- GEOREFERENCIA DE COMUNIDAD -->
-        <div>
-<label for="">GEOREFERENCIA DE COMUNIDAD</label>
-<!-- LAT -->
-<div><label for="Latitud">LAT</label>
-<input type="number" id="Latitud" name="Latitud" placeholder="LATITUD"></div>
-<!-- LON -->
-<div><label for="Longitud">LON</label>
-<input type="number"  id="Longitud" name="Longitud" placeholder="LONGITUD"></div>
-       </div>
-
-
-<!-- Botones de accion -->
-
-
-
-<!-- CARGAR DOCUMENTO DE AUTORIDAD -->
-<div>
-    <input type="button" value="CARGAR DOCUMENTO
-     DE AUTORIDAD">
-</div>
-
-<!--CARGAR FIRMA O HUELLA  -->
-<div>
-    <input type="button" value="CARGAR 
-    FIRMA O HUELLA">
-</div>
-
-<!-- CARGAR ACTA DE POSESION -->
-<div>
-    <input type="button" value="CARGAR ACTA DE
-    POSESION">
-</div>
-
-<!-- CREAR COMUNIDAD -->
-<div>
-    <input type="submit" value="CREAR COMUNIDAD">
-</div>
-
-
-    </form>
-</div>
-
-
+   </main>
 
 </body>
 </html>

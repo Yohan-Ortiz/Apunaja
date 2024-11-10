@@ -15,127 +15,132 @@
 </head>
 <body>
     <header>
-        <div class="logoopcions">                <!--Logo-->
-            <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="Logo"></a>
-        </div>
 
-                            <!-- Icino de usuasio-->
-        <div class="icons">
-            <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html"><i class="fa-solid fa-user"></i></a>
-        </div>
-                          <!-- Boton hacia atras -->
+        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="logo"></a>
         
-        <div class="botonback">
-            <a href="/html/Admin_panel/1.Home/home_panel.html" class="button">Atras</a>
-        </div>
+        <nav> 
+            <ul class="nav">
+                <li><i class="fa-solid fa-users"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a>
+                </li>
+                <li><i class="fa-solid fa-user"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a>   
+                </li>
+                <li><i class="fa-solid fa-school"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/3.Create_new_Schols.html">CENTROS EDUCATIVOS</a>   
+                </li>
+                <li><i class="fa-solid fa-graduation-cap"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a>   
+                </li>
+                <li><i class="fa-solid fa-arrow-right"></i>
+                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                </li>
+                
+            </ul>
+        </nav>
         
-    </header>
+        </header>
     <h2>NUEVO BENEFICIARIO</h2>
 
-    <div class="formglobal">  
-    <form>
-
-         <!-- CARGAR USUARIOS EXCEL -->
-         <div>
-              <input type="button" value="CARGAR USUARIOS
-              EXCEL">
-          </div>
-          
-          <!-- CARGAR ACTA DE POSESION -->
-          <div>
-              <input type="button" value="CARGAR 
-              DOCUMENTO">
-          </div>
-
-          <!--CARGAR FIRMA O HUELLA  -->
-          <div>
-              <input type="button" value="CARGAR 
-              FIRMA O HUELLA">
-          </div>
-       
-
-       <!--  -->
-
-<div class="label">
-<label for="NOMBRES">NOMBRES</label>
-</div>
-
-<div class="input">
-<input type="text"  id="NOMBRES" name="NOMBRES" placeholder="NOMBRES">
-</div>
-
-      <!-- APELLIDOS -->
-      <div class="name-2">
-<label for="APELLIDOS">APELLIDOS</label>
-<input type="text"  id="APELLIDOS" name="APELLIDOS" placeholder="APELLIDOS">
-      </div>
-
-     <!-- DOCUMENTO -->
-        <div class="Document-Id">
-<label for="DOCUMENTO">DOCUMENTO</label>
-<input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="DOCUMENTO">
-        </div>
-
-       <!-- FECHA DE NACIMIENTO-->
-       <div class="fecha">
-<label for="fecha">FECHA DE NACIMIENTO</label>
-<input type="date" name="fecha" id="fecha">    
-       </div>
-
-       <!-- ROL -->
-       <div class="rol">
-<label for="Rol">ROL</label>
-<select name="Rol" id="Rol">
-       <option value="Rol">BENEFICIARIO</option>
-       <option value="Rol">LIDER</option> 
-</select>
-       </div>
- 
-
-<!-- GEOREFERENCIA DE COMUNIDAD -->
-<div class="Ubication">
-<label for="">GEOREFERENCIA DE COMUNIDAD</label>
-
-<!-- LAT -->
-<div class="latitud">
-<div><label for="Latitud">LAT</label>
-<input type="number" id="Latitud" name="Latitud" placeholder="LATITUD"></div>
-</div>
-<!-- LON -->
- <div class="longitud">
-<div><label for="Longitud">LON</label>
-<input type="number"  id="Longitud" name="Longitud" placeholder="LONGITUD"></div>
-</div>
-
-</div>
-
-
-<!--OCUPACION -->
-        <div class="jobs">
-<label for="OCUPACION">OCUPACION</label>
-<input type="text" name="OCUPACION" id="OCUPACION" placeholder="OCUPACION">
-        </div>
-
-
-<!-- Botones de accion -->
-
-<!-- CARGAR DOCUMENTO DE AUTORIDAD -->
-<div>
-    <input type="button" value="CARGAR FOTOGRAFIAS">
-</div>
-
-
-<!-- CREAR COMUNIDAD -->
-<div>
-    <input type="submit" value="CREAR BENEFICIARIO">
-</div>
-
-
-    </form>
-
-
-</div>
-
+    <div class="formglobal">
+        <form>
+            <!-- Sección de Carga de Documentos -->
+            <div class="upload-section">
+                <h2>Documentación</h2>
+                <div class="upload-buttons">
+                    <div class="upload-item">
+                        <div class="icon"><i class="fa-solid fa-file-excel"></i></div>
+                        <input type="button" value="CARGAR USUARIOS EXCEL">
+                    </div>
+                    <div class="upload-item">
+                        <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                        <input type="button" value="CARGAR DOCUMENTO">
+                    </div>
+                    <div class="upload-item">
+                        <div class="icon"><i class="fa-solid fa-signature"></i></div>
+                        <input type="button" value="CARGAR FIRMA O HUELLA">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Contenedor principal de dos columnas -->
+            <div class="main-info-container">
+                <!-- Columna Izquierda: Información Personal -->
+                <div class="info-column">
+                    <h2>Información Personal</h2>
+                    <div class="form-group">
+                        <label for="NOMBRES">NOMBRES</label>
+                        <input type="text" id="NOMBRES" name="NOMBRES" placeholder="NOMBRES">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="APELLIDOS">APELLIDOS</label>
+                        <input type="text" id="APELLIDOS" name="APELLIDOS" placeholder="APELLIDOS">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="DOCUMENTO">DOCUMENTO</label>
+                        <input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="DOCUMENTO">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="fecha">FECHA DE NACIMIENTO</label>
+                        <input type="date" name="fecha" id="fecha">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="OCUPACION">OCUPACION</label>
+                        <input type="text" name="OCUPACION" id="OCUPACION" placeholder="OCUPACION">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="Rol">ROL</label>
+                        <select name="Rol" id="Rol">
+                            <option value="">Seleccione un rol</option>
+                            <option value="Beneficiario">BENEFICIARIO</option>
+                            <option value="Lider">LIDER</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Columna Derecha: Comunidad y Ubicación -->
+                <div class="info-column">
+                    <h2>Comunidad y Ubicación</h2>
+                    <div class="form-group">
+                        <label for="comunidad">COMUNIDAD</label>
+                        <select name="comunidad" id="comunidad">
+                            <option value="comunidad1">Comunidad 1</option>
+                            <option value="comunidad2">Comunidad 2</option>
+                            <option value="comunidad3">Comunidad 3</option>
+                        </select>
+                    </div>
+    
+                    <div class="geo-reference">
+                        <label>GEOREFERENCIA DE COMUNIDAD</label>
+                        <div class="coordinates">
+                            <div class="form-group">
+                                <label for="Latitud">LAT</label>
+                                <input type="number" id="Latitud" name="Latitud" placeholder="LATITUD" step="any">
+                            </div>
+                            <div class="form-group">
+                                <label for="Longitud">LON</label>
+                                <input type="number" id="Longitud" name="Longitud" placeholder="LONGITUD" step="any">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sección de Acciones -->
+            <div class="action-section">
+                <div class="upload-photo">
+                    <div class="icon"><i class="fa-solid fa-camera"></i></div>
+                    <input type="button" value="CARGAR FOTOGRAFIAS">
+                </div>
+                <input type="submit" value="CREAR BENEFICIARIO" class="submit-button">
+            </div>
+        </form>
+    </div>
 
 
 </body>
