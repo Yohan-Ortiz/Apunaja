@@ -1,229 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú responsive</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.logo-admin img {
-  max-width: 150px;
-}
-
-.menu-icon {
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Menu-horizontal {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.Menu-horizontal > li {
-  margin: 0 10px;
-  position: relative;
-}
-
-.Menu-horizontal li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.Menu-horizontal li:hover > .Menu-vertical {
-  display: block;
-}
-
-.Menu-vertical {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  width: 200px;
-  z-index: 1;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.Menu-vertical li {
-  border-bottom: 1px solid #ddd;
-}
-
-.Menu-vertical li a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-}
-
-.Menu-vertical li a:hover {
-  background-color: #ddd;
-}
-
-@media (max-width: 767px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .logo-admin {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1;
-  }
-
-  .Menu-horizontal {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .Menu-horizontal > li {
-    width: 100%;
-    margin: 0;
-  }
-
-  .Menu-horizontal li a {
-    display: block;
-    padding: 10px 20px;
-  }
-
-  .Menu-vertical {
-    position: static;
-    width: 100%;
-    background-color: #444;
-  }
-
-  .Menu-vertical li {
-    border-bottom: 1px solid #555;
-  }
-
-  .Menu-vertical li a {
-    color: #fff;
-    padding: 10px 30px;
-  }
-
-  .show {
-    display: flex !important;
-  }
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_admin_page.css">
+    <link rel="stylesheet" href="/css/Styles_admin_page/Styles_3.Create_new_beneficiary.css">
+    <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_opcions.css">
+    <title>Crear nuevo beneficiario</title>
 </head>
 <body>
-  <header>
-    <div class="logo-admin">
-      <a href="/html/Admin_panel/1.Home/home_panel.html">
-        <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
-      </a>
-    </div>
-    <div class="menu-icon">&#9776;</div>
-    <nav>
-      <ul class="Menu-horizontal">
-        <li>
-          <i class="fa-solid fa-users"></i>
-          <a href="#">BENEFICIARIOS</a>
-          <ul class="Menu-vertical">
-            <li><a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a></li>
-            <li><a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a></li>
-            <li><a href="">CENTROS EDUCATIVOS</a></li>
-            <li><a href="">CREAR ESTUDIANTES</a></li>
-          </ul>
-        </li>
-        <li>
-          <i class="fa-solid fa-newspaper"></i>
-          <a href="#">PANEL DE NOTICIAS</a>
-          <ul class="Menu-vertical">
-            <li><a href="/html/Admin_panel/4.News_panel/admin.html">ADMINISTRADOR</a></li>
-          </ul>
-        </li>
-        <li>
-          <i class="fa-regular fa-folder-open"></i>
-          <a href="#">PROYECTOS</a>
-          <ul class="Menu-vertical">
-            <li><a href="/html/Admin_panel/3.Projects/1.New_project.html">CREAR PROYECTO</a></li>
-            <li><a href="#">CARGAR FORMATO</a></li>
-            <li><a href="#">CONECTAR PROYECTO</a></li>
-            <li><a href="#">INFORMACION</a></li>
-          </ul>
-        </li>
-        <li>
-          <i class="fa-solid fa-database"></i>
-          <a href="#">BASE DE DATOS</a>
-          <ul class="Menu-vertical">
-            <li><a href="#">INFORMACION</a></li>
-            <li><a href="#">FOTOGRAFIAS</a></li>
-            <li><a href="#">DOCUMENTOS</a></li>
-            <li><a href="#">GEOREFERENCIA</a></li>
-          </ul>
-        </li>
-        <li>
-          <i class="fa-solid fa-circle-user"></i>
-          <a href="#">ROLES Y PERMISOS</a>
-          <ul class="Menu-vertical">
-            <li><a href="#">ASIGNAR ROLES</a></li>
-            <li><a href="#">CREAR NUEVOS ROLES</a></li>
-            <li><a href="#">MODIFICAR ROLES</a></li>
-            <li><a href="#">ELIMINAR ROLES</a></li>
-            <li><a href="#">VER PERMISOS</a></li>
-            <li><a href="#">ASIGNAR PERMISOS</a></li>
-          </ul>
-        </li>
-        <li>
-          <i class="fa-solid fa-gears"></i>
-          <a href="#">CONFIGURACION</a>
-          <ul class="Menu-vertical">
-            <li><a href="#">consigurar parametros</a></li>
-            <li><a href="#">consigurar opciones de acceso</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <a href="/html/Admin_panel/1.Home/home_panel.html">
+            <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+        </a>
+        
+        <nav> 
+            <ul class="nav">
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a>   
+                </li>
+                <li>
+                    <i class="fa-solid fa-school"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/3.Create_new_Schols.html">CENTROS EDUCATIVOS</a>   
+                </li>
+                <li>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a>   
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <script>
-    // JavaScript para el menú desplegable
-    const menuIcon = document.querySelector('.menu-icon');
-    const nav = document.querySelector('nav');
+    <main>
+        <h1>CREAR COMUNIDAD</h1>
 
-    menuIcon.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  </script>
+        <div class="formglobal">
+            <form id="beneficiaryForm">
+                <!-- Sección 1: Documentación -->
+                <section class="upload-section">
+                    <h2>Documentación</h2>
+                    <div class="upload-buttons">
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-image"></i></div>
+                            <input type="button" value="CARGAR FOTOGRAFIAS">
+                        </div>
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                            <input type="button" value="CARGAR DOCUMENTO">
+                        </div>
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-signature"></i></div>
+                            <input type="button" value="CARGAR FIRMA O HUELLA">
+                        </div>
+                    </div>
+                </section>
+
+                <div class="main-info-container">
+                    <!-- Sección 2: Datos Personales -->
+                    <section class="info-column">
+                        <h2>DATOS PERSONALES</h2>
+                        
+                        <!-- Información básica -->
+                        <div class="form-group">
+                            <label for="NUMEROFAMILIA">NUMERO FAMILIA</label>
+                            <input type="number" id="NUMEROFAMILIA" name="NUMEROFAMILIA" placeholder="NUMERO FAMILIA" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="NOMBRES">NOMBRES</label>
+                            <input type="text" id="NOMBRES" name="NOMBRES" placeholder="NOMBRES" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="APELLIDOS">APELLIDOS</label>
+                            <input type="text" id="APELLIDOS" name="APELLIDOS" placeholder="APELLIDOS" required>
+                        </div>
+
+                        <!-- Documentación personal -->
+                        <div class="form-group">
+                            <label for="cc">TIPO DE DOCUMENTO</label>
+                            <select name="cc" id="cc" required>
+                                <option value="">Seleccione tipo de documento</option>
+                                <option value="CC">CC: Cédula de ciudadanía</option>
+                                <option value="RC">RC: Registro civil</option>
+                                <option value="TI">TI: Tarjeta de identidad</option>
+                                <option value="PEP">PEP: Permiso especial de permanencia</option>
+                                <option value="CE">CE: Cédula de extranjería</option>
+                                <option value="CD">CD: Carné diplomático</option>
+                                <option value="PA">PA: Pasaporte</option>
+                                <option value="TE">TE: Tarjeta de extranjería</option>
+                                <option value="DIE">DIE: Documento de identificación extranjero</option>
+                                <option value="NIP">NIP: Número de identificación personal</option>
+                                <option value="NUIP">NUIP: Número único de identificación personal</option>
+                                <option value="SCR">SCR: Salvoconducto</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="DOCUMENTO">DOCUMENTO</label>
+                            <input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="NÚMERO DE DOCUMENTO" required>
+                        </div>
+
+                        <!-- Información demográfica -->
+                        <div class="form-group">
+                            <label for="fecha">FECHA DE NACIMIENTO</label>
+                            <input type="date" name="fecha" id="fecha" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sex">SEXO</label>
+                            <select name="sex" id="sex" required>
+                                <option value="">Seleccione sexo</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otros">Otro</option>
+                            </select>
+                        </div>
+
+                        <!-- Información profesional -->
+                        <div class="form-group">
+                            <label for="escolaridad">NIVEL DE ESCOLARIDAD</label>
+                            <select name="escolaridad" id="escolaridad" required>
+                                <option value="">Seleccione nivel de escolaridad</option>
+                                <option value="Ninguna">Ninguna</option>
+                                <option value="Basica primaria">Básica primaria</option>
+                                <option value="Basica secundaria">Básica secundaria</option>
+                                <option value="Tecnico">Técnico</option>
+                                <option value="Tecnologo">Tecnólogo</option>
+                                <option value="Profesional">Profesional</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Phone">NÚMERO DE TELÉFONO</label>
+                            <input type="number" name="Phone" id="Phone" placeholder="NÚMERO DE TELÉFONO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Rol">CARGO</label>
+                            <select name="Rol" id="Rol" required>
+                                <option value="">Seleccione un rol</option>
+                                <option value="Beneficiario">BENEFICIARIO</option>
+                                <option value="Lider">LÍDER</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="OCUPACION">OCUPACIÓN</label>
+                            <input type="text" name="OCUPACION" id="OCUPACION" placeholder="OCUPACIÓN" required>
+                        </div>
+                    </section>
+
+                    <!-- Sección 3: Ubicación -->
+                    <section class="info-column">
+<!-- Información del hogar -->
+                        <div class="form-group">
+                            <label for="House">HABITANTES EN EL HOGAR</label>
+                            <input type="number" name="House" id="House" placeholder="CANTIDAD DE PERSONAS" required>
+                        </div>
+
+                        <!-- Tabla demográfica -->
+                        <div class="form-group">
+                            <label>DISTRIBUCIÓN POR EDAD Y GÉNERO</label>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rango de edad</th>
+                                        <th>Hombre</th>
+                                        <th>Mujer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0-5 años</td>
+                                        <td><input type="number" name="hombres_0_5" min="0" placeholder="0"></td>
+                                        <td><input type="number" name="mujeres_0_5" min="0" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6-14 años</td>
+                                        <td><input type="number" name="hombres_6_14" min="0" placeholder="0"></td>
+                                        <td><input type="number" name="mujeres_6_14" min="0" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15-21 años</td>
+                                        <td><input type="number" name="hombres_15_21" min="0" placeholder="0"></td>
+                                        <td><input type="number" name="mujeres_15_21" min="0" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>22-40 años</td>
+                                        <td><input type="number" name="hombres_22_40" min="0" placeholder="0"></td>
+                                        <td><input type="number" name="mujeres_22_40" min="0" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>41 años o más</td>
+                                        <td><input type="number" name="hombres_41" min="0" placeholder="0"></td>
+                                        <td><input type="number" name="mujeres_41" min="0" placeholder="0"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Lena">CONSUMO DE LEÑA</label>
+                            <input type="number" name="Lena" id="Lena" placeholder="KILOS DE LEÑA POR DÍA">
+                        </div>
+
+
+                        <h2>COMUNIDAD Y UBICACIÓN</h2>
+
+                        <div class="form-group">
+                            <label for="departamento">DEPARTAMENTO</label>
+                            <input type="text" name="departamento" id="departamento" placeholder="DEPARTAMENTO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="municipio">MUNICIPIO</label>
+                            <input type="text" name="municipio" id="municipio" placeholder="MUNICIPIO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comunidad">COMUNIDAD</label>
+                            <select name="comunidad" id="comunidad" required>
+                                <option value="">Seleccione una comunidad</option>
+                                <option value="comunidad1">Comunidad 1</option>
+                                <option value="comunidad2">Comunidad 2</option>
+                                <option value="comunidad3">Comunidad 3</option>
+                            </select>
+                        </div>
+
+                        <div class="geo-reference">
+                            <label>GEOREFERENCIA DE COMUNIDAD</label>
+                            <div class="coordinates">
+                                <div class="form-group">
+                                    <label for="Latitud">LATITUD</label>
+                                    <input type="number" id="Latitud" name="Latitud" placeholder="LATITUD" step="any">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Longitud">LONGITUD</label>
+                                    <input type="number" id="Longitud" name="Longitud" placeholder="LONGITUD" step="any">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sección 4: Acciones finales -->
+                <section class="upload-section">
+                    <h2>Carga masiva</h2>
+                    <div class="upload-buttons">
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-image"></i></div>
+                            <input type="button" value="ZIP DE FOTOGRAFIAS">
+                        </div>
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                            <input type="button" value="ZIP DE DOCUMENTO">
+                        </div>
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-signature"></i></div>
+                            <input type="button" value="BENEFICARIOS EXCEL">
+                        </div>
+                        <div class="upload-item">
+                            <div class="icon"><i class="fa-solid fa-signature"></i></div>
+                            <input type="button" value="ZIP FIRMA/HUELLA">
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="CREAR BENEFICIARIO" class="submit-button">
+                    </div>
+                </section>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

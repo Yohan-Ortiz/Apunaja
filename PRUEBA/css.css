@@ -1,32 +1,207 @@
-/* Barra de pestañas de navegación */
-.barra-secciones {
+/* Variables y Reset */
+:root {
+    --primary-bg: rgba(255, 255, 255, 0.1);
+    --secondary-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: #ffffff;
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-text: #333333;
+    --spacing: 20px;
+    --border-radius: 12px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-bg);
+    padding: var(--spacing);
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    background-color: #333;
-    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.barra-secciones button {
-    background: none;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s;
+header img {
+    height: 50px;
 }
 
-.barra-secciones button:hover {
-    color: #ddd;
+header nav .nav {
+    display: flex;
+    gap: var(--spacing);
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.seccion {
-    display: none; /* Ocultamos todas las secciones inicialmente */
+header nav .nav li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav .nav li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+header nav .nav li i {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Main Content */
+main {
+    padding: var(--spacing);
+    min-height: calc(100vh - 90px);
+}
+
+main h1 {
+    color: var(--text-color);
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: var(--spacing);
+    font-size: 2rem;
 }
 
-.seccion.active {
-    display: block; /* Solo mostramos la sección activa */
+/* Form Container */
+.form-container {
+    background-color: var(--primary-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+/* Section Styles */
+.community-section,
+.authority-section {
+    background-color: var(--secondary-bg);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+}
+
+/* Label Groups */
+.label {
+    margin-bottom: 15px;
+}
+
+.label > div:first-child {
+    margin-bottom: 5px;
+}
+
+.label label {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Form Controls */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--input-text);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing);
+    margin-top: var(--spacing);
+}
+
+.action-buttons input {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.action-buttons input[type="submit"] {
+    background-color: rgba(62, 184, 178, 0.3);
+}
+
+.action-buttons input:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.action-buttons input[type="submit"]:hover {
+    background-color: rgba(62, 184, 178, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header nav .nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+    
+    header nav .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
