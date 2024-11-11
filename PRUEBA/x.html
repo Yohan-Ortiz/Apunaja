@@ -1,39 +1,228 @@
-<form>
-    <table border="1" style="background-color: yellow; border-collapse: collapse;">
-      <thead>
-        <tr>
-          <th>Rango de edad</th>
-          <th>Hombre</th>
-          <th>Mujer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>a) 0-5 años</td>
-          <td><input type="number" name="cantidad_hombres_0-5" min="0" placeholder="0"></td>
-          <td><input type="number" name="cantidad_mujeres_0-5" min="0" placeholder="0"></td>
-        </tr>
-        <tr>
-          <td>b) 6-14 años</td>
-          <td><input type="number" name="cantidad_hombres_6-14" min="0" placeholder="0"></td>
-          <td><input type="number" name="cantidad_mujeres_6-14" min="0" placeholder="0"></td>
-        </tr>
-        <tr>
-          <td>c) 15-21 años</td>
-          <td><input type="number" name="cantidad_hombres_15-21" min="0" placeholder="0"></td>
-          <td><input type="number" name="cantidad_mujeres_15-21" min="0" placeholder="0"></td>
-        </tr>
-        <tr>
-          <td>d) 22-40 años</td>
-          <td><input type="number" name="cantidad_hombres_22-40" min="0" placeholder="0"></td>
-          <td><input type="number" name="cantidad_mujeres_22-40" min="0" placeholder="0"></td>
-        </tr>
-        <tr>
-          <td>e) 41 años o más</td>
-          <td><input type="number" name="cantidad_hombres_41" min="0" placeholder="0"></td>
-          <td><input type="number" name="cantidad_mujeres_41" min="0" placeholder="0"></td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú responsive</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    /* CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo-admin img {
+      max-width: 150px;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Menu-horizontal {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .Menu-horizontal > li {
+      margin: 0 10px;
+      position: relative;
+    }
+
+    .Menu-horizontal li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .Menu-horizontal li:hover > .Menu-vertical {
+      display: block;
+    }
+
+    .Menu-vertical {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      width: 200px;
+      z-index: 1;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .Menu-vertical li {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .Menu-vertical li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+
+    .Menu-vertical li a:hover {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 767px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+      }
+
+      .Menu-horizontal {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .Menu-horizontal > li {
+        width: 100%;
+        margin: 0;
+      }
+
+      .Menu-horizontal li a {
+        display: block;
+        padding: 10px 20px;
+      }
+
+      .Menu-vertical {
+        position: static;
+        width: 100%;
+        background-color: #444;
+      }
+
+      .Menu-vertical li {
+        border-bottom: 1px solid #555;
+      }
+
+      .Menu-vertical li a {
+        color: #fff;
+        padding: 10px 30px;
+      }
+
+      .show {
+        display: flex !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-admin">
+      <a href="/html/Admin_panel/1.Home/home_panel.html">
+        <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+      </a>
+    </div>
+    <div class="menu-icon">&#9776;</div>
+    <nav>
+      <ul class="Menu-horizontal">
+        <li>
+          <i class="fa-solid fa-users"></i>
+          <a href="#">BENEFICIARIOS</a>
+          <ul class="Menu-vertical">
+            <li><a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a></li>
+            <li><a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a></li>
+            <li><a href="">CENTROS EDUCATIVOS</a></li>
+            <li><a href="">CREAR ESTUDIANTES</a></li>
+          </ul>
+        </li>
+        <li>
+          <i class="fa-solid fa-newspaper"></i>
+          <a href="#">PANEL DE NOTICIAS</a>
+          <ul class="Menu-vertical">
+            <li><a href="/html/Admin_panel/4.News_panel/admin.html">ADMINISTRADOR</a></li>
+          </ul>
+        </li>
+        <li>
+          <i class="fa-regular fa-folder-open"></i>
+          <a href="#">PROYECTOS</a>
+          <ul class="Menu-vertical">
+            <li><a href="/html/Admin_panel/3.Projects/1.New_project.html">CREAR PROYECTO</a></li>
+            <li><a href="#">CARGAR FORMATO</a></li>
+            <li><a href="#">CONECTAR PROYECTO</a></li>
+            <li><a href="#">INFORMACION</a></li>
+          </ul>
+        </li>
+        <li>
+          <i class="fa-solid fa-database"></i>
+          <a href="#">BASE DE DATOS</a>
+          <ul class="Menu-vertical">
+            <li><a href="#">INFORMACION</a></li>
+            <li><a href="#">FOTOGRAFIAS</a></li>
+            <li><a href="#">DOCUMENTOS</a></li>
+            <li><a href="#">GEOREFERENCIA</a></li>
+          </ul>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-user"></i>
+          <a href="#">ROLES Y PERMISOS</a>
+          <ul class="Menu-vertical">
+            <li><a href="#">ASIGNAR ROLES</a></li>
+            <li><a href="#">CREAR NUEVOS ROLES</a></li>
+            <li><a href="#">MODIFICAR ROLES</a></li>
+            <li><a href="#">ELIMINAR ROLES</a></li>
+            <li><a href="#">VER PERMISOS</a></li>
+            <li><a href="#">ASIGNAR PERMISOS</a></li>
+          </ul>
+        </li>
+        <li>
+          <i class="fa-solid fa-gears"></i>
+          <a href="#">CONFIGURACION</a>
+          <ul class="Menu-vertical">
+            <li><a href="#">consigurar parametros</a></li>
+            <li><a href="#">consigurar opciones de acceso</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // JavaScript para el menú desplegable
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
