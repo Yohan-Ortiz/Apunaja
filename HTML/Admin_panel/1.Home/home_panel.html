@@ -16,155 +16,116 @@
 <body>
 
     <!-- Barra de navegación-->
-    <header>  
-                <div class="logo-admin">
-                    <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="logo"></a>
-                </div>
-                    
-                    
-        <nav>
-            <ul class="Menu-horizontal">
-                
-
-         <!--#1.Seccion de menu-->
-         
-         
-                <li><i class="fa-solid fa-users"></i><a href="#">BENEFICIARIOS</a>
-
-                    <!-- Sub menu de beneficiarios-->
-                       <ul class="Menu-vertical">
-                            <li><a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a></li>
-                            <li><a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a></li>
-                            <li><a href="">CENTROS EDUCATIVOS</a></li>
-                            <li><a href="">CREAR ESTUDIANTES</a></li>
-                       </ul>
-                </li>
-
-        <!--#2.Seccion de menu-->
-               <li>
+<header>
+    <div class="logo-admin">
+        <a href="/html/Admin_panel/1.Home/home_panel.html">
+            <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+        </a>
+    </div>
+    <div class="menu-icon">&#9776;</div>
+    <nav>
+        <ul class="Menu-horizontal">
+            <li>
+                <i class="fa-solid fa-users"></i>
+                <a href="#">BENEFICIARIOS</a>
+                <ul class="Menu-vertical">
+                    <li><a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a></li>
+                    <li><a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a></li>
+                    <li><a href="">CENTROS EDUCATIVOS</a></li>
+                    <li><a href="">CREAR ESTUDIANTES</a></li>
+                </ul>
+            </li>
+            <li>
                 <i class="fa-solid fa-newspaper"></i>
                 <a href="#">PANEL DE NOTICIAS</a>
-                <!-- Submenú del panel de noticias -->
                 <ul class="Menu-vertical">
                     <li><a href="/html/Admin_panel/4.News_panel/admin.html">ADMINISTRADOR</a></li>
                 </ul>
             </li>
-
-        <!--#3.Seccion de menu-->
-
-
-                <li><i class="fa-regular fa-folder-open"></i><a href="#">PROYECTOS </a>
-
-                    <!-- Sub menu proyectos-->
-                      <ul class="Menu-vertical">
-                           <li><a href="/html/Admin_panel/3.Projects/1.New_project.html">CREAR PROYECTO</a></li>
-                           <li><a href="#">CARGAR FORMATO</a></li>
-                           <li><a href="#">CONECTAR PROYECTO</a></li>
-                           <li><a href="#">INFORMACION</a></li>
-                      </ul>
-                </li>
-                
-                
-        <!--#4.Seccion de menu-->
-
-
-                <li><i class="fa-solid fa-database"></i><a href="#">BASE DE DATOS</a>
-
-                    <!-- Sub menu archivo-->
-                        <ul class="Menu-vertical">
-                             <li><a href="#">INFORMACION</a></li>
-                             <li><a href="#">FOTOGRAFIAS</a></li>
-                             <li><a href="#">DOCUMENTOS</a></li>
-                             <li><a href="#">GEOREFERENCIA</a></li>
-
-                        </ul>
-                  </li>
-                  
-                  
-        <!--#5.Seccion de menu-->
-
-
-                  <li><i class="fa-solid fa-circle-user"></i><a href="#">ROLES Y PERMISOS</a>
-                     
-                    <!-- Sub menu roles-->
-                        <ul class="Menu-vertical">
-                             <li><a href="#">ASIGNAR ROLES</a></li>
-                             <li><a href="#">CREAR NUEVOS ROLES</a></li>
-                             <li><a href="#">MODIFICAR ROLES</a></li>
-                             <li><a href="#">ELIMINAR ROLES</a></li>
-                             <li><a href="#">VER PERMISOS</a></li>
-                             <li><a href="#">ASIGNAR PERMISOS</a></li>
-                        </ul>
-                  </li>
-                  
-                  
-        <!--#6.Seccion de menu-->
-
-
-                  <li><i class="fa-solid fa-gears"></i><a href="#">CONFIGURACION</a>
-
-                    <!-- Sub menu rajustes-->
-                        <ul class="Menu-vertical">
-                             <li><a href="#">consigurar parametros</a></li>
-                             <li><a href="#">consigurar opciones de acceso</a></li>
-                        </ul>
-                  </li>  
-
-
-
-            </ul>   
-        </nav>
+            <li>
+                <i class="fa-regular fa-folder-open"></i>
+                <a href="#">PROYECTOS</a>
+                <ul class="Menu-vertical">
+                    <li><a href="/html/Admin_panel/3.Projects/1.New_project.html">CREAR PROYECTO</a></li>
+                    <li><a href="#">CARGAR FORMATO</a></li>
+                    <li><a href="#">CONECTAR PROYECTO</a></li>
+                    <li><a href="#">INFORMACION</a></li>
+                </ul>
+            </li>
+            <li>
+                <i class="fa-solid fa-database"></i>
+                <a href="#">BASE DE DATOS</a>
+                <ul class="Menu-vertical">
+                    <li><a href="#">INFORMACION</a></li>
+                    <li><a href="#">FOTOGRAFIAS</a></li>
+                    <li><a href="#">DOCUMENTOS</a></li>
+                    <li><a href="#">GEOREFERENCIA</a></li>
+                </ul>
+            </li>
+            <li>
+                <i class="fa-solid fa-circle-user"></i>
+                <a href="#">ROLES Y PERMISOS</a>
+                <ul class="Menu-vertical">
+                    <li><a href="#">ASIGNAR ROLES</a></li>
+                    <li><a href="#">CREAR NUEVOS ROLES</a></li>
+                    <li><a href="#">MODIFICAR ROLES</a></li>
+                    <li><a href="#">ELIMINAR ROLES</a></li>
+                    <li><a href="#">VER PERMISOS</a></li>
+                    <li><a href="#">ASIGNAR PERMISOS</a></li>
+                </ul>
+            </li>
+            <li>
+                <i class="fa-solid fa-gears"></i>
+                <a href="#">CONFIGURACION</a>
+                <ul class="Menu-vertical">
+                    <li><a href="#">consigurar parametros</a></li>
+                    <li><a href="#">consigurar opciones de acceso</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </header>
 
-
-    
-<!-- botones de accion -->
-
-
 <main>
-        <div>
-            <form>
-
-                <!-- Boton #1 -->
-                <div>
-                    <input type="button" value="CREAR UN NUEVO USUARIO">
-                </div>
-
-
-                <!-- Boton #2 -->
-                <div>
-                    <input type="button" value="CARGAR NUEVA COMUNIDAD">
-                </div>
-
-
-                <!-- Boton #3 -->
-                <div>
-                    <input type="button" value="CREAR NUEVO PROYECTO">
-                </div>
-
-
-                <!-- Boton #4 -->
-                <div>
-                    <input type="button" value="ASIGNAR NUEVO ROL">
-                </div>
-
-
-            </form>
+    <div class="main-content">
+        <h1 class="main-title">Bienvenido al Panel de Administración</h1>
+        <div class="button-container">
+            <div class="upload-item">
+                <div class="icon"><i class="fa-solid fa-user-plus"></i></div>
+                <input type="button" value="CREAR UN NUEVO USUARIO">
+            </div>
+            <div class="upload-item">
+                <div class="icon"><i class="fa-solid fa-users"></i></div>
+                <input type="button" value="CARGAR NUEVA COMUNIDAD">
+            </div>
+            <div class="upload-item">
+                <div class="icon"><i class="fa-solid fa-folder-plus"></i></div>
+                <input type="button" value="CREAR NUEVO PROYECTO">
+            </div>
+            <div class="upload-item">
+                <div class="icon"><i class="fa-solid fa-user-shield"></i></div>
+                <input type="button" value="ASIGNAR NUEVO ROL">
+            </div>
         </div>
+    </div>
 </main>
 
 
- <!-- Pie de página -->
-
-
- <footer class="footer">
-
-    <!-- Créditos de desarrollo -->
+<!-- Pie de página -->
+<footer class="footer">
     <p class="By"><strong>Developed by</strong> | Arnaldo Pushaina</p>
-    
-    <!-- Derechos reservados -->
     <p class="text">©2024 | Todos los derechos reservados</p>
 </footer>
+
+<script>
+    // JavaScript para el menú desplegable
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>

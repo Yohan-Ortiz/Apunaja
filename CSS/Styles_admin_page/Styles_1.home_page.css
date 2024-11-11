@@ -1,0 +1,23 @@
+/* Estilo compartido de botones */
+.upload-item,
+.admin-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #864904; /* o el color que prefieras */
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+/* Efecto hover */
+.upload-item:hover,
+.admin-button:hover {
+    background-color: #a75e04; /* Cambiar a un tono más claro */
+}

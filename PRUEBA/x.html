@@ -6,140 +6,143 @@
   <title>Menú responsive</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <style>
-    header {
-      background-color: #333;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0; /* Quitamos los espacios a los lados */
-      width: 100%; /* Aseguramos que cubra todo el ancho */
-    }
-    
-    .logo-admin img {
-      max-width: 150px;
-    }
-    
-    .menu-icon {
-      font-size: 28px;
-      cursor: pointer;
-      display: none;
-    }
-    
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .Menu-horizontal {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    
-    .Menu-horizontal > li {
-      margin: 0 10px;
-      position: relative;
-    }
-    
-    .Menu-horizontal li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-    }
-    
-    .Menu-horizontal li:hover > .Menu-vertical {
-      display: block;
-    }
-    
-    .Menu-vertical {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      width: 200px;
-      z-index: 1;
-      list-style-type: none;
+    body {
       margin: 0;
       padding: 0;
     }
-    
-    .Menu-vertical li {
-      border-bottom: 1px solid #ddd;
-    }
-    
-    .Menu-vertical li a {
-      color: #333;
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-    }
-    
-    .Menu-vertical li a:hover {
-      background-color: #ddd;
-    }
-    
-    @media (max-width: 767px) {
-      header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-      }
-    
-      .logo-admin {
-        display: none;
-      }
-    
-      .menu-icon {
-        display: block;
-      }
-    
-      nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        z-index: 1;
-      }
-    
-      .Menu-horizontal {
-        flex-direction: column;
-        width: 100%;
-      }
-    
-      .Menu-horizontal > li {
-        width: 100%;
-        margin: 0;
-      }
-    
-      .Menu-horizontal li a {
-        display: block;
-        padding: 10px 20px;
-      }
-    
-      .Menu-vertical {
-        position: static;
-        width: 100%;
-        background-color: #444;
-      }
-    
-      .Menu-vertical li {
-        border-bottom: 1px solid #555;
-      }
-    
-      .Menu-vertical li a {
-        color: #fff;
-        padding: 10px 30px;
-      }
-    
-      .show {
-        display: flex !important;
-      }
-    }
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-admin img {
+  max-width: 150px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu-horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.Menu-horizontal > li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.Menu-horizontal li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.Menu-horizontal li:hover > .Menu-vertical {
+  display: block;
+}
+
+.Menu-vertical {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 200px;
+  z-index: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Menu-vertical li {
+  border-bottom: 1px solid #ddd;
+}
+
+.Menu-vertical li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.Menu-vertical li a:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 767px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo-admin {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  .Menu-horizontal {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Menu-horizontal > li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .Menu-horizontal li a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .Menu-vertical {
+    position: static;
+    width: 100%;
+    background-color: #444;
+  }
+
+  .Menu-vertical li {
+    border-bottom: 1px solid #555;
+  }
+
+  .Menu-vertical li a {
+    color: #fff;
+    padding: 10px 30px;
+  }
+
+  .show {
+    display: flex !important;
+  }
+}
   </style>
 </head>
 <body>

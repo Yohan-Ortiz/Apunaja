@@ -16,97 +16,169 @@ body {
     background-size: cover;
     margin-bottom: 180px;
 }
-
-/* Encabezado */
-header {
-    background-color: #ffffff; /* Fondo blanco */
-    width: 100%;
-    border-bottom: 2px solid #ccc;
+    /* Fondo del cuerpo */
+    body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.24)),
+    url('/assets/background_images_website/fondo\ pagina\ adminitrador.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 180px;
+    }
+    /* Encabezado */
+    header {
+    background-color: #ffffff;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo-admin img {
-    width: 100px;
-    height: auto;
-}
-
-/* Navegación */
-nav {
+    padding: 10px;
+    }
+    .logo-admin img {
+    max-width: 100px;
+    }
+    .menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    }
+    nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.Menu-horizontal {
-    list-style: none;
+    }
+    .Menu-horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 20px;
-}
-
-.Menu-horizontal > li {
+    }
+    .Menu-horizontal > li {
+    margin: 0 10px;
     position: relative;
-}
-
-.Menu-horizontal > li > i {
-    margin-right: 8px;
+    }
+    i {
     color: #864904;
-    font-size: 20px;
-}
-
-.Menu-horizontal > li > a {
-    padding: 10px 15px;
+    }
+    .Menu-horizontal li a {
     color: #864904;
     text-decoration: none;
-    border-radius: 5px;     
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.Menu-horizontal > li:hover > a {
+    padding: 10px;
+    }
+    .Menu-horizontal li ul li a {
+        color: #864904;
+    }
+    .Menu-horizontal li:hover > .Menu-vertical {
+    display: block;
+    }
+    .Menu-vertical {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 200px;
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    .Menu-vertical li {
+    border-bottom: 1px solid #ddd;
+    }
+    .Menu-vertical li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    }
+    .Menu-vertical li a:hover {
     background-color: #864904;
     color: #fff;
-}
+    }
+    @media (max-width: 767px) {
+    header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    }
+    Copy.logo-admin {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: block;
+        color: #864904;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 1;
+    }
+    
+    .Menu-horizontal {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .Menu-horizontal > li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .Menu-horizontal li a {
+        display: block;
+        padding: 10px 20px;
+    }
+    
+    .Menu-vertical {
+        position: static;
+        width: 100%;
+        background-color: #ffffff;
+    }
+    
+    .Menu-vertical li {
+        border-bottom: 1px solid #ffffff;
+    }
+    
+    .Menu-vertical li a {
+        color: #fff;
+        padding: 10px 30px;
+    }
+    
+    .show {
+        display: flex !important;
+    }
+    }
+    
 
-/* Submenú */
-.Menu-vertical {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    list-style: none;
-    width: 220px;
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.Menu-vertical li {
+    /* Pie de página */
+    footer {
+    background-color: #ffffff00;
     width: 100%;
-}
-
-.Menu-vertical li > a {
-    display: block;
-    padding: 10px 15px;
-    color: #864904;
-    text-decoration: none;
-    border-bottom: 1px solid #f1f1f1;
-    transition: background-color 0.3s;
-}
-
-.Menu-vertical li > a:hover {
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-/* Mostrar el submenú al hacer hover */
-.Menu-horizontal li:hover .Menu-vertical {
-    display: block;
-}
-
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ffffff00;
+    text-align: center;
+    }
+    .By, .text {
+    margin: 2px 0;
+    color: #555;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2;
+    }
+    /* Evitar que el footer cubra contenido */
+    body {
+    margin-bottom: 180px;
+    }
 /* Pie de página */
 footer {
     background-color: #ffffff00;
