@@ -53,11 +53,13 @@ h2 {
     gap: var(--spacing);
 }
 
+a{text-decoration: none;}
 .upload-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    
 }
 
 .upload-icon {
@@ -196,4 +198,3 @@ input[type="submit"]:hover {
     color: #ffffff;
     font-size:38px;
 }
-   
