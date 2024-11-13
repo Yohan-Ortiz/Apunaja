@@ -1,107 +1,165 @@
+/* Estilos generales */
 .body_login {
-    display: flex; /* Organiza elementos con Flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-    padding-top: 80px; /* Espacio superior */
-    padding-bottom: 180px; /* Espacio inferior */
-    background-image: none !important; /* Sin imagen de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 180px;
+    background-image: none !important;
 }
 
 main {
-    display: flex; /* Usa Flexbox para el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 50px; /* Espacio interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
 
 .wrapper {
-    width: 380px; /* Ancho fijo */
-    background-color: transparent; /* Fondo transparente */
-    border: 2px solid rgba(255, 255, 255, .2); /* Borde semitransparente */
-    backdrop-filter: blur(20px); /* Desenfoque de fondo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Sombra suave */
-    color: white; /* Texto blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px 30px; /* Espacio interno */
+    width: 380px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
 }
 
 .wrapper h1 {
-    font-size: 32px; /* Tamaño grande de texto */
-    text-align: center; /* Centra el texto */
+    font-size: 32px;
+    text-align: center;
 }
 
 .wrapper .input_box {
-    position: relative; /* Posicionamiento relativo */
-    width: 100%; /* Ancho completo */
-    height: 50px; /* Altura fija */
-    margin: 38px 0; /* Espacio vertical */
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 38px 0;
 }
 
 .input_box input {
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    background: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
-    outline: none; /* Sin contorno al enfocar */
-    border: 2px solid rgba(255, 255, 255, .2); /* Borde semitransparente */
-    border-radius: 40px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de fuente */
-    color: white; /* Texto blanco */
-    padding: 20px 45px 20px 20px; /* Espacio interno */
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 14px;
+    color: white;
+    padding: 20px 45px 20px 20px;
 }
 
 .input_box input::placeholder {
-    color: rgb(255, 254, 254); /* Color del placeholder */
+    color: rgb(255, 254, 254);
 }
 
 .input_box i {
-    position: absolute; /* Posiciona el icono */
-    right: 20px; /* A 20px del borde derecho */
-    top: 50%; /* Centrado verticalmente */
-    transform: translateY(-50%); /* Ajuste para centrar */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .wrapper .remenmer-forgot {
-    display: flex; /* Elementos en fila */
-    justify-content: space-between; /* Espacio entre elementos */
-    font-size: 13px; /* Tamaño de fuente pequeño */
-    margin: -15px 0 15px; /* Espacio vertical */
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: -15px 0 15px;
 }
 
 .remenmer-forgot label input {
-    accent-color: white; /* Color de acento blanco */
-    margin-right: 3px; /* Espacio a la derecha */
+    accent-color: white;
+    margin-right: 3px;
 }
 
 .wrapper .btn {
-    width: 100%; /* Ancho completo */
-    height: 45px; /* Altura fija */
-    background: rgb(0, 0, 0); /* Fondo blanco */
-    border: none; /* Sin borde */
-    outline: none; /* Sin contorno */
-    border-radius: 40px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(19, 240, 19, 0.1); /* Sombra suave */
-    cursor: pointer; /* Cambia a mano al pasar */
-    font-size: 14px; /* Tamaño de fuente */
-    color: #ffffff; /* Texto negro */
-    font-weight: 600; /* Grosor medio */
-    margin-bottom: 15px; /* Espacio inferior */
+    width: 100%;
+    height: 45px;
+    background: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(19, 240, 19, 0.1);
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .wrapper .btn-1 {
-    width: 100%; /* Ancho completo */
-    height: 45px; /* Altura fija */
-    background: rgb(255, 255, 255); /* Fondo blanco */
-    border: none; /* Sin borde */
-    outline: none; /* Sin contorno */
-    border-radius: 40px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra suave */
-    cursor: pointer; /* Cambia a mano al pasar */
-    font-size: 14px; /* Tamaño de fuente */
-    color: #000000; /* Texto negro */
-    font-weight: 600; /* Grosor medio */
-    margin-bottom: 15px; /* Espacio inferior */
+    width: 100%;
+    height: 45px;
+    background: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-.icons i {color: rgb(255, 0, 0);}
+.icons i {
+    color: rgb(255, 0, 0);
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .body_login {
+        padding-top: 60px;
+        padding-bottom: 150px;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    .wrapper {
+        width: 90%; /* Ancho mayor en pantallas pequeñas */
+        padding: 15px; /* Reducir el padding */
+    }
+
+    .wrapper h1 {
+        font-size: 28px; /* Fuente más pequeña */
+    }
+
+    .input_box input {
+        font-size: 12px; /* Tamaño de fuente más pequeño */
+    }
+
+    .wrapper .btn, .wrapper .btn-1 {
+        height: 40px; /* Botones más pequeños */
+        font-size: 12px; /* Fuente más pequeña */
+    }
+}
+
+@media (max-width: 480px) {
+    .body_login {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+    .wrapper {
+        width: 100%; /* Ancho completo */
+        padding: 10px; /* Reducir más el padding */
+    }
+
+    .wrapper h1 {
+        font-size: 24px; /* Fuente aún más pequeña */
+    }
+
+    .input_box input {
+        font-size: 11px; /* Fuente más pequeña */
+    }
+
+    .wrapper .btn, .wrapper .btn-1 {
+        height: 35px; /* Botones aún más pequeños */
+        font-size: 11px; /* Fuente más pequeña */
+    }
+}

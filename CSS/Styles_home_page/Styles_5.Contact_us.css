@@ -1,3 +1,4 @@
+/* Estilos generales */
 main {
     position: relative;
     text-align: left;
@@ -33,15 +34,16 @@ main {
     font-size: 1rem;
 }
 
-.data > p > i a{
+.data > p > i a {
     color: rgb(0, 0, 0);
     margin-right: 10px;
     font-size: 25px;
-    
 }
-.data a
-{text-decoration: none;
-color: #ffffff;}
+
+.data a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .data i {}
 
@@ -65,3 +67,72 @@ color: #ffffff;}
     font-size: 20px;
 }
 
+/* Media Queries para dispositivos pequeños */
+
+/* Para tabletas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajusta el ancho al 90% en tabletas */
+        display: block;
+    }
+
+    .box-info {
+        gap: 30px; /* Reduce el espacio entre los elementos */
+    }
+
+    .data > p {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente */
+    }
+
+    .links {
+        flex-wrap: wrap; /* Acomoda los iconos en varias filas */
+        justify-content: center;
+    }
+
+    .links > a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .links > a > i {
+        font-size: 18px; /* Reduce el tamaño de los iconos */
+    }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Ajusta al 100% de ancho en móviles */
+        padding: 10px;
+    }
+
+    .box-info {
+        gap: 20px; /* Reduce el espacio entre los elementos */
+    }
+
+    .box-info > h1 {
+        font-size: 1.2rem; /* Reduce el tamaño del título */
+    }
+
+    .data > p {
+        font-size: 0.85rem; /* Fuente aún más pequeña */
+    }
+
+    .data > p > i a {
+        font-size: 20px; /* Reduce el tamaño de los iconos de las redes */
+    }
+
+    .links {
+        flex-wrap: wrap; /* Los iconos de las redes sociales se ajustan a múltiples filas */
+        justify-content: center;
+    }
+
+    .links > a {
+        width: 30px;
+        height: 30px; /* Hace los iconos más pequeños */
+    }
+
+    .links > a > i {
+        font-size: 16px; /* Reduce el tamaño de los iconos */
+    }
+}
