@@ -24,7 +24,7 @@ body::before {
     left: -10%;
     width: 120%;
     height: 120%;
-    background-image: url('/ASSETS/background_images_website/fondo principal.jpg');
+    background-image: url('/assets/background_images_website/fondo\ principal.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
