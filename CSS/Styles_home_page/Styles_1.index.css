@@ -1,57 +1,97 @@
-.nit {position: relative;
-      text-align: left;
-      color: white;
-      padding: 10px;
-} 
+/* Estilos base (para todas las pantallas) */
+.nit {
+    position: relative;
+    text-align: left;
+    color: white;
+    padding: 10px;
+}
 
-.title {position: relative;
-        text-align: center;
-        color: white;
-        font-size: 50px;
+.title {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 50px;
 }
 
 .logosecundario {
-        display: block;  /* Cambia la imagen a un elemento de bloque */
-        margin-left: auto;  /* Margen izquierdo automático */
-        margin-right: auto; /* Margen derecho automático */
-        width:auto; /* Ajusta el ancho según sea necesario */
-        height: 200px; /* Ajusta la altura según sea necesario */
-        margin-top: 60PX;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 200px;
+    margin-top: 60px;
 }
-.logo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    
-    .logo {
-        width: 300px; /* Ajusta este valor según el tamaño que necesites */
-        height: auto;
-        margin-bottom: 20px;
-    }
-    
-    .text-container {
-        width: 100%;
-    }
-    
-    .main-title {
-        color: #ffffff;
-        font-size: 2.5em;
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-family: Arial, sans-serif;
-    }
-    
-    .subtitle {
-        color: #ffffff;
-        font-size: 1.2em;
-        font-weight: normal;
-        margin-top: 0;
-        font-family: Arial, sans-serif;}
 
-    
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-container {
+    width: 100%;
+}
+
+.main-title {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 30px; /* Título más pequeño en móviles */
+    }
+
+    .logosecundario {
+        height: 150px; /* Logo más pequeño */
+        margin-top: 30px;
+    }
+
+    .logo-container {
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 1.8em; /* Título principal más pequeño */
+    }
+
+    .subtitle {
+        font-size: 1em; /* Subtítulo más pequeño */
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .logosecundario {
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+}

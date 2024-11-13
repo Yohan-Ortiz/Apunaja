@@ -1,11 +1,14 @@
-.text-global { max-width: 1000px;
+/* Estilos base */
+.text-global {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-color: white;}
+    color: white;
+}
 
 /* Sección introductoria */
-.text-intro{
+.text-intro {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -20,23 +23,21 @@ color: white;}
     font-size: 18px;
     color: #ffffff;
     text-align: justify;
+    line-height: 1.6;
 }
-.subtitle{text-align:center;}
 
+.subtitle {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 24px;
+}
 
 /* Contenedor de las columnas */
 .columnas {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-}
-
-/* Estilos para cada columna */
-.columnas {
     padding: 20px;
-    
-    
-    
 }
 
 .columnas h2 {
@@ -49,4 +50,99 @@ color: white;}
     font-size: 16px;
     color: #ffffff;
     text-align: justify;
+    line-height: 1.6;
+}
+
+/* Media Queries para tablets */
+@media screen and (max-width: 768px) {
+    .text-global {
+        padding: 15px;
+    }
+
+    .text-intro h1 {
+        font-size: 28px;
+    }
+
+    .text-intro p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        margin: 25px 0;
+    }
+
+    .columnas {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .columnas h2 {
+        font-size: 22px;
+    }
+
+    .columnas p {
+        font-size: 15px;
+    }
+}
+
+/* Media Queries para móviles */
+@media screen and (max-width: 480px) {
+    .text-global {
+        padding: 10px;
+    }
+
+    .text-intro h1 {
+        font-size: 24px;
+    }
+
+    .text-intro p {
+        font-size: 15px;
+        padding: 0 5px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    /* Cambiar a una columna en móviles */
+    .columnas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .columnas h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .columnas p {
+        font-size: 14px;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+    .text-intro h1 {
+        font-size: 22px;
+    }
+
+    .text-intro p {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .columnas h2 {
+        font-size: 18px;
+    }
+
+    .columnas p {
+        font-size: 13px;
+    }
 }

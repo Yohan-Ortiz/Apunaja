@@ -1,75 +1,181 @@
+/* Estilos base */
+main {
+  padding: 70px;
+}
 
+.design-1 {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
 
-  /* Diseño 1: Grid de imágenes */
+.design-1 .text-content {
+  flex: 1;
+  min-width: 300px;
+}
 
-  main {padding: 70px;}
+.design-1 h1 {
+  color: #864904;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
 
+.design-1 p {
+  text-align: justify;
+  color: #000000;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
 
+.design-1 .image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.design-1 .image-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.design-1 .image-grid img:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  background-color: #864904;
+  border: none;
+  color: #ffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botones-container {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Media queries para tablets */
+@media screen and (max-width: 1024px) {
+  main {
+      padding: 40px;
+  }
 
   .design-1 {
-    display: flex;
-    gap: 2rem;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      flex-direction: column;
+      gap: 1.5rem;
   }
 
   .design-1 .text-content {
-    flex: 1;
-    min-width: 300px;
+      min-width: 100%;
   }
 
   .design-1 h1 {
-    color: #864904;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    text-align: center;
+      font-size: 1.6rem;
   }
+
   .design-1 p {
-    text-align: justify;
-    color: #000000;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-
-
+      font-size: 0.95rem;
   }
 
   .design-1 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    flex: 1;
+      width: 100%;
+  }
+}
+
+/* Media queries para tablets pequeñas */
+@media screen and (max-width: 768px) {
+  main {
+      padding: 20px;
+  }
+
+  .design-1 {
+      padding: 1rem;
+  }
+
+  .design-1 h1 {
+      font-size: 1.4rem;
+  }
+
+  .design-1 .image-grid {
+      gap: 0.8rem;
   }
 
   .design-1 .image-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+      height: 120px;
   }
 
-  .design-1 .image-grid img:hover {
-    transform: scale(1.05);}
+  .button {
+      padding: 12px 25px;
+      font-size: 14px;
+  }
+}
 
-    
-.button {
-            background-color: #864904;
-            border: none;
-            color: #ffff;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
+/* Media queries para móviles */
+@media screen and (max-width: 480px) {
+  main {
+      padding: 10px;
+  }
 
-        /* Opción 1: Usando un contenedor con text-align: right */
-        .botones-container {
-            text-align: right;
-        }
+  .design-1 {
+      padding: 0.8rem;
+      gap: 1rem;
+  }
+
+  .design-1 h1 {
+      font-size: 1.2rem;
+  }
+
+  .design-1 p {
+      font-size: 0.9rem;
+  }
+
+  .design-1 .image-grid {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+  }
+
+  .design-1 .image-grid img {
+      height: 200px;
+  }
+
+  .button {
+      padding: 10px 20px;
+      font-size: 13px;
+  }
+
+  .botones-container {
+      text-align: center;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+  .design-1 h1 {
+      font-size: 1.1rem;
+  }
+
+  .design-1 p {
+      font-size: 0.85rem;
+  }
+
+  .design-1 .image-grid img {
+      height: 150px;
+  }
+}
