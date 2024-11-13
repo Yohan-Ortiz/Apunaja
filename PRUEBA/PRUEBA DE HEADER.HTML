@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+    
+<!-- ENLACE css  -->
+<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_admin_page.css">
+<link rel="stylesheet" href="/css/Styles_home_page/Styles_1.index.css">
+
+    <title>Home</title>
+</head>
+<body>
+
+    <!-- Barra de navegación-->
+<header>
+    <div class="logo-admin">
+        <a href="/html/Admin_panel/1.Home/home_panel.html">
+            <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+        </a>
+    </div>
+    <div class="menu-icon">&#9776;</div>
+    <nav>
+        <ul class="Menu-horizontal">
+            <li>
+                <i class="fa-solid fa-users"></i>
+                <a href="/index.html">INICIO</a>
+                
+            </li>
+            <li>
+                <i class="fa-solid fa-newspaper"></i>
+                <a href="/html/home_page/2.public.html">NOTICIAS</a>
+            </li>
+            <li>
+                <i class="fa-regular fa-folder-open"></i>
+                <a href="/html/home_page/3.Who_are_we.html">¿QUINES SOMOS?</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-database"></i>
+                <a href="#">PROYECTOS ASOCIADOS</a>
+                <ul class="Menu-vertical">
+                    <li><a href="/html/home_page/4.Associated_projects/project-1.html">INFORMACION</a></li>
+                    <li><a href="/html/home_page/4.Associated_projects/project-2.html">FOTOGRAFIAS</a></li>
+                    <li><a href="/html/home_page/4.Associated_projects/project-3.html">DOCUMENTOS</a></li>
+                    <li><a href="/html/home_page/4.Associated_projects/project-4.html">GEOREFERENCIA</a></li>
+                    <li><a href="/html/home_page/4.Associated_projects/project-5.html">GEOREFERENCIA</a></li>
+                </ul>
+            </li>
+            <li>
+                <i class="fa-solid fa-circle-user"></i>
+                <a href="/html/home_page/5.Contact_us.html">CONTACTÁNOS</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-gears"></i>
+                <a href="/html/home_page/6.login.html">INICIAR SESION</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    
+</main>
+
+
+<!-- Pie de página -->
+<footer class="footer">
+    <p class="By"><strong>Developed by</strong> | Arnaldo Pushaina</p>
+    <p class="text">©2024 | Todos los derechos reservados</p>
+</footer>
+
+<script>
+    // JavaScript para el menú desplegable
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
+

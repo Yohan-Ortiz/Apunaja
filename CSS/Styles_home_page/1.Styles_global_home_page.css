@@ -141,6 +141,50 @@ nav ul li ul li {
 nav ul li ul li:hover {
     background-color: #f1f1f1; 
 }
+/* Estilo para el botón de menú en móviles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 10px;
+    color: #864904;
+    
+}
+
+/* Visualización móvil */
+@media (max-width: 768px) {
+    nav {
+        float: none;
+        
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align:left;
+        margin-left: 10px;
+        
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        margin-left: auto;  /* Esto empujará el botón hacia la derecha */
+        margin-right: 20px; /* Ajusta este valor para el espaciado que desees */
+    }
+    nav ul li {
+        float: none;
+        margin: 0;
+    }
+
+    .logoprincipal {
+        display: flex; /* Oculta el logo en dispositivos móviles */
+    }
+}
+
 
 
 
