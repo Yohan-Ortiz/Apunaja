@@ -1,0 +1,99 @@
+.main-content {
+    text-align: center;
+    padding: 130px 20px; /* Reduced padding for smaller screens */
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-container a {
+    text-decoration: none;
+}
+
+.upload-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(202, 202, 202, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 300px; /* Maintain original max-width */
+}
+
+.icon i {
+    color: #ffffff;
+}
+
+.upload-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.upload-item .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.upload-item input[type="button"] {
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.upload-item input[type="button"]:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #f7f7f7;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+    .button-container {
+        gap: 15px;
+    }
+
+    .upload-item {
+        max-width: 100%; /* Adjust to full width on smaller screens */
+        padding: 10px;
+    }
+
+    .upload-item input[type="button"] {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+
+    .upload-item {
+        padding: 8px;
+    }
+
+    .upload-item .icon {
+        font-size: 1.5rem; /* Smaller icon size on mobile */
+    }
+
+    .upload-item input[type="button"] {
+        font-size: 0.8rem; /* Smaller button text on mobile */
+    }
+}

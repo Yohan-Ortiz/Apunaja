@@ -21,7 +21,7 @@ h1 {
     color: var(--text-color);
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .upload-section {
@@ -93,6 +93,11 @@ h1 {
     font-weight: 500;
 }
 
+input [type="placeholder"] {
+
+    text-decoration: noness;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -111,7 +116,7 @@ input:focus,
 select:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 15px rgba(130, 195, 236, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .geo-reference {
@@ -131,7 +136,7 @@ select:focus {
 
 input[type="button"],
 input[type="submit"] {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.151);
     color: var(--text-color);
     border: 1px solid var(--glass-border);
     padding: 1rem 2rem;
@@ -150,7 +155,7 @@ input[type="submit"]:hover {
 }
 
 .submit-button {
-    background: rgba(76, 175, 80, 0.3) !important;
+    background: rgba(255, 255, 255, 0.3) !important;
     width: 100%;
     margin-top: 2rem;
     color: var(--text-color);

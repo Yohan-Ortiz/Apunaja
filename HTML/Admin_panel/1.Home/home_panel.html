@@ -7,15 +7,32 @@
 <!-- ICONOS -->
     <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
     
-<!-- ENLACE css  -->
-<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global_admin_page.css">
-<link rel="stylesheet" href="/css/Styles_admin_page/Styles_1.home_page.css">
+  <!-- Enlaces a css  -->
+<link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_admin_page.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_home/Styles_1.home_page.css">
+
+ <!-- Favicons para diferentes dispositivos y tamaños -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
 
     <title>Home</title>
 </head>
 <body>
+    
+    <!-- ===================== HEADER ===================== -->
 
-    <!-- Barra de navegación-->
+<!-- Barra de navegación-->
 <header>
     <div class="logo-admin">
         <a href="/html/Admin_panel/1.Home/home_panel.html">
@@ -31,15 +48,8 @@
                 <ul class="Menu-vertical">
                     <li><a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a></li>
                     <li><a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a></li>
-                    <li><a href="">CENTROS EDUCATIVOS</a></li>
-                    <li><a href="">CREAR ESTUDIANTES</a></li>
-                </ul>
-            </li>
-            <li>
-                <i class="fa-solid fa-newspaper"></i>
-                <a href="#">PANEL DE NOTICIAS</a>
-                <ul class="Menu-vertical">
-                    <li><a href="/html/Admin_panel/4.News_panel/admin.html">ADMINISTRADOR</a></li>
+                    <li><a href="/html/Admin_panel/2.Beneficiaries/3.Create_new_Schols.html">CENTROS EDUCATIVOS</a></li>
+                    <li><a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a></li>
                 </ul>
             </li>
             <li>
@@ -53,6 +63,13 @@
                 </ul>
             </li>
             <li>
+                <i class="fa-solid fa-newspaper"></i>
+                <a href="#">PANEL DE NOTICIAS</a>
+                <ul class="Menu-vertical">
+                    <li><a href="/html/Admin_panel/4.News_panel/admin.html">ADMINISTRADOR</a></li>
+                </ul>
+            </li>
+            <li>
                 <i class="fa-solid fa-database"></i>
                 <a href="#">BASE DE DATOS</a>
                 <ul class="Menu-vertical">
@@ -63,7 +80,7 @@
                 </ul>
             </li>
             <li>
-                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-user-shield"></i>
                 <a href="#">ROLES Y PERMISOS</a>
                 <ul class="Menu-vertical">
                     <li><a href="#">ASIGNAR ROLES</a></li>
@@ -86,36 +103,36 @@
     </nav>
 </header>
 
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+
 <main>
     <div class="main-content">
         <h1 class="main-title">Bienvenido al Panel de Administración</h1>
         <div class="button-container">
-            <div class="upload-item">
+            <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html"><div class="upload-item">
                 <div class="icon"><i class="fa-solid fa-user-plus"></i></div>
-                <input type="button" value="CREAR UN NUEVO USUARIO">
-            </div>
-            <div class="upload-item">
+                <input type="button" value="CREAR BENEFICIARIO">
+            </div></a>
+            <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html"><div class="upload-item">
                 <div class="icon"><i class="fa-solid fa-users"></i></div>
-                <input type="button" value="CARGAR NUEVA COMUNIDAD">
-            </div>
-            <div class="upload-item">
+                <input type="button" value="CREAR COMUNIDAD">
+            </div></a>
+            <a href="/html/Admin_panel/3.Projects/1.New_project.html"><div class="upload-item">
                 <div class="icon"><i class="fa-solid fa-folder-plus"></i></div>
-                <input type="button" value="CREAR NUEVO PROYECTO">
-            </div>
-            <div class="upload-item">
+                <input type="button" value="CREAR PROYECTO">
+            </div></a>
+            <a href="/html/Admin_panel/5.Roles/assign_roles.html"><div class="upload-item">
                 <div class="icon"><i class="fa-solid fa-user-shield"></i></div>
-                <input type="button" value="ASIGNAR NUEVO ROL">
-            </div>
+                <input type="button" value="ASIGNAR ROLES">
+            </div></a>
+            <a href="/html/Admin_panel/4.News_panel/admin.html"><div class="upload-item">
+                <div class="icon"><i class="fa-solid fa-newspaper"></i></div>
+                <input type="button" value="PUBLICAR NOTICIA">
+            </div></a>
         </div>
     </div>
 </main>
-
-
-<!-- Pie de página -->
-<footer class="footer">
-    <p class="By"><strong>Developed by</strong> | Arnaldo Pushaina</p>
-    <p class="text">©2024 | Todos los derechos reservados</p>
-</footer>
 
 <script>
     // JavaScript para el menú desplegable

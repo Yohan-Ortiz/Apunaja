@@ -9,23 +9,14 @@
 /* Fondo del cuerpo */
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.24)), 
-                      url('/assets/background_images_website/fondo\ pagina\ adminitrador.png'); /* Tu imagen original */
+                      url('/assets/background_images_website/fondo\ pagina\ adminitrador.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin-bottom: 180px;
+    margin-bottom: 100px; /* Reduced margin-bottom */
+    padding-bottom: 80px; /* Reduced padding-bottom */
 }
-    /* Fondo del cuerpo */
-    body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.24)),
-    url('/assets/background_images_website/fondo\ pagina\ adminitrador.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin-bottom: 180px;
-    }
     /* Encabezado */
     header {
     background-color: #ffffff;
@@ -34,44 +25,54 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+
     }
     .logo-admin img {
     max-width: 100px;
     }
+
     .menu-icon {
     font-size: 28px;
     cursor: pointer;
     display: none;
     }
+
     nav {
     display: flex;
     justify-content: center;
     align-items: center;
     }
+
     .Menu-horizontal {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     }
+
     .Menu-horizontal > li {
     margin: 0 10px;
     position: relative;
     }
+
     i {
     color: #864904;
     }
+
     .Menu-horizontal li a {
     color: #864904;
     text-decoration: none;
     padding: 10px;
     }
+
     .Menu-horizontal li ul li a {
         color: #864904;
     }
+
     .Menu-horizontal li:hover > .Menu-vertical {
     display: block;
     }
+
     .Menu-vertical {
     display: none;
     position: absolute;
@@ -82,19 +83,23 @@ body {
     margin: 0;
     padding: 0;
     }
+
     .Menu-vertical li {
     border-bottom: 1px solid #ddd;
     }
+
     .Menu-vertical li a {
     color: #333;
     text-decoration: none;
     display: block;
     padding: 10px;
     }
+
     .Menu-vertical li a:hover {
     background-color: #864904;
     color: #fff;
     }
+    
     @media (max-width: 767px) {
     header {
     flex-direction: row;
@@ -154,58 +159,8 @@ body {
     .show {
         display: flex !important;
     }
+    .Menu-vertical i {
+display: none;
+    }
     }
     
-
-    /* Pie de página */
-    footer {
-    background-color: #ffffff00;
-    width: 100%;
-    padding: 2px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid #ffffff00;
-    text-align: center;
-    }
-    .By, .text {
-    margin: 2px 0;
-    color: #555;
-    text-align: center;
-    font-size: 0.9em;
-    line-height: 1.2;
-    }
-    /* Evitar que el footer cubra contenido */
-    body {
-    margin-bottom: 180px;
-    }
-/* Pie de página */
-footer {
-    background-color: #ffffff00;
-    width: 100%;
-    padding: 2px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid #ffffff00;
-    text-align: center;
-}
-
-.footer h4 {
-    color: #864904;
-    margin: 2px 0;
-    font-size: 0.9em;
-}
-
-.By, .text {
-    margin: 2px 0;
-    color: #555;
-    text-align: center;
-    font-size: 0.9em;
-    line-height: 1.2;
-}
-
-/* Evitar que el footer cubra contenido */
-body {
-    margin-bottom: 180px;
-}
