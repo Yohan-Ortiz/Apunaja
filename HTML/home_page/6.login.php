@@ -1,3 +1,28 @@
+<?php
+// Simular una base de datos con un usuario y contraseña
+$usuario_prueba = "arnaldozxc@gmail.com";
+$contrasena_prueba = "20010926";
+
+// Inicializar mensaje de error
+$error = "";
+
+// Verificar si se envió el formulario
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    if ($email === $usuario_prueba && $password === $contrasena_prueba) {
+        // Redirigir al panel interno si las credenciales son correctas
+        header("Location:/html/Admin_panel/1.Home/home_panel.php");
+        exit();
+    } else {
+        // Mostrar un mensaje de error
+        $error = "Usuario o contraseña incorrectos.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -58,7 +83,7 @@
                     </ul>
                 </li>
                 <li><i class="fa-solid fa-phone"></i><a href="/html/home_page/5.Contact_us.html">CONTÁCTANOS</a></li>
-                <li><i class="fa-solid fa-right-to-bracket"></i><a href="/html/home_page/6.login.html">INICIAR SESIÓN</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="/html/home_page/6.login.php">INICIAR SESIÓN</a></li>
             </div>                                   
         </ul>
     </nav>
@@ -68,8 +93,11 @@
     <div class="contanierlogin">
         <main>
             <div class="wrapper">
-                <form action="">
+                <form action="" method="POST">
                     <h1>INICIAR SESIÓN</h1>
+                    <?php if (!empty($error)): ?>
+                    <p style="color: red; font-size: 14px;"><?php echo $error; ?></p>
+                        <?php endif; ?>
 
                     <div class="input_box">
                         <input type="text" placeholder="CORREO ELECTRÓNICO" required>

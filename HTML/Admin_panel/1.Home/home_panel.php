@@ -93,6 +93,12 @@
                     <li><a href="#">consigurar opciones de acceso</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i> CERRAR SESION</a>
+                <ul class="Menu-vertical">
+                    <li><a href="/html/home_page/6.login.php">CERRAR SESION</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
