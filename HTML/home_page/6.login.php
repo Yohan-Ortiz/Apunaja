@@ -1,27 +1,3 @@
-<?php
-// Simular una base de datos con un usuario y contraseña
-$usuario_prueba = "arnaldozxc@gmail.com";
-$contrasena_prueba = "20010926";
-
-// Inicializar mensaje de error
-$error = "";
-
-// Verificar si se envió el formulario
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
-
-    if ($email === $usuario_prueba && $password === $contrasena_prueba) {
-        // Redirigir al panel interno si las credenciales son correctas
-        header("Location:/html/Admin_panel/1.Home/home_panel.php");
-        exit();
-    } else {
-        // Mostrar un mensaje de error
-        $error = "Usuario o contraseña incorrectos.";
-    }
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -93,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="contanierlogin">
         <main>
             <div class="wrapper">
-                <form action="" method="POST">
+                <form action="/php/Home_page/1.Php_login/login.php" method="POST">
                     <h1>INICIAR SESIÓN</h1>
                     <?php if (!empty($error)): ?>
                     <p style="color: red; font-size: 14px;"><?php echo $error; ?></p>
@@ -116,11 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <div class="icons">
                         <button type="submit" class="btn"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</button>
                     </div>
-
-
-                    <div class="icons">
-                        <button type="button" class="btn-1"><i class="fa-brands fa-google"></i> Iniciar con Gmail</button>
-                    </div>
                 </form>
             </div>
         </main>
@@ -137,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </footer>
     
 <!-- Enalce a Javascript -->
-<script src="/javascript/Script_Home_page/Scrip_menu-responsive.js"></script> 
+<script src="/javascript/Script_Home_page/1.Script_Responsive/Scrip_Responsive.js"></script>
 
 </body>
 </html>

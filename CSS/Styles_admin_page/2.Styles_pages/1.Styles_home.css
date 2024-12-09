@@ -1,0 +1,63 @@
+
+main {
+    padding: 15rem;
+}
+
+.Contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.105);
+    padding: 15px;
+    border-radius: 1rem;
+}
+
+.title {
+    color: var(--colorbarras);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.button-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid var(--colorbarras);
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--colortexto2);
+    transform: scale(1.05);
+}
+
+.boton .icon {
+    margin-right: 10px;
+    color: var(--colorbarras);
+}
+
+.boton input[type="button"] {
+    background: none;
+    border: none;
+    color: var(--colorbarras);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+

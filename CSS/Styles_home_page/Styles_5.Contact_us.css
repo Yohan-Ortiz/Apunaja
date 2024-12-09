@@ -1,138 +1,127 @@
-/* Estilos generales */
+:root {
+    --primary-color: #964b00;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --hover-color: #1ec203;
+}
+
 main {
-    position: relative;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 1rem;
 }
 
 .container {
-    display: block;
-    grid-template-columns: repeat(2, 50%);
-    padding: 10px;
-    gap: 10px;
-    width: 1000px;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.box-info {
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.container:hover {
+    transform: translateY(-10px);
 }
 
-.box-info > h1 {
-    text-align: left;
-    letter-spacing: 5px;
+.box-info h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .data {
+    margin-bottom: 2rem;
+}
+
+.data p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    align-items: center;
+    justify-content: center;
 }
 
-.data > p {
-    font-size: 1rem;
-}
-
-.data > p > i a {
-    color: rgb(0, 0, 0);
+.data i {
     margin-right: 10px;
-    font-size: 25px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
 }
 
 .data a {
+    color: var(--text-color);
     text-decoration: none;
-    color: #ffffff;
+    transition: color 0.3s ease;
 }
 
-.data i {}
+.data a:hover {
+    color: var(--primary-color);
+}
+.texto {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 15px;
+    font-size: 0.7rem;
+}
 
 .links {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-.links > a {
-    text-decoration: none;
-    width: 40px;
-    height: 40px;
-    background: rgb(0, 0, 0);
-    text-align: center;
-    transition: 0.1s;
+.links a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    border: 2px solid var(--primary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-.links > a > i {
-    color: #ffffff;
-    line-height: 40px;
-    font-size: 20px;
+.links a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
 }
 
-/* Media Queries para dispositivos pequeños */
-
-/* Para tabletas */
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Ajusta el ancho al 90% en tabletas */
-        display: block;
+        width: 90%;
+        padding: 2rem;
     }
 
-    .box-info {
-        gap: 30px; /* Reduce el espacio entre los elementos */
+    .box-info h1 {
+        font-size: 1.5rem;
     }
+    .texto {
+        font-size: 0.7rem;
+    }
+    p {
+        font-size: 0.8rem;}
 
-    .data > p {
-        font-size: 0.9rem; /* Reduce el tamaño de fuente */
-    }
+        .links {
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
 
-    .links {
-        flex-wrap: wrap; /* Acomoda los iconos en varias filas */
-        justify-content: center;
+    .links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        margin: 0.5rem;
     }
-
-    .links > a {
-        width: 35px;
-        height: 35px;
-    }
-
-    .links > a > i {
-        font-size: 18px; /* Reduce el tamaño de los iconos */
-    }
-}
-
-/* Para móviles */
-@media (max-width: 480px) {
-    .container {
-        width: 100%; /* Ajusta al 100% de ancho en móviles */
-        padding: 10px;
-    }
-
-    .box-info {
-        gap: 20px; /* Reduce el espacio entre los elementos */
-    }
-
-    .box-info > h1 {
-        font-size: 1.2rem; /* Reduce el tamaño del título */
-    }
-
-    .data > p {
-        font-size: 0.85rem; /* Fuente aún más pequeña */
-    }
-
-    .data > p > i a {
-        font-size: 20px; /* Reduce el tamaño de los iconos de las redes */
-    }
-
-    .links {
-        flex-wrap: wrap; /* Los iconos de las redes sociales se ajustan a múltiples filas */
-        justify-content: center;
-    }
-
-    .links > a {
-        width: 30px;
-        height: 30px; /* Hace los iconos más pequeños */
-    }
-
-    .links > a > i {
-        font-size: 16px; /* Reduce el tamaño de los iconos */
-    }
+    
 }

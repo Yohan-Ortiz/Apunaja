@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ICONOS -->
+<script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+    
+<!-- Enlaces a css  -->
+<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_pages/zip.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/3.Styles_responsive/styles_beneficiaries.css">
+
+ <!-- Favicons para diferentes dispositivos y tamaños -->
+ <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+
+    <title>ZIP FIRMA/HUELLA</title>
+</head>
+<body>
+    <header>
+        <a href="/html/Admin_panel/1.Home/home_panel.php">
+            <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+        </a>
+
+            <!-- Botón de menú hamburguesa -->
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav id="navbar">
+            <ul class="nav">
+                <li>
+                    <i class="fas fa-file-excel"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_excelbeneficiary.html">FORMATO EXCEL</a>
+                </li>
+                <li>
+                    <i class="fas fa-file-zipper"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_document.html">ZIP DE DOCUMENTO</a>   
+                </li>
+                <li>
+                    <i class="fas fa-file-zipper"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_signature.html">ZIP FIRMA/HUELLA</a>   
+                </li>
+                <li>
+                    <i class="fas fa-file-zipper"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_images.html">ZIP DE FOTOGRAFIAS</a> 
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/2.create_new_beneficiary.html">ATRAS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title"><i class="fa-solid fa-signature"></i> ZIP FIRMA/HUELLA</h1>
+    
+        <section class="instructions">
+            <h2>Instrucciones para Cargar Archivos ZIP</h2>
+        
+            <div class="instruction-step">
+                <h3>1. Descargar el Formato ZIP</h3>
+                <p>Descarga el archivo ZIP con carpetas numeradas del 1 al 20 <strong>(Familia 1, Familia 2, etc.)</strong>.</p>
+            </div>
+        
+            <div class="instruction-step">
+                <h3>2. Organizar los Documentos</h3>
+                <p>Coloca las huellas o firmas "Foto1" para la huella y "Foto2" para la firma en las carpetas según el orden de beneficiarios en el <strong>formato Excel</strong>.</p>
+            </div>
+        
+            <div class="instruction-step">
+                <h3>3. Subir el Archivo ZIP</h3>
+                <p>Carga el archivo ZIP al sistema.</p>
+            </div>
+        
+            <div class="instruction-step">
+                <h3>4. Seleccionar la Comunidad</h3>
+                <p>Asocia los archivos a la comunidad correspondiente.</p>
+            </div>
+        
+            <div class="instruction-step">
+                <h3 style="color: rgb(7, 224, 0);">5. ADVERTENCIA</h3>
+                <p><strong style="color: rgb(30, 254, 0);">¡NO MODIFICAR EL NOMBRE DE LAS CARPETAS!</strong></p>
+            </div>
+        
+            <div class="instruction-step">
+                <h3>6. Verificación</h3>
+                <p>El sistema verificará que todo esté en orden.</p>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title"><i class="fa-solid fa-users"></i> Seleccionar Comunidad</h2>
+            <select name="comunidad" id="comunidad" class="select-comunidad">
+                <option value="">Seleccione una comunidad</option>
+                <option value="comunidad 1">Comunidad 1</option>
+                <option value="comunidad 2">Comunidad 2</option>
+                <option value="comunidad 3">Comunidad 3</option>
+                <option value="comunidad 4">Comunidad 4</option>
+            </select>
+        </section>
+    
+        <section class="section">
+            <h2 class="section-title"><i class="fa-solid fa-file-zipper"></i> Formato ZIP</h2>
+            <a href="/assets/formatos/Formatsignature.zip" download>
+                <button class="btn btn-primary"><i class="fa-solid fa-download"></i> Descargar</button>
+            </a>
+        </section>
+    
+        <section class="section">
+            <h2 class="section-title"><i class="fa-solid fa-spinner fa-spin"></i> Cargar archivo ZIP</h2>
+            <form action="/subir-archivo" method="POST" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <label for="archivo" id="file-label" class="file-input-label">Seleccionar archivo</label>
+                    <input type="file" id="archivo" name="archivo" accept=".zip" class="file-input">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-upload"></i> Cargar</button>
+                </div>
+            </form>
+        </section>
+    
+        
+    </main>
+    
+    
+    <script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/2.script_create_new_beneficiaries.js"></script>
+    <script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/0.responsive.js"></script>
+    
+</body>
+</html>

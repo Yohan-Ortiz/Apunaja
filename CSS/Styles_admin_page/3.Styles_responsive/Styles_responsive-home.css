@@ -1,0 +1,95 @@
+    
+    /* Responsive barra de nevegacion */
+    @media (max-width: 767px) 
+    {
+        header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        Copy.logo-admin {
+            display: none;
+        }
+        
+        .menu-icon {
+            display: block;
+            color: var(--colortexto2);
+        }
+        
+        nav {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: var(--colorbarras);
+            z-index: 1;
+        }
+        
+        .Menu-horizontal {
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .Menu-horizontal > li {
+            width: 100%;
+            margin: 0;
+        }
+        
+        .Menu-horizontal li a {
+            display: block;
+            padding: 10px 20px;
+        }
+        
+        .Menu-vertical {
+            position: static;
+            width: 100%;
+            background-color: var(--colorbarras);
+        }
+        
+        .Menu-vertical li {
+            border-bottom: 1px solid  var(--colorbarras);
+        }
+        
+        .Menu-vertical li a {
+            color: var(--colorbarras);
+            padding: 10px 30px;
+        }
+        
+        .show {
+            display: flex !important;
+        }
+        .Menu-vertical i {
+            display: none;
+        }
+
+        /* Home main */
+
+        main {
+            padding: 0;
+        }
+
+        .Contenedor  h1 {
+            font-size: 1rem;
+        }
+
+        .button-contenedor a {
+            font-size: 1rem;
+        }
+
+        .button-contenedor {
+            gap: 1rem;
+        }
+
+        .button-contenedor i {
+            font-size: 1rem;
+        }
+
+        .boton {
+            gap: 0.5rem;
+        }
+
+
+}
+

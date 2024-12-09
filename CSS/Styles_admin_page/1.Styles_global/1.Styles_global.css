@@ -1,0 +1,168 @@
+/* Estilos generales */
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'arial';
+}
+
+:root {
+    --contenedores: #ffffff18;
+    --colorbarras: #ffff;
+    --colortexto2: #964b00;
+    --detalles: #000000;
+    --detalles2: #e10000;
+    --color6: #1ec203;}
+
+body {
+    background-color:var(--colorbarras);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 80px; /* Altura del footer */
+    overflow-x: hidden; /* Solo previene scroll horizontal */
+}
+
+/* Fondo con efecto zoom */
+body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url('/assets/background_images_website/fondo\ pagina\ adminitrador.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    animation: zoomEffect 20s infinite ease-in-out;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.304));
+    z-index: -1;
+}
+
+@keyframes zoomEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+    /* Encabezado */
+    header {
+    background-color:var(--colorbarras);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    }
+    .logo-admin img {
+    max-width: 100px;
+    }
+
+    .menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    }
+
+    nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .Menu-horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    }
+
+    .Menu-horizontal > li {
+    margin: 0 10px;
+    position: relative;
+    }
+
+    .Menu-horizontal i {
+    color: var(--colortexto2);
+    }
+
+    .Menu-horizontal li a {
+    color: var(--colortexto2);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 80%;
+    }
+
+    .Menu-horizontal li ul li a {
+        color: var(--colortexto2)
+    }
+
+    .Menu-horizontal li:hover > .Menu-vertical {
+    display: block;
+    }
+
+    .Menu-vertical {
+    display: none;
+    position: absolute;
+    background-color: var(--colorbarras);
+    width: 200px;
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    .Menu-vertical li {
+    border-bottom: 1px solid var(--colorbarras);
+    }
+
+    .Menu-vertical li a {
+    color: var(--colorbarras);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    }
+
+    .Menu-vertical li a:hover {
+    background-color: var(--colortexto2);
+    color: var(--colorbarras);
+    }
+    .Menu-vertical {
+        display: none;
+        position: absolute;
+        background-color: var(--colorbarras);
+        width: 200px;
+        z-index: 1;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+    
+        .Menu-vertical li {
+        border-bottom: 1px solid var(--colorbarras);
+        }
+    
+        .Menu-vertical li a {
+        color: var(--colorbarras);
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        }
+    
+        .Menu-vertical li a:hover {
+        background-color: var(--colortexto2);
+        color: var(--colorbarras);
+        }
+    
+   

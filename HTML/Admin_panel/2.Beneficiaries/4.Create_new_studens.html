@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,11 @@
     <!-- ICONOS -->
     <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
 
+
     <!-- Conectar con css -->
-    <link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_admin_page.css">
-    <link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_opcions.css">
-    <link rel="stylesheet" href="">
+   <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
+   <link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_pages/2.beneficiaries.css">
+   <link rel="stylesheet" href="/css/Styles_admin_page/3.Styles_responsive/styles_beneficiaries.css">
 
     <!-- Favicons para diferentes dispositivos y tamaños -->
  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
@@ -31,40 +32,193 @@
 </head>
 <body>
     <header>
-
-        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="logo"></a>
+        <a href="/html/Admin_panel/1.Home/home_panel.php">
+            <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+        </a>
         
-        <nav>
+        <!-- Botón de menú hamburguesa -->
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav id="navbar">
             <ul class="nav">
-                <li><i class="fa-solid fa-users"></i>
+                <li>
+                    <i class="fa-solid fa-users"></i>
                     <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a>
                 </li>
-                <li><i class="fa-solid fa-user"></i>
+                <li>
+                    <i class="fa-solid fa-user"></i>
                     <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a>   
                 </li>
-                <li><i class="fa-solid fa-school"></i>
-                    <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CENTROS EDUCATIVOS</a>   
+                <li>
+                    <i class="fa-solid fa-school"></i>
+                    <a href="/html/Admin_panel/2.Beneficiaries/3.Create_new_Schols.html">CENTROS EDUCATIVOS</a>   
                 </li>
-                <li><i class="fa-solid fa-graduation-cap"></i>
+                <li>
+                    <i class="fa-solid fa-graduation-cap"></i>
                     <a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a>   
                 </li>
-                <li><i class="fa-solid fa-arrow-right"></i>
-                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="/html/Admin_panel/1.Home/home_panel.php">ATRAS</a>
                 </li>
-                
             </ul>
         </nav>
-        
-        </header>
+    </header>
         <main>
 
             <h1>CREAR ESTUDIANTES</h1>
+
+            <section class="section">
+                <div class="columna">
+                    <div class="formulario">  
+                        <label for="comunidad">CENTRO ETNOEDUCATIVO</label>
+                            <div>
+                                <select name="comunidad" id="comunidad" required>
+                                    <option value="">Seleccione un centro</option>
+                                    <option value="comunidad1">Centro 1</option>
+                                    <option value="comunidad2">Centro 2</option>
+                                    <option value="comunidad3">Centro 3</option>
+                                </select>    
+                            </div>
+                    </div>
+
+                   
+
+                    <form action="">
+                        <h2>DATOS BASICOS</h2>
+                        <div class="formulario">
+                            <label for="name">NOMBRES</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="name" id="name" placeholder="NOMBRES" required>    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="apellido">APELLIDOs</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="apellido" id="apellido" placeholder="APELLIDOS" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="cc">TIPO DE DOCUMENTO</label>
+                            <div>
+                                <select name="cc" id="cc" required>
+                                    <option value="">Seleccione tipo de documento</option>
+                                    <option value="CC">CC: Cédula de ciudadanía</option>
+                                    <option value="RC">RC: Registro civil</option>
+                                    <option value="TI">TI: Tarjeta de identidad</option>
+                                </select>
+                            </div>
+                        </div>
+
+                       <div class="formulario">
+                            <label for="DOCUMENTO">DOCUMENTO</label>
+                            <div>
+                                <input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="NÚMERO DE DOCUMENTO" required>
+                            </div>                   
+                        </div>
+
+                        <div class="formulario">
+                            <label for="cc">EDAD</label>
+                            <div>
+                                <select name="cc" id="cc" required>
+                                    <option value="">Seleccionar edad</option>
+                                    <option value="0"> o años</option>
+                                    <option value="1"> 1 años</option>
+                                    <option value="2"> 2 años</option>
+                                    <option value="3"> 3 años</option>
+                                    <option value="4"> 4 años</option>
+                                    <option value="5"> 5 años</option>
+                                    <option value="6"> 6 años</option>
+                                    <option value="7"> 7 años</option>
+                                    <option value="8"> 8 años</option>
+                                    <option value="9"> 9 años</option>
+                                    <option value="10"> 10 años</option>
+                                    <option value="11"> 11 años</option>
+                                    <option value="12"> 12 años</option>
+                                    <option value="13"> 13 años</option>
+                                    <option value="14"> 14 años</option>
+                                    <option value="15"> 15 años</option>
+                                    <option value="16"> 16 años</option>
+                                    <option value="17"> 17 años</option>
+                                    <option value="18"> 18 años</option>
+                                    <option value="19"> 19 años</option>
+                                    <option value="20"> 20 años</option>
+                                    <option value="21"> 21 anos</option>
+                                    <option value="22"> 22 anos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="grado">Grado</label>
+                            <div>
+                                <select name="grado" id="grado" required>
+                                    <option value="">Seleccionar grado</option>
+                                    <option value="0"> UCA</option>
+                                    <option value="0"> Transicion</option>
+                                    <option value="1"> 1°</option>
+                                    <option value="2"> 2°</option>
+                                    <option value="3"> 3°</option>
+                                    <option value="4"> 4°</option>
+                                    <option value="5"> 5°</option>
+                                    <option value="6"> 6°</option>
+                                    <option value="7"> 7°</option>
+                                    <option value="8"> 8°</option>
+                                    <option value="9"> 9°</option>
+                                    <option value="10"> 10°</option>
+                                    <option value="11"> 11°</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="sex">SEXO</label>
+                            <div>
+                                <select name="sex" id="sex" required>
+                                    <option value="">Seleccione sexo</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </section>
             
+            <section class="seccion">
+                <h2>CARGA MASIVA</h2>
+                <div class="botones">
+                    <!--boton 1  -->
+                    <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_excelstudens.html"><div class="boton">
+                        <div class="icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <input type="button" value="FORMATO EXCEL">
+                    </div></a>
+                    <!-- boton 2 -->
+                    <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_imagesstudens.html"><div class="boton">
+                        <div class="icon">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <input type="button" value="ZIP DE FOTOGRAFIAS">
+                    </div></a>
+                </div>
+            </section>
 
-
-
+            <div>
+                <button type="submit" class="submit-button">
+                    <i class="fa-solid fa-pen-to-square"></i> CREAR ESTUDIANTE
+                </button>
+            </div>
         </main>
-
+<script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/0.responsive.js"></script>
 
 </body>
 </html>

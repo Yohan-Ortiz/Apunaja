@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- ICONOS -->
-<script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
     
-<!-- Enlaces a css  -->
-<link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_admin_page.css">
-    <link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_opcions.css">
-<link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
+    <link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_pages/2.beneficiaries.css">
+    <link rel="stylesheet" href="/css/Styles_admin_page/3.Styles_responsive/styles_beneficiaries.css">
+    
 
- <!-- Favicons para diferentes dispositivos y tamaños -->
+    <!-- Favicons para diferentes dispositivos y tamaños -->
  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
@@ -26,150 +25,288 @@
  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-
-    <title>CENTROS EDUCATIVOS</title>
+  
+    <title>CREAR CENTROS EDUCATIVOS</title>
 </head>
 <body>
-    <header>
 
-        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="logo"></a>
-        
-        <nav>
-            <ul class="nav">
-                <li><i class="fa-solid fa-users"></i>
-                    <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a>
-                </li>
-                <li><i class="fa-solid fa-user"></i>
-                    <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a>   
-                </li>
-                <li><i class="fa-solid fa-school"></i>
-                    <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CENTROS EDUCATIVOS</a>   
-                </li>
-                <li><i class="fa-solid fa-graduation-cap"></i>
-                    <a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a>   
-                </li>
-                <li><i class="fa-solid fa-arrow-right"></i>
-                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
-                </li>
+<!-- ===================== HEADER ===================== -->
+<header>
+    <a href="/html/Admin_panel/1.Home/home_panel.php">
+        <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+    </a>
+    
+    <!-- Botón de menú hamburguesa -->
+    <button id="menu-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <nav id="navbar">
+        <ul class="nav">
+            <li>
+                <i class="fa-solid fa-users"></i>
+                <a href="/html/Admin_panel/2.Beneficiaries/1.Create_new_community.html">CREAR COMUNIDAD</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-user"></i>
+                <a href="/html/Admin_panel/2.Beneficiaries/2.Create_new_beneficiary.html">CREAR BENEFICIARIO</a>   
+            </li>
+            <li>
+                <i class="fa-solid fa-school"></i>
+                <a href="/html/Admin_panel/2.Beneficiaries/3.Create_new_Schols.html">CENTROS EDUCATIVOS</a>   
+            </li>
+            <li>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <a href="/html/Admin_panel/2.Beneficiaries/4.Create_new_studens.html">CREAR ESTUDIANTES</a>   
+            </li>
+            <li>
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <main>
+            <h1>CREAR CENTROS ETNO-DUCATIVOS/ UCAS</h1>
+            <form>
+            <section class="section">
+                <div class="columna">
+                <h2>COMUNIDAD</h2>
+                <div class="formulario">  
+                    <label for="comunidad">COMUNIDAD</label>
+                        <div>
+                            <select name="comunidad" id="comunidad" required>
+                                <option value="">Seleccione una comunidad</option>
+                                <option value="comunidad1">Comunidad 1</option>
+                                <option value="comunidad2">Comunidad 2</option>
+                                <option value="comunidad3">Comunidad 3</option>
+                            </select>    
+                        </div>
+                </div>   
+                <h2>DATOS GENERALES</h2>
+                <div class="formulario">
+                    <label>FECHA</label>
+                    <div>
+                        <input type="date">
+                    </div>
+                </div>
                 
-            </ul>
-        </nav>
-        
-        </header>
-        <main>
-
-            <h1>CREAR CENTROS EDUCATIVOS</h1>
-
-            <form action="">
-                <div class="formglobal">
-                    <div class="nameinstitution">
-                        <!-- NOMBRE DE LA SEDE ETNOEDUCATIVA -->
-                        <div><label for="Nombre-de-la-inmstitucion">NOMBRE DE LA SEDE ETNOEDUCATIVA</label></div>
-                        <div><input type="text" name="name" placeholder="NOMBRE DE LA SEDE ETNOEDUCATIVA"></div>
+                <div class="formulario">
+                    <label>DEPARTAMENTO</label>
+                    <div>
+                        <input type="text" name="Departament" placeholder="DEPARTAMENTO">
                     </div>
-
-                    <div class="time">
-                        <div><label for="Town">FECHA</label></div>
-                        <div><input type="date"></div>
+                </div>
+                                
+                <div class="formulario">
+                    <label>MUNICIPIO</label>
+                    <div>
+                        <input type="text" name="Town" placeholder="MUNICIPIO  ">
                     </div>
-
-                    <!-- CODIGO DANE -->
-                    <div class="dane">
-                        <div><label for="Codigo-deane">CODIGO DANE</label></div>
-                        <div><input type="number" name="code" placeholder="CODIGO DANE"></div>
-                    </div>
-
-                    <!--  Departamento -->
-                    <div class="Departament">
-                        <div><label for="Departament">DEPARTAMENTO</label></div>
-                        <div><input type="text" name="Departament" placeholder="DEPARTAMENTO"></div>
-                    </div>
-                        <!--MUNICIPIO  -->
-                    <div class="Town">
-                        <div><label for="Town">MUNICIPIO</label></div>
-                        <div><input type="text" name="Town" placeholder="MUNICIPIO  "></div>
-                    </div>
-                    <!-- AREA DE INFLUENCIA COMUNIDADES-->
-                    <div class="locationextense">
-                        <div><label for="Town">AREA DE INFLUENCIA</label></div>
-                        <div><input type="text" name="locationextense" placeholder="AREA DE INFLUENCIA"></div>
-                        <div><input type="text" name="locationextense" placeholder="AREA DE INFLUENCIA"></div>
-                        <div><input type="text" name="locationextense" placeholder="AREA DE INFLUENCIA"></div>
-                    </div>
-
-                    <div class="Town">
-                        <div><label for="Town">MUNICIPIO</label></div>
-                        <div><input type="text" name="Town" placeholder="MUNICIPIO  "></div>
-                    </div>
-
-
-                    <h2>DATOS BASICOS DE SEDE SATELITE</h2>
-
-                    <div class="datateacher">
-                        <div><label for="datateacher">NOMBRE DE DOCENTE</label></div>
-                        <div><input type="text" name="datateacher" placeholder="NOMBRES Y APELLIDO"></div>
-                        <div><input type="text" name="datateacher" placeholder="APELLIDOS"></div>
-                        <div><input type="number" name="datateacher" placeholder="DOCUMENTO"></div>
-                        <div><input type="text" name="datateacher" placeholder="TELEFONO"></div>
-                        <div><input type="text" name="datateacher" placeholder="CORREO"></div>
-                    </div>
-
-                    <div><h2>CANTIDAD DE ESTUDIANTES</h2></div>
-\
-                    <div class="datestudens">
-                        <label for="datestudens">PRESCOLAR</label>
-                        <input type="number" name="datestudens" placeholder="PRESCOLAR">
-                        <label for="datestudens">PRIMERO</label>
-                        <input type="number" name="datestudens" placeholder="PRIMERO">
-                        <label for="datestudens">SEGUNDO</label>
-                        <input type="number" name="datestudens" placeholder="SEGUNDO">
-                        <label for="datestudens">TERCERO</label>
-                        <input type="number" name="datestudens" placeholder="TERCERO">
-                        <label for="datestudens">CUARTO</label>
-                        <input type="number" name="datestudens" placeholder="CUARTO">
-                        <label for="datestudens">QUINTO</label>
-                        <input type="number" name="datestudens" placeholder="QUINTO">
-
-                    </div>
-
-                    <div><h2>INFRAESTRUCTURA</h2></div>
-
-                    <div class="assets">
-                        <label for="datestudens">No.AULAS</label>
-                        <input type="number" name="assets" placeholder="No.AULAS">
-                        <label for="datestudens">BATERIA SANITARIA</label>
-                        <input type="number" name="assets" placeholder="BATERIA SANITARIA">
-                        <label for="datestudens">ZONAS DEPORTIVAS</label>
-                        <input type="number" name="assets" placeholder="ZONAS DEPORTIVAS">
-                        <label for="datestudens">TERCERO</label>
-                        <input type="number" name="assets" placeholder="TERCERO">
-                        <label for="datestudens">CUARTO</label>
-                        <input type="number" name="assets" placeholder="CUARTO">
-                        <label for="datestudens">QUINTO</label>
-                        <input type="number" name="assets" placeholder="QUINTO">
-
-                    </div>
-
-
-                    </div>
-
-        
+                </div>
+            
+                <div class="formulario">
+                    <label>GEOREFERENCIA DE COMUNIDAD</label>
+                        <div>
+                            <div class="columna">
+                                <div>
+                                    <input type="number" id="Latitud" name="Latitud" placeholder="LATITUD" step="any">
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <div>
+                                    <input type="number" id="Longitud" name="Longitud" placeholder="LONGITUD" step="any">
+                                </div>
+                            </div>
+                        </div>
+                </div>
                     
-
-
+                <div class="formulario">
+                        <label for="Nombre-de-la-inmstitucion">NOMBRE DE LA SEDE ETNOEDUCATIVA</label>
+                        <div>
+                            <input type="text" name="name" placeholder="NOMBRE DE LA SEDE ETNOEDUCATIVA">
+                        </div>
                 </div>
 
+                    <div class="formulario">
+                        <label for="Town">AREA DE INFLUENCIA</label>
+                        <div class="dataschols">
+                            <input type="text" name="locationextense" placeholder="AREA DE INFLUENCIA">
+                        </div>
+                        <div class="dataschols">
+                            <input type="text" name="locationextense" placeholder="AREA DE INFLUENCIA">
+                        </div>
+                        <div class="dataschols">
+                            <input type="text" name="locationextense" placeholder="AREA DE INFLUENCIA">
+                        </div>
+                    </div>
 
+                    <div class="formulario">
+                        <label for="Codigo-deane">CODIGO DANE</label>
+                        <div>
+                            <input type="number" name="code" placeholder="CODIGO DANE">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="section">
+                    <h2>DATOS BASICOS DE SEDE SATELITE</h2>
+                    <div class="columna">
+                        <div class="formulario">
+                            <div class="datateacher">
+                                <label for="datateacher">DATOS DEL DOCENTE</label>
+                            </div>
+                            <div class="datateacher">
+                                <input type="text" name="datateacher" placeholder="NOMBRES">
+                            </div>
+                            <div class="datateacher">
+                                <input type="text" name="datateacher" placeholder="APELLIDOS">
+                            </div>
+                            <div class="datateacher">
+                                <input type="number" name="datateacher" placeholder="DOCUMENTO">
+                            </div>
+                            <div class="datateacher">
+                                <input type="text" name="datateacher" placeholder="TELEFONO">
+                            </div>
+                            <div class="datateacher">
+                                <input type="text" name="datateacher" placeholder="CORREO">
+                            </div>
+                        </div>
+                            <h2>CANTIDAD DE ESTUDIANTES</h2>
+                        <div class="formulario">
+                            <div class="grados">
+                                <div class="datateacher">
+                                    <input type="number" name="datestudens" placeholder="PRESCOLAR">
+                                </div>
+                                
+                                <div class="datateacher">
+                                    <input type="number" name="datestudens" placeholder="PRIMERO">
+                                </div>
+                                
+                                <div class="datateacher">
+                                    <input type="number" name="datestudens" placeholder="SEGUNDO">
+                                </div>
+                                
+                                <div class="datateacher">
+                                    <input type="number" name="datestudens" placeholder="TERCERO">
+                                </div>
+                                
+                                <div class="datateacher">
+                                    <input type="number" name="datestudens" placeholder="CUARTO">
+                                </div>
+                                
+                                <div class="datateacher">
+                                    <input type="number" name="datestudens" placeholder="QUINTO">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
 
+            <section class="seccion">
+                    <h2>INFRAESTRUCTURA</h2>
+                        <div class="columna">
+                            <div class="formulario">
+                                <div class="inventario">
+                                    <label for="datestudens">No.AULAS</label>
+                                    <input type="number" name="assets" placeholder="No.AULAS">
+                                </div>
+                                <div class="inventario">
+                                    <label for="datestudens">BATERIA SANITARIA</label>
+                                    <input type="number" name="assets" placeholder="BATERIA SANITARIA">
+                                </div>
+                                <div class="inventario">
+                                    <label for="datestudens">ZONAS DEPORTIVAS</label>
+                                    <input type="number" name="assets" placeholder="ZONAS DEPORTIVAS">
+                                </div>
+                            </div>
+                            <div class="formulario">
+                                <div class="inventario">
+                                    <label for="datestudens">MATERIAL</label>
+                                    <input type="number" name="assets" placeholder="TABLEROS">
+                                </div>
+                                <div class="inventario">
+                                    <label for="datestudens">VENTANAS</label>
+                                    <input type="number" name="assets" placeholder="VENTANAS">
+                                </div>
+                                <div class="inventario">
+                                    <label for="datestudens">HUERTAS</label>
+                                    <input type="text" name="assets" placeholder="HUERTAS">
+                                </div>
+                            </div>
+                            <div class="formulario">
+                                <div class="inventario">
+                                    <label for="datestudens">PISOS</label>
+                                    <input type="number" name="assets" placeholder="PISOS">
+                                </div>
+                                <div class="inventario">
+                                    <label for="datestudens">CUBIERTAS</label>
+                                    <input type="number" name="assets" placeholder="CUBIERTAS">
+                                </div>
+                                <div class="inventario">
+                                    <label for="datestudens">OTRO</label>
+                                    <input type="number" name="assets" placeholder="OTRO">
+                                </div>
+                            </div>
+                        </div>
+            </section>
+                    
+            <section class="seccion">
+                    <h2>DOTACION</h2>
+                        <div class="columna">
+                            <div class="formulario">
+                                <div>
+                                    <label for="datestudens">PUPITRES</label>
+                                    <input type="number" name="assets" placeholder="PUPITRES">
+                                </div>
+                                <div>
+                                    <label for="datestudens">JUEGOS LUDICOS</label>
+                                    <input type="number" name="assets" placeholder="JUEGOS LUDICOS">
+                                </div>
+                                <div>
+                                    <label for="datestudens">SALA DE SISTEMAS</label>
+                                    <input type="number" name="assets" placeholder="SALA DE SISTEMAS">
+                                </div>
+                            </div>
+                            <div class="formulario">
+                                <div>
+                                    <label for="datestudens">TABLEROS</label>
+                                    <input type="text" name="assets" placeholder="MATERIAL">
+                                </div>
+                                <div>
+                                    <label for="datestudens">ESCRITORIOS</label>
+                                    <input type="number" name="assets" placeholder="ESCRITORIOS">
+                                </div>
+                                <div>
+                                    <label for="datestudens">COMPUTADORES</label>
+                                    <input type="number" name="assets" placeholder="COMPUTADORES">
+                                </div>
+                            </div>
+                            <div class="formulario">
+                                <div>
+                                    <label for="datestudens">ESTADO</label>
+                                    <input type="number" name="assets" placeholder="ESTADO">
+                                </div>
+                                <div>
+                                    <label for="datestudens">BIBLIOTECA</label>
+                                    <input type="number" name="assets" placeholder="BIBLIOTECA">
+                                </div>
+                                <div>
+                                    <label for="datestudens">INTENRET</label>
+                                    <input type="number" name="assets" placeholder="INTENRET">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            </section>
 
-            </form>
-
-
-
-
-        </main>
-
-
+            <div>
+                <button type="submit" class="submit-button">
+                    <i class="fa-solid fa-pen-to-square"></i> CREAR CENTRO ETNO / UCA
+                </button>
+            </div>
+    </main>
+    <script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/0.responsive.js"></script>
 </body>
 </html>

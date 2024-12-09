@@ -7,8 +7,7 @@
     <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
     
   <!-- Enlaces a css  -->
-<link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_admin_page.css">
-<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_home/Styles_1.home_page.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
 
  <!-- Favicons para diferentes dispositivos y tamaños -->
  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
@@ -28,18 +27,36 @@
     <title>NUEVO PROYECTO</title>
 </head>
 <body>
-
-    <!-- Encabezado de navegacion -->
-    <header>
-                <!-- logo -->
-                <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="Logo"></a>
-
-                <!--icono-->
-                <i class="fa-solid fa-diagram-project"><a href="/html/Admin_panel/1.Home/home_panel.html"></a></i>
-
-                <!--Bootos hacia atras  -->
-                <a href="/html/Admin_panel/1.Home/home_panel.html">Atras</a>
-    </header>
+<header>
+    <a href="/html/Admin_panel/1.Home/home_panel.html">
+        <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+    </a>+
+    
+    <!-- Botón de menú hamburguesa -->
+    <button id="menu-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <nav id="navbar">
+        <ul class="nav">
+            <li><i class="fa-solid fa-tools"></i>
+                <a href="/html/Admin_panel/3.Projects/1.new_project.html">NUEVO PROYECTO</a>
+            </li>
+            <li><i class="fa-solid fa-upload"></i>
+                <a href="/html/Admin_panel/3.Projects/2.load_format.html">CARGAR FORMATO</a>   
+            </li>
+            <li><i class="fa-solid fa-link"></i>
+                <a href="/html/Admin_panel/3.Projects/3.connect_project.html">CONECTAR PROYECTO</a>   
+            </li>
+            <li><i class="fa-solid fa-circle-info"></i>
+                <a href="/html/Admin_panel/3.Projects/4.project_information.html">INFORMACION</a>   
+            </li>
+            <li><i class="fa-solid fa-arrow-right"></i>
+                <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
 <!-- Cuerpo de la pagina web -->
 
@@ -113,17 +130,5 @@
          </form>
         </div>
       </main>
-
-      <!--Pie de pagina -->
-      <footer class="footer">
-
-        <!-- Créditos de desarrollo -->
-        <p class="By"><strong>Developed by</strong> | Arnaldo Pushaina</p>
-        
-        <!-- Derechos reservados -->
-        <p class="text">©2024 | Todos los derechos reservados</p>
-    </footer>
-
-      
     </body>
 </html>

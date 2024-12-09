@@ -7,9 +7,9 @@
 <script src="https://kit.fontawesome.com/3140323153.js" crossorigin="anonymous"></script>
     
 <!-- Enlaces a css  -->
-<link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_admin_page.css">
-<link rel="stylesheet" href="/css/Styles_admin_page/0.Styles_global/1.Styles_global_opcions.css">
-<link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_beneficiary/Styles_3.Create_new_beneficiary.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_pages/2.beneficiaries.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/3.Styles_responsive/styles_beneficiaries.css">
 
  <!-- Favicons para diferentes dispositivos y tamaños -->
  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
@@ -30,11 +30,16 @@
 </head>
 <body>
     <header>
-        <a href="/html/Admin_panel/1.Home/home_panel.html">
+        <a href="/html/Admin_panel/1.Home/home_panel.php">
             <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
         </a>
         
-        <nav> 
+        <!-- Botón de menú hamburguesa -->
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav id="navbar">
             <ul class="nav">
                 <li>
                     <i class="fa-solid fa-users"></i>
@@ -54,253 +59,328 @@
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                    <a href="/html/Admin_panel/1.Home/home_panel.php">ATRAS</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>CREAR BENEFICIARIO</h2>
+        <h1>CREAR BENEFICIARIO</h1>
 
-        <div class="formglobal">
-            <form id="beneficiaryForm">
-                <!-- Sección 1: Documentación -->
-                <section class="upload-section">
-                    <h2>Documentación</h2>
-                    <div class="upload-buttons">
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-image"></i></div>
-                            <input type="button" value="CARGAR FOTOGRAFIAS">
+            <form onsubmit="return validarFormulario()">
+
+                <section class="seccion">
+                    <h2>DOCUMENTACIÓN</h2>
+                    <div class="botones">
+                        <!-- Botón 1: Cargar Fotografías -->
+                        <div class="boton" data-file-id="file-upload-1">
+                            <div class="icon">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <label for="file-upload-1" id="file-label-1">CARGAR FOTOGRAFÍAS</label>
+                            <input id="file-upload-1" type="file" style="display: none;" accept=".png, .jpg, .jpeg" multiple>
                         </div>
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-id-card"></i></div>
-                            <input type="button" value="CARGAR DOCUMENTO">
+                
+                        <!-- Botón 2: Cargar Documento -->
+                        <div class="boton" data-file-id="file-upload-2">
+                            <div class="icon">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <label for="file-upload-2" id="file-label-2">CARGAR DOCUMENTO</label>
+                            <input id="file-upload-2" type="file" style="display: none;" accept=".png, .jpg, .jpeg" multiple>
                         </div>
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-signature"></i></div>
-                            <input type="button" value="CARGAR FIRMA O HUELLA">
+                
+                        <!-- Botón 3: Cargar Firma/Huella -->
+                        <div class="boton" data-file-id="file-upload-3">
+                            <div class="icon">
+                                <i class="fa-solid fa-signature"></i>
+                            </div>
+                            <label for="file-upload-3" id="file-label-3">CARGAR FIRMA/HUELLA</label>
+                            <input id="file-upload-3" type="file" style="display: none;" accept=".png, .jpg, .jpeg" multiple>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="seccion">
+
+                    <div class="columna">
+                        <div>
+                            <h2>DATOS PERSONALES</h2>
+                        </div>
+                    
+                        <div class="formulario">
+                            <label for="NUMEROFAMILIA">NUMERO FAMILIA</label>
+                            <div>
+                                <input type="number" id="NUMEROFAMILIA" name="NUMEROFAMILIA" placeholder="NUMERO FAMILIA" required>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="NOMBRES">NOMBRES</label>
+                            <div>
+                                <input type="text" id="NOMBRES" name="NOMBRES" placeholder="NOMBRES" required>
+                            </div>
+                        </div>
+                        
+                        <div class="formulario">
+                            <label for="APELLIDOS">APELLIDOS</label>
+                            <div>
+                                <input type="text" id="APELLIDOS" name="APELLIDOS" placeholder="APELLIDOS" required>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="cc">TIPO DE DOCUMENTO</label>
+                            <div>
+                                <select name="cc" id="cc" required>
+                                    <option value="">Seleccione tipo de documento</option>
+                                    <option value="CC">CC: Cédula de ciudadanía</option>
+                                    <option value="RC">RC: Registro civil</option>
+                                    <option value="TI">TI: Tarjeta de identidad</option>
+                                    <option value="PEP">PEP: Permiso especial de permanencia</option>
+                                    <option value="CE">CE: Cédula de extranjería</option>
+                                    <option value="CD">CD: Carné diplomático</option>
+                                    <option value="PA">PA: Pasaporte</option>
+                                    <option value="TE">TE: Tarjeta de extranjería</option>
+                                    <option value="DIE">DIE: Documento de identificación extranjero</option>
+                                    <option value="NIP">NIP: Número de identificación personal</option>
+                                    <option value="NUIP">NUIP: Número único de identificación personal</option>
+                                    <option value="SCR">SCR: Salvoconducto</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="DOCUMENTO">DOCUMENTO</label>
+                            <div>
+                                <input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="NÚMERO DE DOCUMENTO" required>
+                            </div>                   
+                        </div>
+
+                        <div class="formulario">
+                            <label for="fecha">FECHA DE NACIMIENTO</label>
+                            <div>    
+                                <input type="date" name="fecha" id="fecha" required>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="sex">SEXO</label>
+                            <div>
+                                <select name="sex" id="sex" required>
+                                    <option value="">Seleccione sexo</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Otros">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="escolaridad">NIVEL DE ESCOLARIDAD</label>
+                            <div>
+                                <select name="escolaridad" id="escolaridad" required>
+                                    <option value="">Seleccione nivel de escolaridad</option>
+                                    <option value="Ninguna">Ninguna</option>
+                                    <option value="Basica primaria">Básica primaria</option>
+                                    <option value="Basica secundaria">Básica secundaria</option>
+                                    <option value="Tecnico">Técnico</option>
+                                    <option value="Tecnologo">Tecnólogo</option>
+                                    <option value="Profesional">Profesional</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="Phone">NÚMERO DE TELÉFONO</label>
+                            <div>
+                                <input type="number" name="Phone" id="Phone" placeholder="NÚMERO DE TELÉFONO" required>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="Rol">CARGO</label>
+                            <div>
+                                <select name="Rol" id="Rol" required>
+                                    <option value="">Seleccione un rol</option>
+                                    <option value="Beneficiario">BENEFICIARIO</option>
+                                    <option value="Lider">LÍDER</option>
+                                    <option value="autoridad">AUTORIDAD TRADICIONAL</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="OCUPACION">OCUPACIÓN</label>
+                            <div>    
+                                <input type="text" name="OCUPACION" id="OCUPACION" placeholder="OCUPACIÓN" required>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <div class="main-info-container">
-                    <!-- Sección 2: Datos Personales -->
-                    <section class="info-column">
-                        <h2>DATOS PERSONALES</h2>
-                        
-                        <!-- Información básica -->
-                        <div class="form-group">
-                            <label for="NUMEROFAMILIA">NUMERO FAMILIA</label>
-                            <input type="number" id="NUMEROFAMILIA" name="NUMEROFAMILIA" placeholder="NUMERO FAMILIA" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="NOMBRES">NOMBRES</label>
-                            <input type="text" id="NOMBRES" name="NOMBRES" placeholder="NOMBRES" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="APELLIDOS">APELLIDOS</label>
-                            <input type="text" id="APELLIDOS" name="APELLIDOS" placeholder="APELLIDOS" required>
-                        </div>
-
-                        <!-- Documentación personal -->
-                        <div class="form-group">
-                            <label for="cc">TIPO DE DOCUMENTO</label>
-                            <select name="cc" id="cc" required>
-                                <option value="">Seleccione tipo de documento</option>
-                                <option value="CC">CC: Cédula de ciudadanía</option>
-                                <option value="RC">RC: Registro civil</option>
-                                <option value="TI">TI: Tarjeta de identidad</option>
-                                <option value="PEP">PEP: Permiso especial de permanencia</option>
-                                <option value="CE">CE: Cédula de extranjería</option>
-                                <option value="CD">CD: Carné diplomático</option>
-                                <option value="PA">PA: Pasaporte</option>
-                                <option value="TE">TE: Tarjeta de extranjería</option>
-                                <option value="DIE">DIE: Documento de identificación extranjero</option>
-                                <option value="NIP">NIP: Número de identificación personal</option>
-                                <option value="NUIP">NUIP: Número único de identificación personal</option>
-                                <option value="SCR">SCR: Salvoconducto</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="DOCUMENTO">DOCUMENTO</label>
-                            <input type="number" name="DOCUMENTO" id="DOCUMENTO" placeholder="NÚMERO DE DOCUMENTO" required>
-                        </div>
-
-                        <!-- Información demográfica -->
-                        <div class="form-group">
-                            <label for="fecha">FECHA DE NACIMIENTO</label>
-                            <input type="date" name="fecha" id="fecha" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sex">SEXO</label>
-                            <select name="sex" id="sex" required>
-                                <option value="">Seleccione sexo</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otros">Otro</option>
-                            </select>
-                        </div>
-
-                        <!-- Información profesional -->
-                        <div class="form-group">
-                            <label for="escolaridad">NIVEL DE ESCOLARIDAD</label>
-                            <select name="escolaridad" id="escolaridad" required>
-                                <option value="">Seleccione nivel de escolaridad</option>
-                                <option value="Ninguna">Ninguna</option>
-                                <option value="Basica primaria">Básica primaria</option>
-                                <option value="Basica secundaria">Básica secundaria</option>
-                                <option value="Tecnico">Técnico</option>
-                                <option value="Tecnologo">Tecnólogo</option>
-                                <option value="Profesional">Profesional</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Phone">NÚMERO DE TELÉFONO</label>
-                            <input type="number" name="Phone" id="Phone" placeholder="NÚMERO DE TELÉFONO" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Rol">CARGO</label>
-                            <select name="Rol" id="Rol" required>
-                                <option value="">Seleccione un rol</option>
-                                <option value="Beneficiario">BENEFICIARIO</option>
-                                <option value="Lider">LÍDER</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="OCUPACION">OCUPACIÓN</label>
-                            <input type="text" name="OCUPACION" id="OCUPACION" placeholder="OCUPACIÓN" required>
-                        </div>
-                    </section>
-
-                    <!-- Sección 3: Ubicación -->
-                    <section class="info-column">
-<!-- Información del hogar -->
-                        <div class="form-group">
+                <section class="seccion">
+                    
+                    <div class="columna">
+                        <h2>DATOS DEL HOGAR</h2>
+                        <div class="formulario">
                             <label for="House">HABITANTES EN EL HOGAR</label>
-                            <input type="number" name="House" id="House" placeholder="CANTIDAD DE PERSONAS" required>
+                            <div>
+                                <input type="number" name="House" id="House" placeholder="CANTIDAD DE PERSONAS" required>
+                            </div>
                         </div>
 
-                        <!-- Tabla demográfica -->
-                        <div class="form-group">
+                        <div class="formulario">
                             <label>DISTRIBUCIÓN POR EDAD Y GÉNERO</label>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Rango de edad</th>
-                                        <th>Hombre</th>
-                                        <th>Mujer</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>0-5 años</td>
-                                        <td><input type="number" name="hombres_0_5" min="0" placeholder="0"></td>
-                                        <td><input type="number" name="mujeres_0_5" min="0" placeholder="0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>6-14 años</td>
-                                        <td><input type="number" name="hombres_6_14" min="0" placeholder="0"></td>
-                                        <td><input type="number" name="mujeres_6_14" min="0" placeholder="0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>15-21 años</td>
-                                        <td><input type="number" name="hombres_15_21" min="0" placeholder="0"></td>
-                                        <td><input type="number" name="mujeres_15_21" min="0" placeholder="0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>22-40 años</td>
-                                        <td><input type="number" name="hombres_22_40" min="0" placeholder="0"></td>
-                                        <td><input type="number" name="mujeres_22_40" min="0" placeholder="0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>41 años o más</td>
-                                        <td><input type="number" name="hombres_41" min="0" placeholder="0"></td>
-                                        <td><input type="number" name="mujeres_41" min="0" placeholder="0"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Rango de edad</th>
+                                            <th>Hombre</th>
+                                            <th>Mujer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0-5 años</td>
+                                            <td><input type="number" name="hombres_0_5" min="0" placeholder="0"></td>
+                                            <td><input type="number" name="mujeres_0_5" min="0" placeholder="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6-14 años</td>
+                                            <td><input type="number" name="hombres_6_14" min="0" placeholder="0"></td>
+                                            <td><input type="number" name="mujeres_6_14" min="0" placeholder="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>15-21 años</td>
+                                            <td><input type="number" name="hombres_15_21" min="0" placeholder="0"></td>
+                                            <td><input type="number" name="mujeres_15_21" min="0" placeholder="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>22-40 años</td>
+                                            <td><input type="number" name="hombres_22_40" min="0" placeholder="0"></td>
+                                            <td><input type="number" name="mujeres_22_40" min="0" placeholder="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>41 años o más</td>
+                                            <td><input type="number" name="hombres_41" min="0" placeholder="0"></td>
+                                            <td><input type="number" name="mujeres_41" min="0" placeholder="0"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="Lena">CONSUMO DE LEÑA</label>
-                            <input type="number" name="Lena" id="Lena" placeholder="KILOS DE LEÑA POR DÍA">
+                        <div class="formulario">
+                            <label for="Lena">CONSUMO DE LEÑA DIARIO</label>
+                            <div>
+                                <input type="number" name="Lena" id="Lena" placeholder="KILOS DE LEÑA POR DÍA">
+                            </div>
                         </div>
 
-
-                        <h2>COMUNIDAD Y UBICACIÓN</h2>
-
-                        <div class="form-group">
-                            <label for="departamento">DEPARTAMENTO</label>
-                            <input type="text" name="departamento" id="departamento" placeholder="DEPARTAMENTO" required>
+                        <div class="formulario">
+                            <label for="Lena">CONSUMO DE LEÑA SEMANAL</label>
+                            <div>
+                                <input type="number" name="Lena" id="Lena" placeholder="KILOS DE LEÑA POR DÍA">
+                            </div>
                         </div>
+                    </div>
+                </section>                
+                
+                <section class="seccion">
 
-                        <div class="form-group">
-                            <label for="municipio">MUNICIPIO</label>
-                            <input type="text" name="municipio" id="municipio" placeholder="MUNICIPIO" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="comunidad">COMUNIDAD</label>
-                            <select name="comunidad" id="comunidad" required>
-                                <option value="">Seleccione una comunidad</option>
-                                <option value="comunidad1">Comunidad 1</option>
-                                <option value="comunidad2">Comunidad 2</option>
-                                <option value="comunidad3">Comunidad 3</option>
-                            </select>
-                        </div>
-
-                        <div class="geo-reference">
-                            <label>GEOREFERENCIA DE COMUNIDAD</label>
-                            <div class="coordinates">
-                                <div class="form-group">
-                                    <label for="Latitud">LATITUD</label>
-                                    <input type="number" id="Latitud" name="Latitud" placeholder="LATITUD" step="any">
+                        <div class="columna">
+                            <h2>COMUNIDAD Y UBICACIÓN</h2>
+                            <div class="formulario">
+                                <label for="departamento">DEPARTAMENTO</label>
+                                <div>
+                                    <input type="text" name="departamento" id="departamento" placeholder="DEPARTAMENTO" required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="Longitud">LONGITUD</label>
-                                    <input type="number" id="Longitud" name="Longitud" placeholder="LONGITUD" step="any">
+                            </div>
+                                
+                            <div class="formulario">
+                                <label for="municipio">MUNICIPIO</label>
+                                <div>
+                                   <input type="text" name="municipio" id="municipio" placeholder="MUNICIPIO" required>
+                                </div>
+                            </div>
+
+                            <div class="formulario">  
+                                <label for="comunidad">COMUNIDAD</label>
+
+                                <div>
+                                    <select name="comunidad" id="comunidad" required>
+                                        <option value="">Seleccione una comunidad</option>
+                                        <option value="comunidad1">Comunidad 1</option>
+                                        <option value="comunidad2">Comunidad 2</option>
+                                        <option value="comunidad3">Comunidad 3</option>
+                                    </select>    
+                                </div>
+                            </div>
+
+                            <div class="formulario">
+                                <label>GEOREFERENCIA DE COMUNIDAD</label>
+                                <div>
+                                    <div class="columna">
+                                        <div>
+                                            <input type="number" id="Latitud" name="Latitud" placeholder="LATITUD" step="any">
+                                        </div>
+                                    </div>
+                                    <div class="columna">
+                                        <div>
+                                            <input type="number" id="Longitud" name="Longitud" placeholder="LONGITUD" step="any">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
+                </section>
 
-                <!-- Sección 4: Acciones finales -->
-                <section class="upload-section">
-                    <h2>Carga masiva</h2>
-                    <div class="upload-buttons">
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-image"></i></div>
-                            <input type="button" value="ZIP DE FOTOGRAFIAS">
-                        </div>
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                <section class="seccion">
+                    <h2>CARGA MASIVA</h2>
+                    <div class="botones">
+                        <!--boton 1  -->
+                        <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_excelbeneficiary.html"><div class="boton">
+                            <div class="icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <input type="button" value="FORMATO EXCEL">
+                        </div></a>
+                        <!-- boton 2 -->
+                        <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_document.html"><div class="boton">
+                            <div class="icon">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
                             <input type="button" value="ZIP DE DOCUMENTO">
-                        </div>
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-signature"></i></div>
-                            <input type="button" value="BENEFICARIOS EXCEL">
-                        </div>
-                        <div class="upload-item">
-                            <div class="icon"><i class="fa-solid fa-signature"></i></div>
+                        </div></a>
+                        <!-- boton 3 -->
+                        <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_signature.html"><div class="boton">
+                            <div class="icon">
+                                <i class="fa-solid fa-signature"></i>
+                            </div>
                             <input type="button" value="ZIP FIRMA/HUELLA">
-                        </div>
-                    </div>
-
-                    <div>
-                        <input type="submit" value="CREAR BENEFICIARIO" class="submit-button">
+                        </div></a>
+                        <!-- boton 4 -->
+                        <a href="/html/Admin_panel/2.Beneficiaries/zip/zip_images.html"><div class="boton">
+                            <div class="icon">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <input type="button" value="ZIP DE FOTOGRAFIAS">
+                        </div></a>
                     </div>
                 </section>
             </form>
-        </div>
+            <div>
+                <button type="submit" class="submit-button">
+                    <i class="fa-solid fa-pen-to-square"></i> CREAR BENEFICIARIO
+                </button>
+            </div>
     </main>
+<script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/0.responsive.js"></script>
+<script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/2.script_create_new_beneficiaries.js"></script>
+    
+    
 </body>
 </html>

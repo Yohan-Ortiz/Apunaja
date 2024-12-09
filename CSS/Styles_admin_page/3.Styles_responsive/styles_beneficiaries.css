@@ -1,0 +1,153 @@
+@media (max-width: 768px) {
+    /* Estilos responsive para el header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001;
+        position: relative;
+        color: var(--colortexto2);
+    }
+
+    #navbar {
+        position: fixed;
+        top: -100%; /* Inicialmente oculto arriba */
+        left: 0;
+        width: 100%;
+        background-color: var(--colorbarras);
+        transition: top 0.3s ease;
+        z-index: 1000;
+        padding-top: 60px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    #navbar.active {
+        top: 0; /* Desplegado desde arriba */
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #navbar ul li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+        justify-content: center;
+    }
+
+    #navbar ul li i {
+        margin-right: 10px;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--colortexto2);
+    }
+
+    /* Estilos responsive para el contenido principal */
+
+    .botones {
+        grid-template-columns: 1fr;
+    }
+    .botones .boton label{
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .seccion a .boton input {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+    .seccion i {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+    .seccion a .boton i {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .formulario .columna {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario .columna input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .formulario table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+
+    .formulario table th,
+    .formulario table td {
+        border: 1px solid var(--border-color);
+        padding: 8px;
+        text-align: center;
+        color: var(--text-color);
+        font-size: 0.8rem;
+    }
+
+    .formulario table input {
+        width: 100%;
+
+    }
+
+    .formulario .columna {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario .columna input {
+        width: 100%;
+    }
+
+    main h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .seccion h2 {
+        text-align: center;
+        font-size: 15px;
+    }
+    .formulario .columna {
+        display: grid;
+        gap: 15px;
+        margin-top: 1rem;
+    }
+    
+}
+
