@@ -69,12 +69,8 @@
     <div class="contanierlogin">
         <main>
             <div class="wrapper">
-                <form action="/php/Home_page/1.Php_login/login.php" method="POST">
+                <form action="" method="POST">
                     <h1>INICIAR SESIÓN</h1>
-                    <?php if (!empty($error)): ?>
-                    <p style="color: red; font-size: 14px;"><?php echo $error; ?></p>
-                        <?php endif; ?>
-
                     <div class="input_box">
                         <input type="text" placeholder="CORREO ELECTRÓNICO" required>
                         <i class="fa-solid fa-user"></i>
