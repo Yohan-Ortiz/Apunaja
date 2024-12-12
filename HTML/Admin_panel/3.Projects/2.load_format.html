@@ -9,6 +9,7 @@
     
   <!-- Enlaces a css  -->
    <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
+   <link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_pages/3.Styles_projects.css">
 
    <!-- Favicons para diferentes dispositivos y tamaños -->
  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
@@ -29,10 +30,16 @@
 </head>
 <body>
     <header>
-
-        <a href="/html/Admin_panel/1.Home/home_panel.html"><img src="/assets/logos_of_the_site/logo_color.png" alt="logo"></a>
+        <a href="/html/Admin_panel/1.Home/home_panel.html">
+            <img src="/assets/logos_of_the_site/logo_color.png" alt="logo">
+        </a>+
         
-        <nav>
+        <!-- Botón de menú hamburguesa -->
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav id="navbar">
             <ul class="nav">
                 <li><i class="fa-solid fa-tools"></i>
                     <a href="/html/Admin_panel/3.Projects/1.new_project.html">NUEVO PROYECTO</a>
@@ -47,16 +54,69 @@
                     <a href="/html/Admin_panel/3.Projects/4.project_information.html">INFORMACION</a>   
                 </li>
                 <li><i class="fa-solid fa-arrow-right"></i>
-                    <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                    <a href="/html/Admin_panel/1.Home/home_panel.php">ATRAS</a>
                 </li>
-                
             </ul>
         </nav>
+    </header>
+
+    <main>
+        <main>
+        <h1>Formatos de Proyectos</h1>
+            <section class="seccion">
+                <div class="columna">
+                    <h2>Cargar Nuevo Formato</h2>
+                        <form id="formulario">
+                            <div class="formulario">
+                                <select name="pdf-file" id="formulario">
+                                    <option value="proyecto_1.pdf">Protecto 1</option>
+                                    <option value="proyecto_2.pdf">Protecto 2</option>
+                                    <option value="proyecto_3.pdf">Protecto 3</option>
+                                    <option value="proyecto_4.pdf">Protecto 4</option>
+                                </select>
+                            </div>
+                            <div class="formulario">
+                                <input type="file" id="pdf-file" name="pdf-file" accept="application/pdf" required>
+                                <button type="submit">Cargar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <section class="section">
+                        <div class="columna">
+                            <div class="formlario">
+                                <a href="proyecto_1.pdf" target="_blank">Proyecto 1</a>
+                                <button>Descargar</button>
+                            </div>
+                            <div class="formlario">
+                                <a href="proyecto_1.pdf" target="_blank">Proyecto 1</a>
+                                <button>Descargar</button>
+                            </div>
+                            <div class="formlario">
+                                <a href="proyecto_1.pdf" target="_blank">Proyecto 1</a>
+                                <button>Descargar</button>
+                            </div>
+                        </div>
+                    </section>        
+                    <div class="pdf-preview" id="pdf-preview">
+                        <h2>Previsualización</h2>
+                        <iframe id="pdf-frame" src=""></iframe>
+                    </div>
+            </section>
+            
+            <script>
+                const pdfInput = document.getElementById('pdf-file');
+                const pdfFrame = document.getElementById('pdf-frame');
         
-</header>
-
-<main>
-
-</main>
+                pdfInput.addEventListener('change', (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const fileURL = URL.createObjectURL(file);
+                        pdfFrame.src = fileURL;
+                    }
+                });
+            </script>
+        </main>
+    </main>
+    
 </body>
 </html>

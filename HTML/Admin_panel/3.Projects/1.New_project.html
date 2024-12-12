@@ -8,6 +8,7 @@
     
   <!-- Enlaces a css  -->
 <link rel="stylesheet" href="/css/Styles_admin_page/1.Styles_global/2.styles_global.css">
+<link rel="stylesheet" href="/css/Styles_admin_page/2.Styles_pages/3.Styles_projects.css">
 
  <!-- Favicons para diferentes dispositivos y tamaños -->
  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
@@ -52,51 +53,143 @@
                 <a href="/html/Admin_panel/3.Projects/4.project_information.html">INFORMACION</a>   
             </li>
             <li><i class="fa-solid fa-arrow-right"></i>
-                <a href="/html/Admin_panel/1.Home/home_panel.html">ATRAS</a>
+                <a href="/html/Admin_panel/1.Home/home_panel.php">ATRAS</a>
             </li>
         </ul>
     </nav>
 </header>
 <main>
-<h1>NUEVO PROYECTO</h1>
-<form action="">
+    <h1>NUEVO PROYECTO</h1>
+    <form id="project-form">
+      <section class="section">
+        <div class="columna">
+          <div class="formulario">
+            <label for="name">NOMBRE DEL PROYECTO</label>
+            <div>
+              <input type="text" id="name" name="name">
+            </div>
+            <label for="entidad">ENTIDAD PROMOTORA</label>
+            <div>
+              <input type="text" id="entidad" name="entidad">
+            </div>
+            <label for="nit">NIT</label>
+            <div>
+              <input type="number" id="nit" name="nit">
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="section">
+        <div class="columna">
+          <div class="formulario">
+            <label for="date">FECHA DE CREACION</label>
+            <div>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <label for="Pro">PROFESIONAL ASIGNADO</label>
+            <div>
+              <input type="text" id="Pro" name="Pro">
+            </div>
+            <label for="description">DESCRIPCION</label>
+            <div>
+              <textarea id="excerpt" name="description" placeholder="DESCRIPCION DE PROYECTO"></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="submit-button"><i class="fa-solid fa-pen-to-square"></i> CREAR PROYECTO <i class="fa-solid fa-arrow-right"></i></button>
+      </section>
+    </form>
+  
     <section class="section">
-        <div class="columna">
-            <div class="formulario">
-                <div>
-                    <label for="name">NOMBRE DEL PROYECTO</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="entidad">ENTIDADA PROMOTORA</label>
-                    <input type="text" id="entidad" name="entidad" required>
-                </div>
-                <div>
-                    <label for="nit">NIT</label>
-                    <input type="text" id="nit" name="nit" required>
-                </div>
-
-                <div>
-                    <label for="date">FECHA DE CREACION</label>
-                    <input type="datetime" id="date" name="date" required>
-                </div>
-            </div>
+      <div class="columna">
+        <div class="formulario">
+          <h2>LISTA DE PROYECTOS</h2>
+          <ul id="project-list"></ul>
         </div>
+      </div>
     </section>
+  </main>
+  
+  <script>
+   const form = document.getElementById('project-form');
+const projectList = document.getElementById('project-list');
 
-    <section>
-        <div class="columna">
-            <div class="formulario">
-                <div>
-                    <label for="description">DESCRIPCION</label>
-                    <input type="text" id="description" name="description" required>
-                </div>
-            </div>
-        </div>
-    </section>
-</form>
-</main>
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    
+  const name = document.getElementById('name').value.trim();
+  const entidad = document.getElementById('entidad').value.trim();
+  const nit = document.getElementById('nit').value.trim();
+  const date = document.getElementById('date').value;
+  const pro = document.getElementById('Pro').value.trim();
+  const description = document.getElementById('excerpt').value.trim();
+
+  if (!name || !entidad || !/\d{8}/.test(nit) || !date || !pro || description.length > 2000) {
+    alert('Por favor, completa todos los campos correctamente.');
+    return;
+  }
+
+  const newProject = document.createElement('li');
+  newProject.innerHTML = `
+    <div class="project-details">
+      <div class="detail">
+        <span class="detail-label">Nombre del Proyecto</span>
+        <span class="detail-value">${name}</span>
+      </div>
+      <div class="detail">
+        <span class="detail-label">Entidad Promotora</span>
+        <span class="detail-value">${entidad}</span>
+      </div>
+      <div class="detail">
+        <span class="detail-label">NIT</span>
+        <span class="detail-value">${nit}</span>
+      </div>
+      <div class="detail">
+        <span class="detail-label">Fecha de Creación</span>
+        <span class="detail-value">${date}</span>
+      </div>
+      <div class="detail">
+        <span class="detail-label">Profesional Asignado</span>
+        <span class="detail-value">${pro}</span>
+      </div>
+      <div class="detail">
+        <span class="detail-label">Descripción</span>
+        <span class="detail-value">${description}</span>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="edit-button">Editar</button>
+      <button class="delete-button">Eliminar</button>
+    </div>
+  `;
+
+  projectList.appendChild(newProject);
+
+  // Limpiar formulario
+  form.reset();
+});
+
+projectList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('delete-button')) {
+    const project = event.target.closest('li');
+    projectList.removeChild(project);
+  } else if (event.target.classList.contains('edit-button')) {
+    const project = event.target.closest('li');
+    const details = project.querySelectorAll('.detail-value');
+
+    document.getElementById('name').value = details[0].textContent;
+    document.getElementById('entidad').value = details[1].textContent;
+    document.getElementById('nit').value = details[2].textContent;
+    document.getElementById('date').value = details[3].textContent;
+    document.getElementById('Pro').value = details[4].textContent;
+    document.getElementById('excerpt').value = details[5].textContent;
+
+    projectList.removeChild(project);
+  }
+});
+  </script>
+  
+    <script src="/javascript/Script_Admin_panel/2.Script_Beneficiaries/0.responsive.js"></script>
     </body>
 </html>
